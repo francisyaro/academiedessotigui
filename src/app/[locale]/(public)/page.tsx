@@ -20,6 +20,51 @@ export default async function HomePage({ params }: HomeProps) {
 
   const isEn = locale === 'en'
 
+  const officialPartners = [
+    { name: 'Coris Bank', logo: '/images/partners/official_coris.png', url: 'https://www.coris-bank.com/' },
+    { name: 'Azalaï Hotel', logo: '/images/partners/official_azalai.png', url: 'https://www.azalaihotels.com/' },
+    { name: 'Canal+', logo: '/images/partners/official_canalplus.png', url: 'https://www.canalplus-afrique.com/' }
+  ]
+
+  const regularPartners = [
+    { logo: '/images/partners/partner_row1_0.png' },
+    { logo: '/images/partners/partner_row1_1.png' },
+    { logo: '/images/partners/partner_row1_2.png' },
+    { logo: '/images/partners/partner_row1_3.png' },
+    { logo: '/images/partners/partner_row1_4.png' },
+    { logo: '/images/partners/partner_row1_5.png' },
+    { logo: '/images/partners/partner_row1_6.png' },
+    { logo: '/images/partners/partner_row2_0.png' },
+    { logo: '/images/partners/partner_row2_1.png' },
+    { logo: '/images/partners/partner_row2_2.png' },
+    { logo: '/images/partners/partner_row2_3.png' },
+    { logo: '/images/partners/partner_row2_4.png' },
+    { logo: '/images/partners/partner_row2_5.png' },
+    { logo: '/images/partners/partner_row2_6.png' },
+    { logo: '/images/partners/partner_row3_0.png' },
+    { logo: '/images/partners/partner_row3_1.png' },
+    { logo: '/images/partners/partner_row3_2.png' },
+    { logo: '/images/partners/partner_row3_3.png' },
+    { logo: '/images/partners/partner_row3_4.png' },
+    { logo: '/images/partners/partner_row3_5.png' },
+    { logo: '/images/partners/partner_row3_6.png' },
+    { logo: '/images/partners/partner_row4_0.png' },
+    { logo: '/images/partners/partner_row4_1.png' },
+    { logo: '/images/partners/partner_row4_2.png' },
+    { logo: '/images/partners/partner_row4_3.png' },
+    { logo: '/images/partners/partner_row4_4.png' },
+    { logo: '/images/partners/partner_row4_5.png' },
+    { logo: '/images/partners/partner_row4_6.png' },
+    { logo: '/images/partners/partner_row4_7.png' },
+    { logo: '/images/partners/partner_row5_0.png' },
+    { logo: '/images/partners/partner_row5_1.png' },
+    { logo: '/images/partners/partner_row5_2.png' },
+    { logo: '/images/partners/partner_row5_3.png' },
+    { logo: '/images/partners/partner_row5_4.png' },
+    { logo: '/images/partners/partner_row5_5.png' },
+    { logo: '/images/partners/partner_row5_6.png' }
+  ]
+
   const OTHER_LAUREATES = [
     {
       name: 'Cheikh Babou GAYE',
@@ -302,31 +347,68 @@ export default async function HomePage({ params }: HomeProps) {
         </section>
 
         {/* 7. Partners Section */}
-        <section className="flex flex-col gap-8 text-center border-t border-border-color/30 pt-16">
-          <div>
-            <h2 className="font-serif text-2xl font-bold text-ivory tracking-tight mb-2">
-              {isEn ? 'Our Partners' : 'Nos Partenaires'}
-            </h2>
-            <p className="text-xs text-gray-text uppercase tracking-widest">
-              {isEn ? 'Support of cinematic excellence' : 'Le soutien de l\'excellence cinématographique'}
-            </p>
+        <section className="flex flex-col gap-12 text-center border-t border-border-color/30 pt-16 pb-12 overflow-hidden">
+          {/* Partenaires Officiels */}
+          <div className="flex flex-col gap-6">
+            <div>
+              <h2 className="font-serif text-xl md:text-2xl font-bold text-gold-light tracking-widest uppercase mb-1">
+                {isEn ? 'Official Partners' : 'Partenaires Officiels'}
+              </h2>
+              <div className="h-[2px] w-24 bg-gold-primary mx-auto"></div>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 mt-6">
+              {officialPartners.map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-16 md:h-20 w-auto object-contain max-w-[220px] transition-all duration-300 filter drop-shadow-[0_0_10px_rgba(255,255,255,0.05)]"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-12 mt-6">
-            {partners.map((partner) => (
-              <a
-                key={partner.slug}
-                href={partner.website_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-50 hover:opacity-100 transition-opacity duration-300 focus:outline-none"
-              >
-                <img
-                  src={partner.logo_path}
-                  alt={partner.name}
-                  className="h-12 w-auto object-contain max-w-[160px] grayscale brightness-90 hover:grayscale-0 hover:brightness-100 transition-all duration-300"
-                />
-              </a>
-            ))}
+
+          {/* Partenaires */}
+          <div className="flex flex-col gap-6 mt-8">
+            <div>
+              <h2 className="font-serif text-lg md:text-xl font-semibold text-ivory/80 tracking-widest uppercase mb-1">
+                {isEn ? 'Partners' : 'Partenaires'}
+              </h2>
+              <div className="h-[1px] w-16 bg-ivory/30 mx-auto"></div>
+            </div>
+            
+            {/* Infinite Marquee Loop */}
+            <div className="relative w-full overflow-hidden py-4 bg-dark-surface/30 border-y border-border-color/20 mt-4">
+              <div className="animate-marquee gap-16 items-center">
+                {/* First half: list of logos */}
+                {regularPartners.map((partner, index) => (
+                  <div key={`orig-${index}`} className="flex-shrink-0">
+                    <img
+                      src={partner.logo}
+                      alt="Partner"
+                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                ))}
+                {/* Second half: duplicate list for infinite looping */}
+                {regularPartners.map((partner, index) => (
+                  <div key={`dup-${index}`} className="flex-shrink-0">
+                    <img
+                      src={partner.logo}
+                      alt="Partner Duplicate"
+                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </div>
