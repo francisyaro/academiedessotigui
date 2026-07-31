@@ -363,7 +363,7 @@ export default async function HomePage({ params }: HomeProps) {
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 transition-all duration-300 transform hover:scale-105"
+                  className="transition-all duration-300 transform hover:scale-105"
                 >
                   <img
                     src={partner.logo}
@@ -393,7 +393,7 @@ export default async function HomePage({ params }: HomeProps) {
                     <img
                       src={partner.logo}
                       alt="Partner"
-                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] transition-all duration-300"
                     />
                   </div>
                 ))}
@@ -403,7 +403,7 @@ export default async function HomePage({ params }: HomeProps) {
                     <img
                       src={partner.logo}
                       alt="Partner Duplicate"
-                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      className="h-10 md:h-12 w-auto object-contain max-w-[150px] transition-all duration-300"
                     />
                   </div>
                 ))}
