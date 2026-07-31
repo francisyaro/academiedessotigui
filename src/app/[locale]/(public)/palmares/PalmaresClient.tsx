@@ -591,6 +591,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: '"DJAGASSA" de Hyacinthe HOUNSOU',
               image: '/images/afrique_de_l_ouest_2022_dosso_tiekomba.jpg',
               isWinner: false
+            },
+            {
+              name: 'Wabinle NABIE',
+              country: 'Burkina Faso',
+              work: '"UN TRIOMPHE" de Emmanuel COURCOL',
+              image: '/images/afrique_de_l_ouest_2022_wabinle_nabie.jpg',
+              isWinner: false
             }
           ]
         },
@@ -603,7 +610,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Thabo Rametsi',
               country: 'Afrique du Sud',
               work: '"SILVERTON SIEGE" de Mandla Dube',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/afrique_australe_2022_thabo_rametsi.jpg',
               isWinner: true
             },
             {
