@@ -27,7 +27,7 @@ export default async function HomePage({ params }: HomeProps) {
   ]
 
   const regularPartners = [
-    { logo: '/images/partners/partner_row1_0.png' },
+    { logo: '/images/partners/regular_presidence.png' },
     { logo: '/images/partners/regular_uemoa.png' },
     { logo: '/images/partners/regular_fespaco.jpg' },
     { logo: '/images/partners/partner_row1_3.png' },
