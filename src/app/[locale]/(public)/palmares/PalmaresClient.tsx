@@ -582,7 +582,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Roger Felmont Sallah',
               country: 'Sénégal',
               work: '"SALOUM" de Jean-Luc Herbulot',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/afrique_de_l_ouest_2022_roger_felmont_sallah.jpg',
               isWinner: true
             },
             {
@@ -630,8 +630,8 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
             {
               name: 'Rosemary Odire',
               country: 'Kenya',
-              work: '"BANGARANG" de Odongo Robbie',
-              image: '/images/trophy_dark.jpg',
+              work: '"BANGARANG" de Robin ODONGO',
+              image: '/images/afrique_de_l_est_2022_rosemary_odire.jpg',
               isWinner: true
             },
             {
@@ -639,6 +639,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Tanzanie',
               work: '"UNCLE" de Halibu MADUDU',
               image: '/images/afrique_de_l_est_2022_tunu_mwinyimbegu.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Seare FITSUM',
+              country: 'Érythrée',
+              work: '"Seare - The Winner" de Seare FITSUM',
+              image: '/images/afrique_de_l_est_2022_seare_fitsum.jpg',
               isWinner: false
             }
           ]
@@ -651,8 +658,8 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
             {
               name: 'Philippe Coly',
               country: 'Sénégal',
-              work: '"IMPACT" de ...',
-              image: '/images/trophy_dark.jpg',
+              work: '"IMPACT" de Elhadji Cissokho et Ousmane Gningue',
+              image: '/images/serie_tv_masculin_2022_philippe_coly.jpg',
               isWinner: true
             },
             {
@@ -660,6 +667,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Cameroun',
               work: '"JE TE PROMETS" de Arnaud SELIGNAC et Renaud BERTRAND',
               image: '/images/serie_tv_masculin_2022_narcisse_mame.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Terrence AMADI',
+              country: 'Mali',
+              work: '"EKI" de Nadine Otsobogo, Boris Oué et Alex Ogou',
+              image: '/images/serie_tv_masculin_2022_terrence_amadi.jpg',
               isWinner: false
             }
           ]
@@ -701,7 +715,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Roger Felmont Sallah',
               country: 'Sénégal',
               work: '"SALOUM" de Jean-Luc Herbulot',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/afrique_de_l_ouest_2022_roger_felmont_sallah.jpg',
               isWinner: true
             }
           ]
