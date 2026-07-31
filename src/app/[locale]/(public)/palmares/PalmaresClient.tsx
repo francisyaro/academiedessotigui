@@ -470,7 +470,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Landry Nguetsa',
               country: 'Cameroun',
               work: '"KANKAN" de Joseph Akama',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/afrique_centrale_2022_landry_nguetsa.jpg',
               isWinner: true
             },
             {
@@ -498,7 +498,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Lydia Forson',
               country: 'Ghana',
               work: '"BORGA" de York-Fabian Raabe',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/nigeria_ghana_2022_lydia_forson.jpg',
               isWinner: true
             },
             {
@@ -525,8 +525,8 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
             {
               name: 'Khady Touré',
               country: 'Côte d\'Ivoire',
-              work: '"L\'INDOMPTABLE" de Franck Vlehi',
-              image: '/images/trophy_dark.jpg',
+              work: '"LES LARMES DE L\'AMOUR" de Brigitte BLEU et Andy Melo',
+              image: '/images/serie_tv_feminin_2022_kadhy_toure.jpg',
               isWinner: true
             },
             {
@@ -604,6 +604,27 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Madagascar',
               work: '"HAINGOSOA" de Edouard JOUBEAUD',
               image: '/images/afrique_australe_2022_haingosoa_vola.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_diaspora_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de la Diaspora',
+          name_en: 'Sotigui of the Best Actor of Diaspora',
+          nominees: [
+            {
+              name: 'Letitia Michelle Wright',
+              country: 'Guyane',
+              work: '"MORT SUR LE NIL" de Kenneth Branagh',
+              image: '/images/diaspora_2022_letitia_michelle_wright.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Lea Lucas GARCIA',
+              country: 'Brésil',
+              work: '"UN DIA COM JERUSA" de Viviane FERREIRA',
+              image: '/images/diaspora_2022_lea_lucas_garcia.jpg',
               isWinner: false
             }
           ]
