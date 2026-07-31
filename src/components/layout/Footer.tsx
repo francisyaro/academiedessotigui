@@ -29,6 +29,15 @@ function YoutubeIcon({ size = 18 }: { size?: number }) {
   )
 }
 
+function XIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 4l11.73 16h4.27L8.27 4z" />
+      <path d="M18 4l-4.25 5.75M11.25 12.75L4 20" />
+    </svg>
+  )
+}
+
 interface FooterProps {
   locale: string
 }
@@ -59,9 +68,10 @@ export function Footer({ locale }: FooterProps) {
                 : "Valoriser et promouvoir les acteurs, actrices et professionnels du cinéma d'Afrique et de sa diaspora dans le monde."}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-gold-light transition-colors" aria-label="Facebook"><FacebookIcon /></a>
-              <a href="#" className="hover:text-gold-light transition-colors" aria-label="Instagram"><InstagramIcon /></a>
-              <a href="#" className="hover:text-gold-light transition-colors" aria-label="Youtube"><YoutubeIcon /></a>
+              <a href="https://web.facebook.com/Lessotigui/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors" aria-label="Facebook"><FacebookIcon /></a>
+              <a href="https://twitter.com/SotiguiAwds" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors" aria-label="X"><XIcon /></a>
+              <a href="https://www.instagram.com/sotiguiawards/" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors" aria-label="Instagram"><InstagramIcon /></a>
+              <a href="https://www.youtube.com/@academiedessotigui6686" target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors" aria-label="Youtube"><YoutubeIcon /></a>
             </div>
           </div>
 
@@ -135,8 +145,8 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={16} className="text-gold-light shrink-0" />
-                <a href="mailto:contact@academiedessotigui.org" className="hover:text-ivory transition-colors">
-                  contact@academiedessotigui.org
+                <a href="mailto:cinema@academiedessotigui.org" className="hover:text-ivory transition-colors">
+                  cinema@academiedessotigui.org
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
