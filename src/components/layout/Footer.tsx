@@ -151,7 +151,7 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={16} className="text-gold-light shrink-0" />
-                <span>+226 25 30 00 00</span>
+                <span>+226 58 07 00 00</span>
               </li>
             </ul>
           </div>
