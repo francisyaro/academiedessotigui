@@ -535,6 +535,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: '"VAUTOURS" de Ibou GAYE',
               image: '/images/serie_tv_feminin_2022_awa_djiga_kane.jpg',
               isWinner: false
+            },
+            {
+              name: 'Nancy ISIME',
+              country: 'Nigéria',
+              work: '"BLOOD SISTERS" de Kenneth Gyang, Biyi Bandele',
+              image: '/images/serie_tv_feminin_2022_nancy_isime.jpg',
+              isWinner: false
             }
           ]
         },
@@ -555,6 +562,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Égypte',
               work: '"FEATHERS" de Omar EL ZOHANY',
               image: '/images/afrique_du_nord_2022_demyana_nassar.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Naima LEMCHERKI',
+              country: 'Maroc',
+              work: '"L\'AUTOMNE DES POMMIERS" de Mohamed MOUFTAKIR',
+              image: '/images/afrique_du_nord_2022_naima_lemcherki.jpg',
               isWinner: false
             }
           ]
@@ -609,6 +623,48 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
           ]
         },
         {
+          id: 'meilleur_acteur_ae_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Est',
+          name_en: 'Sotigui of the Best Actor of East Africa',
+          nominees: [
+            {
+              name: 'Rosemary Odire',
+              country: 'Kenya',
+              work: '"BANGARANG" de Odongo Robbie',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Ms. Tunu MWINYIMBEGU',
+              country: 'Tanzanie',
+              work: '"UNCLE" de Halibu MADUDU',
+              image: '/images/afrique_de_l_est_2022_tunu_mwinyimbegu.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleure_interpretation_masculine_serie_tv_7e',
+          name_fr: 'Sotigui de la Meilleure Interprétation Masculine Africaine Série TV',
+          name_en: 'Sotigui of the Best Male Interpretation African TV Show',
+          nominees: [
+            {
+              name: 'Philippe Coly',
+              country: 'Sénégal',
+              work: '"IMPACT" de ...',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Narcisse MAME',
+              country: 'Cameroun',
+              work: '"JE TE PROMETS" de Arnaud SELIGNAC et Renaud BERTRAND',
+              image: '/images/serie_tv_masculin_2022_narcisse_mame.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
           id: 'meilleur_acteur_diaspora_7e',
           name_fr: 'Sotigui du Meilleur Acteur de la Diaspora',
           name_en: 'Sotigui of the Best Actor of Diaspora',
@@ -625,6 +681,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Brésil',
               work: '"UN DIA COM JERUSA" de Viviane FERREIRA',
               image: '/images/diaspora_2022_lea_lucas_garcia.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Passi BALENDE',
+              country: 'Congo Brazzaville',
+              work: '"LE PRINCE" de Lisa Bierwirth',
+              image: '/images/diaspora_2022_passi_balende.jpg',
               isWinner: false
             }
           ]
