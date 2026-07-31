@@ -507,6 +507,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: '"THE RISE OF IGBINOGUN" de Onesoul',
               image: '/images/nigeria_ghana_2022_blossom_chukwujekwu.jpg',
               isWinner: false
+            },
+            {
+              name: 'Funke Akindele',
+              country: 'Nigéria',
+              work: '"OMO GHETTO THE SAGA" de Funke Akindele',
+              image: '/images/nigeria_ghana_2022_funke_akindele.jpg',
+              isWinner: false
             }
           ]
         },
@@ -540,7 +547,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               name: 'Fatma Ben Saidane',
               country: 'Tunisie',
               work: '"J\'IRAI AU DIABLE" de Ismahane Lahmar',
-              image: '/images/trophy_dark.jpg',
+              image: '/images/afrique_du_nord_2022_fatma_ben_saidane.jpg',
               isWinner: true
             },
             {
@@ -548,6 +555,55 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: 'Égypte',
               work: '"FEATHERS" de Omar EL ZOHANY',
               image: '/images/afrique_du_nord_2022_demyana_nassar.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_ao_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Ouest',
+          name_en: 'Sotigui of the Best Actor of West Africa',
+          nominees: [
+            {
+              name: 'Roger Felmont Sallah',
+              country: 'Sénégal',
+              work: '"SALOUM" de Jean-Luc Herbulot',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Dosso TIEKOMBA',
+              country: 'Côte d\'Ivoire',
+              work: '"DJAGASSA" de Hyacinthe HOUNSOU',
+              image: '/images/afrique_de_l_ouest_2022_dosso_tiekomba.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_as_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique Australe',
+          name_en: 'Sotigui of the Best Actor of Southern Africa',
+          nominees: [
+            {
+              name: 'Thabo Rametsi',
+              country: 'Afrique du Sud',
+              work: '"SILVERTON SIEGE" de Mandla Dube',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Jose KITECULO',
+              country: 'Angola',
+              work: '"AIR CONDITIONER" de Mario Bastos Fradique',
+              image: '/images/afrique_australe_2022_jose_kiteculo.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Haingosoa VOLA',
+              country: 'Madagascar',
+              work: '"HAINGOSOA" de Edouard JOUBEAUD',
+              image: '/images/afrique_australe_2022_haingosoa_vola.jpg',
               isWinner: false
             }
           ]
