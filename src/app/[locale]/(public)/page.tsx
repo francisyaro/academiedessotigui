@@ -184,7 +184,7 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <div className="flex flex-col w-full pb-20">
       {/* 1. Hero Banner */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-black overflow-hidden py-20 px-4">
+      <section className="relative min-h-[55vh] flex items-center justify-center bg-black overflow-hidden pt-24 pb-16 px-4">
         {/* Background Image: Eve GUEHI Poster */}
         <div className="absolute inset-0 bg-[url('/images/dress_code.jpg')] bg-cover bg-center opacity-45 mix-blend-luminosity scale-105 transition-transform duration-[10000ms] hover:scale-100" />
         {/* Soft Golden & Dark Overlay */}
@@ -228,7 +228,7 @@ export default async function HomePage({ params }: HomeProps) {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 flex flex-col gap-28 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col gap-28 w-full">
         {/* Carousel Highlights of the 10th Edition */}
         <section className="flex flex-col gap-8">
           <div>
