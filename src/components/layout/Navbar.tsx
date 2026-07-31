@@ -67,7 +67,7 @@ export function Navbar({ locale }: NavbarProps) {
             ))}
           </nav>
 
-          {/* Right actions (Language & Admin) */}
+          {/* Right actions (Language switch only) */}
           <div className="hidden lg:flex items-center gap-4">
             {/* Language Switch */}
             <button
@@ -77,14 +77,6 @@ export function Navbar({ locale }: NavbarProps) {
               <Globe size={14} />
               <span>{locale === 'fr' ? 'EN' : 'FR'}</span>
             </button>
-
-            {/* Dashboard Link */}
-            <Link href={`/${locale}/connexion`}>
-              <Button variant="outline" size="sm" className="flex items-center gap-1.5 uppercase tracking-wider text-[10px]">
-                <LogIn size={12} />
-                <span>{locale === 'en' ? 'Admin' : 'Connexion'}</span>
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -127,15 +119,6 @@ export function Navbar({ locale }: NavbarProps) {
               </Link>
             ))}
           </nav>
-          
-          <div className="pt-4 border-t border-border-color flex justify-between items-center">
-            <Link href={`/${locale}/connexion`} onClick={() => setIsOpen(false)} className="w-full">
-              <Button variant="outline" size="md" className="w-full flex items-center justify-center gap-2 uppercase tracking-widest text-xs">
-                <LogIn size={14} />
-                <span>{locale === 'en' ? 'Admin Access' : 'Accès Administration'}</span>
-              </Button>
-            </Link>
-          </div>
         </div>
       )}
     </header>

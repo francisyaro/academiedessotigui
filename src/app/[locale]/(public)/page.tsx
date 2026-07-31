@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { getPartners, getArticles } from '@/lib/services'
+import { getPartners } from '@/lib/services'
 import { Countdown } from '@/components/ui/Countdown'
 import { Button } from '@/components/ui/Button'
 import { LaureatesGrid } from '@/components/ui/LaureatesGrid'
 import { HighlightsCarousel } from '@/components/ui/HighlightsCarousel'
-import { Calendar, Newspaper } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 
 interface HomeProps {
   params: Promise<{ locale: string }>
@@ -16,7 +16,6 @@ export default async function HomePage({ params }: HomeProps) {
   
   // Fetch data from service
   const partners = await getPartners()
-  const articles = await getArticles()
 
   const isEn = locale === 'en'
 
@@ -294,58 +293,6 @@ export default async function HomePage({ params }: HomeProps) {
           </div>
         </section>
 
-        {/* 7. News Section */}
-        <section className="flex flex-col gap-8">
-          <div className="flex justify-between items-end">
-            <div>
-              <h2 className="font-serif text-3xl font-bold text-ivory tracking-tight mb-2">
-                {isEn ? 'Latest News' : 'Actualités'}
-              </h2>
-              <p className="text-xs text-gray-text uppercase tracking-widest">
-                {isEn ? 'Announcements and interviews' : 'Les annonces et interviews récentes'}
-              </p>
-            </div>
-            <Link
-              href={`/${locale}/actualites`}
-              className="text-xs font-bold uppercase tracking-widest text-gold-light hover:text-gold-primary transition-colors duration-300"
-            >
-              {isEn ? 'View all news →' : 'Toutes les actualités →'}
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {articles.map((article) => (
-              <div key={article.slug} className="group bg-dark-surface border border-border-color/60 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
-                <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto overflow-hidden bg-black shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={article.cover_path}
-                    alt={article.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] text-gold-light uppercase tracking-widest font-semibold flex items-center gap-1.5 mb-2">
-                      <Newspaper size={12} />
-                      {article.article_type}
-                    </span>
-                    <h3 className="text-base font-bold text-ivory group-hover:text-gold-light transition-colors duration-300 line-clamp-2 mb-2">
-                      <Link href={`/${locale}/actualites/${article.slug}`}>
-                        {article.title}
-                      </Link>
-                    </h3>
-                    <p className="text-xs text-gray-text leading-relaxed line-clamp-3 mb-4">
-                      {article.excerpt}
-                    </p>
-                  </div>
-                  <span className="text-[10px] text-gray-text">
-                    {article.published_at}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* 7. Partners Section */}
         <section className="flex flex-col gap-12 text-center border-t border-border-color/30 pt-16 pb-12 overflow-hidden">
