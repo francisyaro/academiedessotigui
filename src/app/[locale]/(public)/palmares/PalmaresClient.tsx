@@ -460,7 +460,113 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
       name_en: '7th Edition',
       year: 2022,
       location: 'Ouagadougou, Burkina Faso',
-      categories: []
+      categories: [
+        {
+          id: 'meilleur_acteur_ac_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique Centrale',
+          name_en: 'Sotigui of the Best Actor of Central Africa',
+          nominees: [
+            {
+              name: 'Landry Nguetsa',
+              country: 'Cameroun',
+              work: '"KANKAN" de Joseph Akama',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Doria LEMBE',
+              country: 'Congo Brazzaville',
+              work: '"PARCOURS" de BONGO Said',
+              image: '/images/afrique_centrale_2022_doria_lembe.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Adjani Nancy NGELEKWA',
+              country: 'RD Congo',
+              work: '"ADJANI" de Julio Lolo BIBAS',
+              image: '/images/afrique_centrale_2022_adjani_nancy_ngelekwa.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_ng_gh_7e',
+          name_fr: 'Sotigui du Meilleur Acteur Nigeria / Ghana',
+          name_en: 'Sotigui of the Best Actor Nigeria / Ghana',
+          nominees: [
+            {
+              name: 'Lydia Forson',
+              country: 'Ghana',
+              work: '"BORGA" de York-Fabian Raabe',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Blossom Chukwujekwu',
+              country: 'Nigéria',
+              work: '"THE RISE OF IGBINOGUN" de Onesoul',
+              image: '/images/nigeria_ghana_2022_blossom_chukwujekwu.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleure_interpretation_feminine_serie_tv_7e',
+          name_fr: 'Sotigui de la Meilleure Interprétation Féminine Africaine Série TV',
+          name_en: 'Sotigui of the Best Female Interpretation African TV Show',
+          nominees: [
+            {
+              name: 'Khady Touré',
+              country: 'Côte d\'Ivoire',
+              work: '"L\'INDOMPTABLE" de Franck Vlehi',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Awa Djiga KANE',
+              country: 'Sénégal',
+              work: '"VAUTOURS" de Ibou GAYE',
+              image: '/images/serie_tv_feminin_2022_awa_djiga_kane.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_an_7e',
+          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique du Nord',
+          name_en: 'Sotigui of the Best Actor of North Africa',
+          nominees: [
+            {
+              name: 'Fatma Ben Saidane',
+              country: 'Tunisie',
+              work: '"J\'IRAI AU DIABLE" de Ismahane Lahmar',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            },
+            {
+              name: 'Demyana NASSAR',
+              country: 'Égypte',
+              work: '"FEATHERS" de Omar EL ZOHANY',
+              image: '/images/afrique_du_nord_2022_demyana_nassar.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'sotigui_d_or_7e',
+          name_fr: 'Sotigui d\'Or 2022',
+          name_en: 'Sotigui d\'Or 2022',
+          nominees: [
+            {
+              name: 'Roger Felmont Sallah',
+              country: 'Sénégal',
+              work: '"SALOUM" de Jean-Luc Herbulot',
+              image: '/images/trophy_dark.jpg',
+              isWinner: true
+            }
+          ]
+        }
+      ]
     },
     {
       id: '6e',
