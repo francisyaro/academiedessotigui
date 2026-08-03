@@ -19,58 +19,58 @@ interface SotiguiTVProps {
 
 const VIDEOS_DATA: VideoItem[] = [
   {
-    id: 'Y3G7zG9e_l8', // Real/mock YouTube ID
-    titleFr: 'Grand entretien avec Adrienne KOUTOUAN - Sotigui d\'Honneur',
-    titleEn: 'Grand interview with Adrienne KOUTOUAN - Sotigui of Honor',
+    id: '6aH6d1kKcVg',
+    titleFr: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
+    titleEn: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
     category: 'interviews',
-    duration: '15:24',
-    publishedAtFr: '28 juillet 2026',
-    publishedAtEn: 'July 28, 2026'
+    duration: '06:42',
+    publishedAtFr: '15 novembre 2023',
+    publishedAtEn: 'November 15, 2023'
   },
   {
-    id: 'qP24Uv1S8K4',
-    titleFr: 'Ildevert MEDA : Retour sur son parcours d\'acteur et metteur en scène',
-    titleEn: 'Ildevert MEDA: Looking back at his actor and director journey',
-    category: 'interviews',
-    duration: '18:10',
-    publishedAtFr: '15 mai 2026',
-    publishedAtEn: 'May 15, 2026'
-  },
-  {
-    id: 'zG8X2_wK1sA',
-    titleFr: 'Cérémonie de Clôture et remise des Sotigui d\'Or 2025',
-    titleEn: 'Closing Ceremony and Presentation of the Sotigui d\'Or 2025',
+    id: 'it1pPuGmvYk',
+    titleFr: 'Lauréats SOTIGUI AWARDS 2024',
+    titleEn: 'Lauréats SOTIGUI AWARDS 2024',
     category: 'galas',
-    duration: '45:12',
-    publishedAtFr: '16 novembre 2025',
-    publishedAtEn: 'November 16, 2025'
+    duration: '22:15',
+    publishedAtFr: '16 novembre 2024',
+    publishedAtEn: 'November 16, 2024'
   },
   {
-    id: 'tV9mX4_wL8k',
-    titleFr: 'Tapis Rouge & Arrivée des stars de la 10ème Édition',
-    titleEn: 'Red Carpet & Stars Arrival of the 10th Edition',
+    id: 'V0HxQzTIBOc',
+    titleFr: 'Vidéo Teaser SOTIGUI AWARDS 2023',
+    titleEn: 'Teaser Video SOTIGUI AWARDS 2023',
     category: 'galas',
-    duration: '12:35',
-    publishedAtFr: '15 novembre 2025',
-    publishedAtEn: 'November 15, 2025'
+    duration: '02:05',
+    publishedAtFr: '29 juillet 2023',
+    publishedAtEn: 'July 29, 2023'
   },
   {
-    id: 'wL8sZ2_wK4m',
-    titleFr: 'Conférence de presse : Lancement officiel des Sotigui 2026',
-    titleEn: 'Press Conference: Official Launch of the Sotigui 2026',
-    category: 'behind-scenes',
-    duration: '22:45',
-    publishedAtFr: '29 juillet 2026',
-    publishedAtEn: 'July 29, 2026'
+    id: 'ELCjqKjvSZY',
+    titleFr: 'Temps forts SOTIGUI AWARDS 2018',
+    titleEn: 'Highlights SOTIGUI AWARDS 2018',
+    category: 'galas',
+    duration: '04:12',
+    publishedAtFr: '18 novembre 2018',
+    publishedAtEn: 'November 18, 2018'
   },
   {
-    id: 'kL9wX2_zS8a',
-    titleFr: 'Projet "La Rue des Étoiles Kwamé N\'Krumah" : Les temps forts',
-    titleEn: 'Project "Kwamé N\'Krumah Street of Stars": The highlights',
+    id: 'hEjPw5koYxw',
+    titleFr: 'Académie des SOTIGUI - Projet Amazone',
+    titleEn: 'Academy of SOTIGUI - Amazon Project',
     category: 'behind-scenes',
-    duration: '08:50',
-    publishedAtFr: '12 avril 2026',
-    publishedAtEn: 'April 12, 2026'
+    duration: '11:45',
+    publishedAtFr: '14 mai 2021',
+    publishedAtEn: 'May 14, 2021'
+  },
+  {
+    id: 'TIy0gu4iwnc',
+    titleFr: 'Vote du public : Les Nominés Burkinabé SOTIGUI AWARDS 2017',
+    titleEn: 'Public Vote: Burkinabe Nominees SOTIGUI AWARDS 2017',
+    category: 'behind-scenes',
+    duration: '03:50',
+    publishedAtFr: '12 octobre 2017',
+    publishedAtEn: 'October 12, 2017'
   }
 ]
 
@@ -153,13 +153,9 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`https://img.youtube.com/vi/${spotlightVideo.id}/maxresdefault.jpg`}
+                src={`https://img.youtube.com/vi/${spotlightVideo.id}/hqdefault.jpg`}
                 alt={isEn ? spotlightVideo.titleEn : spotlightVideo.titleFr}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                onError={(e) => {
-                  // Fallback if maxresdefault doesn't exist
-                  (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${spotlightVideo.id}/0.jpg`
-                }}
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full bg-gold-primary text-black flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110">
@@ -210,7 +206,7 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
                 <div className="relative aspect-video w-24 shrink-0 rounded-lg overflow-hidden bg-black">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
+                    src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                     alt={isEn ? video.titleEn : video.titleFr}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
