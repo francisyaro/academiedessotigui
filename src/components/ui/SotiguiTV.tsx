@@ -11,6 +11,8 @@ interface VideoItem {
   duration: string
   publishedAtFr: string
   publishedAtEn: string
+  // Date timestamp for strict sorting
+  timestamp: number
 }
 
 interface SotiguiTVProps {
@@ -18,6 +20,7 @@ interface SotiguiTVProps {
 }
 
 const VIDEOS_DATA: VideoItem[] = [
+  // --- 2024 ---
   {
     id: 'it1pPuGmvYk',
     titleFr: 'Lauréats SOTIGUI AWARDS 2024',
@@ -25,133 +28,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'galas',
     duration: '22:15',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
-  },
-  {
-    id: '6aH6d1kKcVg',
-    titleFr: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
-    titleEn: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
-    category: 'interviews',
-    duration: '06:42',
-    publishedAtFr: '15 novembre 2023',
-    publishedAtEn: 'November 15, 2023'
-  },
-  {
-    id: 'V0HxQzTIBOc',
-    titleFr: 'Vidéo Teaser SOTIGUI AWARDS 2023',
-    titleEn: 'Teaser Video SOTIGUI AWARDS 2023',
-    category: 'galas',
-    duration: '02:05',
-    publishedAtFr: '29 juillet 2023',
-    publishedAtEn: 'July 29, 2023'
-  },
-  {
-    id: 'z_EDhmB_kCQ',
-    titleFr: 'Sotigui Awards 2018 Black Panthers',
-    titleEn: 'Sotigui Awards 2018 Black Panthers',
-    category: 'galas',
-    duration: '03:15',
-    publishedAtFr: '18 novembre 2018',
-    publishedAtEn: 'November 18, 2018'
-  },
-  {
-    id: 'e5KZeAoSBjk',
-    titleFr: 'Teaser SOTIGUI AWARDS 2019',
-    titleEn: 'Teaser SOTIGUI AWARDS 2019',
-    category: 'galas',
-    duration: '01:30',
-    publishedAtFr: '30 juillet 2019',
-    publishedAtEn: 'July 30, 2019'
-  },
-  {
-    id: 'ELCjqKjvSZY',
-    titleFr: 'Temps forts SOTIGUI AWARDS 2018',
-    titleEn: 'Highlights SOTIGUI AWARDS 2018',
-    category: 'galas',
-    duration: '04:12',
-    publishedAtFr: '18 novembre 2018',
-    publishedAtEn: 'November 18, 2018'
-  },
-  {
-    id: 'CR91FsUQRC0',
-    titleFr: 'Temps forts SOTIGUI AWARDS 2019',
-    titleEn: 'Highlights SOTIGUI AWARDS 2019',
-    category: 'galas',
-    duration: '05:40',
-    publishedAtFr: '30 novembre 2019',
-    publishedAtEn: 'November 30, 2019'
-  },
-  {
-    id: 'EbbvJs0_SGA',
-    titleFr: 'Après les César, les Oscar, les Sotigui du cinéma africain',
-    titleEn: 'After the Césars and Oscars, the Sotiguis of African cinema',
-    category: 'galas',
-    duration: '03:22',
-    publishedAtFr: '23 mai 2018',
-    publishedAtEn: 'May 23, 2018'
-  },
-  {
-    id: '4bL3DYb6wg4',
-    titleFr: 'NOMINES SOTIGUI AWARDS 2017',
-    titleEn: 'NOMINEES SOTIGUI AWARDS 2017',
-    category: 'galas',
-    duration: '05:08',
-    publishedAtFr: '10 octobre 2017',
-    publishedAtEn: 'October 10, 2017'
-  },
-  {
-    id: 'TIy0gu4iwnc',
-    titleFr: 'Vote du public : Les Nominés Burkinabé SOTIGUI AWARDS 2017',
-    titleEn: 'Public Vote: Burkinabe Nominees SOTIGUI AWARDS 2017',
-    category: 'behind-scenes',
-    duration: '03:50',
-    publishedAtFr: '12 octobre 2017',
-    publishedAtEn: 'October 12, 2017'
-  },
-  {
-    id: 'HDI-ixdeC20',
-    titleFr: 'HOMMAGE POSTHUME',
-    titleEn: 'POSTHUMOUS TRIBUTE',
-    category: 'behind-scenes',
-    duration: '04:45',
-    publishedAtFr: '20 novembre 2018',
-    publishedAtEn: 'November 20, 2018'
-  },
-  {
-    id: 'D0KUlywKHtY',
-    titleFr: 'SPOT LA NUIT DES SOTIGUI 2016 - SALLE DES BANQUETS DE OUAGA 2000',
-    titleEn: 'SPOT THE NIGHT OF SOTIGUI 2016 - OUAGA 2000 BANQUET HALL',
-    category: 'galas',
-    duration: '00:45',
-    publishedAtFr: '10 mai 2016',
-    publishedAtEn: 'May 10, 2016'
-  },
-  {
-    id: 'i21R1j4phlY',
-    titleFr: 'TEASER LES SOTIGUI AWARDS "C\'est l\'Afrique qui gagne"',
-    titleEn: 'TEASER THE SOTIGUI AWARDS "Africa Wins"',
-    category: 'galas',
-    duration: '01:50',
-    publishedAtFr: '15 octobre 2017',
-    publishedAtEn: 'October 15, 2017'
-  },
-  {
-    id: 'nWRDXryS0Ow',
-    titleFr: 'Académie des SOTIGUI - Projet Amazone - Bon',
-    titleEn: 'Academy of SOTIGUI - Amazon Project - Best',
-    category: 'behind-scenes',
-    duration: '08:15',
-    publishedAtFr: '14 mai 2021',
-    publishedAtEn: 'May 14, 2021'
-  },
-  {
-    id: 'hEjPw5koYxw',
-    titleFr: 'Académie des SOTIGUI - Projet Amazone',
-    titleEn: 'Academy of SOTIGUI - Amazon Project',
-    category: 'behind-scenes',
-    duration: '11:45',
-    publishedAtFr: '14 mai 2021',
-    publishedAtEn: 'May 14, 2021'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'BTmp30WzZPs',
@@ -160,7 +38,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:40',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'ntwFNRocy5I',
@@ -169,7 +48,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '03:12',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'cxb-CKTQzgA',
@@ -178,7 +58,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:18',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: '4Sxw1YtzfmI',
@@ -187,7 +68,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '01:55',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'XmHFclMOx3Y',
@@ -196,7 +78,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:10',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'mpRNsSL2y2M',
@@ -205,7 +88,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '03:05',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'P9ol6SxeCBQ',
@@ -214,7 +98,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:30',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: '0kmonHNeD9A',
@@ -223,7 +108,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:08',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'DxVSJV8D8U4',
@@ -232,7 +118,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:45',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: '6jABReXJTvs',
@@ -241,7 +128,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '03:00',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: '2m30p3CRG8Q',
@@ -250,7 +138,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '02:15',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
   },
   {
     id: 'vj-SONnmDr4',
@@ -259,7 +148,29 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '03:35',
     publishedAtFr: '16 novembre 2024',
-    publishedAtEn: 'November 16, 2024'
+    publishedAtEn: 'November 16, 2024',
+    timestamp: 20241116
+  },
+  // --- 2023 ---
+  {
+    id: 'MCmCd74Swdo',
+    titleFr: 'Remise du trophée de Chinedu Ikedieze',
+    titleEn: 'Presentation of the trophy to Chinedu Ikedieze',
+    category: 'galas',
+    duration: '04:15',
+    publishedAtFr: '16 novembre 2023',
+    publishedAtEn: 'November 16, 2023',
+    timestamp: 20231116
+  },
+  {
+    id: '6aH6d1kKcVg',
+    titleFr: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
+    titleEn: 'SOTIGUI AWARDS 2023 - GUEST STAR - CHINEDU IKEDIEZE MFR',
+    category: 'interviews',
+    duration: '06:42',
+    publishedAtFr: '15 novembre 2023',
+    publishedAtEn: 'November 15, 2023',
+    timestamp: 20231115
   },
   {
     id: '4V-bmyoUB-o',
@@ -268,7 +179,18 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '05:12',
     publishedAtFr: '15 novembre 2023',
-    publishedAtEn: 'November 15, 2023'
+    publishedAtEn: 'November 15, 2023',
+    timestamp: 20231115
+  },
+  {
+    id: 'V0HxQzTIBOc',
+    titleFr: 'Vidéo Teaser SOTIGUI AWARDS 2023',
+    titleEn: 'Teaser Video SOTIGUI AWARDS 2023',
+    category: 'galas',
+    duration: '02:05',
+    publishedAtFr: '29 juillet 2023',
+    publishedAtEn: 'July 29, 2023',
+    timestamp: 20230729
   },
   {
     id: 'z9ppgA0Z-LE',
@@ -277,7 +199,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '08:45',
     publishedAtFr: '24 juillet 2023',
-    publishedAtEn: 'July 24, 2023'
+    publishedAtEn: 'July 24, 2023',
+    timestamp: 20230724
   },
   {
     id: 'ot_7j75TD7U',
@@ -286,16 +209,8 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '10:30',
     publishedAtFr: '24 juillet 2023',
-    publishedAtEn: 'July 24, 2023'
-  },
-  {
-    id: 'MCmCd74Swdo',
-    titleFr: 'Remise du trophée de Chinedu Ikedieze',
-    titleEn: 'Presentation of the trophy to Chinedu Ikedieze',
-    category: 'galas',
-    duration: '04:15',
-    publishedAtFr: '16 novembre 2023',
-    publishedAtEn: 'November 16, 2023'
+    publishedAtEn: 'July 24, 2023',
+    timestamp: 20230724
   },
   {
     id: 'U2bxeL4Sgio',
@@ -304,8 +219,10 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'interviews',
     duration: '09:20',
     publishedAtFr: '24 juillet 2023',
-    publishedAtEn: 'July 24, 2023'
+    publishedAtEn: 'July 24, 2023',
+    timestamp: 20230724
   },
+  // --- 2022 ---
   {
     id: 'TpyylkRpuW8',
     titleFr: 'SOIREE VIP SOTIGUI AWARDS : les acteurs apprécient l\'initiative de Canal+ Burkina',
@@ -313,7 +230,133 @@ const VIDEOS_DATA: VideoItem[] = [
     category: 'galas',
     duration: '06:10',
     publishedAtFr: '17 novembre 2022',
-    publishedAtEn: 'November 17, 2022'
+    publishedAtEn: 'November 17, 2022',
+    timestamp: 20221117
+  },
+  // --- 2021 ---
+  {
+    id: 'hEjPw5koYxw',
+    titleFr: 'Académie des SOTIGUI - Projet Amazone',
+    titleEn: 'Academy of SOTIGUI - Amazon Project',
+    category: 'behind-scenes',
+    duration: '11:45',
+    publishedAtFr: '14 mai 2021',
+    publishedAtEn: 'May 14, 2021',
+    timestamp: 20210514
+  },
+  {
+    id: 'nWRDXryS0Ow',
+    titleFr: 'Académie des SOTIGUI - Projet Amazone - Bon',
+    titleEn: 'Academy of SOTIGUI - Amazon Project - Best',
+    category: 'behind-scenes',
+    duration: '08:15',
+    publishedAtFr: '14 mai 2021',
+    publishedAtEn: 'May 14, 2021',
+    timestamp: 20210514
+  },
+  // --- 2019 ---
+  {
+    id: 'CR91FsUQRC0',
+    titleFr: 'Temps forts SOTIGUI AWARDS 2019',
+    titleEn: 'Highlights SOTIGUI AWARDS 2019',
+    category: 'galas',
+    duration: '05:40',
+    publishedAtFr: '30 novembre 2019',
+    publishedAtEn: 'November 30, 2019',
+    timestamp: 20191130
+  },
+  {
+    id: 'e5KZeAoSBjk',
+    titleFr: 'Teaser SOTIGUI AWARDS 2019',
+    titleEn: 'Teaser SOTIGUI AWARDS 2019',
+    category: 'galas',
+    duration: '01:30',
+    publishedAtFr: '30 juillet 2019',
+    publishedAtEn: 'July 30, 2019',
+    timestamp: 20190730
+  },
+  // --- 2018 ---
+  {
+    id: 'HDI-ixdeC20',
+    titleFr: 'HOMMAGE POSTHUME',
+    titleEn: 'POSTHUMOUS TRIBUTE',
+    category: 'behind-scenes',
+    duration: '04:45',
+    publishedAtFr: '20 novembre 2018',
+    publishedAtEn: 'November 20, 2018',
+    timestamp: 20181120
+  },
+  {
+    id: 'z_EDhmB_kCQ',
+    titleFr: 'Sotigui Awards 2018 Black Panthers',
+    titleEn: 'Sotigui Awards 2018 Black Panthers',
+    category: 'galas',
+    duration: '03:15',
+    publishedAtFr: '18 novembre 2018',
+    publishedAtEn: 'November 18, 2018',
+    timestamp: 20181118
+  },
+  {
+    id: 'ELCjqKjvSZY',
+    titleFr: 'Temps forts SOTIGUI AWARDS 2018',
+    titleEn: 'Highlights SOTIGUI AWARDS 2018',
+    category: 'galas',
+    duration: '04:12',
+    publishedAtFr: '18 novembre 2018',
+    publishedAtEn: 'November 18, 2018',
+    timestamp: 20181118
+  },
+  {
+    id: 'EbbvJs0_SGA',
+    titleFr: 'Après les César, les Oscar, les Sotigui du cinéma africain',
+    titleEn: 'After the Césars and Oscars, the Sotiguis of African cinema',
+    category: 'galas',
+    duration: '03:22',
+    publishedAtFr: '23 mai 2018',
+    publishedAtEn: 'May 23, 2018',
+    timestamp: 20180523
+  },
+  // --- 2017 ---
+  {
+    id: 'i21R1j4phlY',
+    titleFr: 'TEASER LES SOTIGUI AWARDS "C\'est l\'Afrique qui gagne"',
+    titleEn: 'TEASER THE SOTIGUI AWARDS "Africa Wins"',
+    category: 'galas',
+    duration: '01:50',
+    publishedAtFr: '15 octobre 2017',
+    publishedAtEn: 'October 15, 2017',
+    timestamp: 20171015
+  },
+  {
+    id: 'TIy0gu4iwnc',
+    titleFr: 'Vote du public : Les Nominés Burkinabé SOTIGUI AWARDS 2017',
+    titleEn: 'Public Vote: Burkinabe Nominees SOTIGUI AWARDS 2017',
+    category: 'behind-scenes',
+    duration: '03:50',
+    publishedAtFr: '12 octobre 2017',
+    publishedAtEn: 'October 12, 2017',
+    timestamp: 20171012
+  },
+  {
+    id: '4bL3DYb6wg4',
+    titleFr: 'NOMINES SOTIGUI AWARDS 2017',
+    titleEn: 'NOMINEES SOTIGUI AWARDS 2017',
+    category: 'galas',
+    duration: '05:08',
+    publishedAtFr: '10 octobre 2017',
+    publishedAtEn: 'October 10, 2017',
+    timestamp: 20171010
+  },
+  // --- 2016 ---
+  {
+    id: 'D0KUlywKHtY',
+    titleFr: 'SPOT LA NUIT DES SOTIGUI 2016 - SALLE DES BANQUETS DE OUAGA 2000',
+    titleEn: 'SPOT THE NIGHT OF SOTIGUI 2016 - OUAGA 2000 BANQUET HALL',
+    category: 'galas',
+    duration: '00:45',
+    publishedAtFr: '10 mai 2016',
+    publishedAtEn: 'May 10, 2016',
+    timestamp: 20160510
   }
 ]
 
@@ -323,7 +366,7 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
 
-  // Filtered and searched videos list
+  // Filtered and strictly sorted (newest to oldest) videos list
   const filteredVideos = useMemo(() => {
     return VIDEOS_DATA.filter((video) => {
       const matchesCategory = activeCategory === 'all' || video.category === activeCategory
@@ -332,7 +375,7 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
         video.titleFr.toLowerCase().includes(query) ||
         video.titleEn.toLowerCase().includes(query)
       return matchesCategory && matchesSearch
-    })
+    }).sort((a, b) => b.timestamp - a.timestamp) // Descending sort (newest first)
   }, [activeCategory, searchQuery])
 
   // Spotlight video is the first item matching current filters
@@ -348,7 +391,7 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
             Sotigui <span className="gold-text-gradient">TV</span>
           </h2>
           <p className="text-xs text-gold-light uppercase tracking-widest font-semibold">
-            {isEn ? 'Official YouTube Channel Videos' : 'Toutes les vidéos de notre chaîne YouTube'}
+            {isEn ? 'Official YouTube Channel Videos (Newest First)' : 'Toutes les vidéos du plus récent au plus ancien'}
           </p>
         </div>
 
@@ -508,7 +551,7 @@ export function SotiguiTV({ locale }: SotiguiTVProps) {
                   </div>
                 </div>
                 <div className="flex flex-col justify-between py-1 flex-grow">
-                  <h4 className="text-xs font-bold text-ivory leading-snug line-clamp-2 group-hover:text-gold-light transition-colors">
+                  <h4 className="text-xs font-bold text-ivory leading-snug line-clamp-2 group-hover:text-gold-light transition-colors font-sans">
                     {isEn ? video.titleEn : video.titleFr}
                   </h4>
                   <div className="flex justify-between items-center text-[10px] text-gray-text gap-2 mt-2">
