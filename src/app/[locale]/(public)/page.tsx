@@ -5,6 +5,7 @@ import { Countdown } from '@/components/ui/Countdown'
 import { Button } from '@/components/ui/Button'
 import { LaureatesGrid } from '@/components/ui/LaureatesGrid'
 import { HighlightsCarousel } from '@/components/ui/HighlightsCarousel'
+import { SotiguiTV } from '@/components/ui/SotiguiTV'
 import { Calendar } from 'lucide-react'
 
 interface HomeProps {
@@ -292,6 +293,9 @@ export default async function HomePage({ params }: HomeProps) {
             </div>
           </div>
         </section>
+
+        {/* Sotigui TV YouTube Showcase */}
+        <SotiguiTV locale={locale} />
 
 
         {/* 7. Partners Section */}
