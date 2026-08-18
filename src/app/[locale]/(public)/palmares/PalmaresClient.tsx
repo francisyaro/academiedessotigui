@@ -528,6 +528,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleur_acteur_ng_gh_10e",
+          name_fr: "Sotigui du Meilleur Acteur Nigeria / Ghana",
+          name_en: "Sotigui of the Best Actor Nigeria / Ghana",
+          nominees: [
+            {
+              name: "Kwadwo NKANSAH",
+              country: "Ghana",
+              work: "CAPITAIN IBRAHIM TRAORE",
+              image: "/images/nominee_10_kwadwo_nkansah.jpg",
+              isWinner: true
+            },
+            {
+              name: "Wole OJO",
+              country: "Nigéria",
+              work: "L'HOMME EST MORT",
+              image: "/images/nominee_10_wole_ojo.jpg",
+              isWinner: false
+            },
+            {
+              name: "Nnamdi AGBO",
+              country: "Nigéria",
+              work: "LE DETOURNEMENT (HIJACK 93)",
+              image: "/images/nominee_10_nnamdi_agbo.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
