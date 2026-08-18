@@ -229,6 +229,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "Soumsoum, the Night of the Stars",
               image: "/images/nominee_11_achouackh_souleymane.jpg",
               isWinner: false
+            },
+            {
+              name: "Emy Dany BASSONG",
+              country: "Cameroun",
+              work: "LE PRIX DU POUVOIR",
+              image: "/images/nominee_11_emy_dany_bassong.jpg",
+              isWinner: false
             }
           ]
         },
@@ -242,6 +249,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Ghana",
               work: "VIRGIN OF THE THRONE",
               image: "/images/nominee_11_adjetey_anang.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_ae_11e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique de l'Est",
+          name_en: "Sotigui of the Best Actor of East Africa",
+          nominees: [
+            {
+              name: "Clémentine U. NYIRINKINDI",
+              country: "Rwanda",
+              work: "Ben'imana",
+              image: "/images/nominee_11_clementine_nyirinkindi.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_diaspora_11e",
+          name_fr: "Sotigui du Meilleur Acteur de la Diaspora",
+          name_en: "Sotigui of the Best Actor of the Diaspora",
+          nominees: [
+            {
+              name: "Eriq EBOUANEY",
+              country: "France/Cameroun",
+              work: "L2: Empuraan",
+              image: "/images/nominee_11_eriq_ebouaney.jpg",
               isWinner: false
             }
           ]
