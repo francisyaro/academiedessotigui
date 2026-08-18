@@ -556,6 +556,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleure_interpretation_feminine_serie_tv_10e",
+          name_fr: "Meilleure Interprétation Féminine Africaine – Série TV",
+          name_en: "Best Female Performance – TV Series",
+          nominees: [
+            {
+              name: "Eve GUEHI",
+              country: "Côte d'Ivoire",
+              work: "LES NOUNOUS",
+              image: "/images/nominee_10_eve_guehi.jpg",
+              isWinner: true
+            },
+            {
+              name: "Hortavie MPONDO",
+              country: "Cameroun",
+              work: "REVELATIONS SCANDALEUSES",
+              image: "/images/nominee_10_hortavie_mpondo.jpg",
+              isWinner: false
+            },
+            {
+              name: "Keisha Khadija DEME",
+              country: "Sénégal",
+              work: "KEY & ZA",
+              image: "/images/nominee_10_keisha_khadija_deme.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
