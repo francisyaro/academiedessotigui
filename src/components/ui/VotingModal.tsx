@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { X, ExternalLink, Sparkles, Loader2 } from 'lucide-react'
 
 interface VotingModalProps {
@@ -12,6 +13,12 @@ interface VotingModalProps {
 export function VotingModal({ isOpen, onClose, locale }: VotingModalProps) {
   const isEn = locale === 'en'
   const [isLoading, setIsLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
+
+  // Wait until mounted on client-side
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Prevent scroll when modal is open
   useEffect(() => {
@@ -26,13 +33,13 @@ export function VotingModal({ isOpen, onClose, locale }: VotingModalProps) {
     }
   }, [isOpen])
 
-  if (!isOpen) return null
+  if (!isOpen || !mounted) return null
 
   const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSc00TsfO7dL_e4E3_uWAxX8stMc80CoSj-ff8z3-muog8SyPQ/viewform?embedded=true"
   const directLink = "https://forms.gle/e8ANJa7vKQ6944nT8"
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in">
+  return createPortal(
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
       {/* Backdrop close */}
       <div className="absolute inset-0 cursor-default" onClick={onClose} />
 
@@ -101,6 +108,7 @@ export function VotingModal({ isOpen, onClose, locale }: VotingModalProps) {
           </iframe>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
