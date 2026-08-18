@@ -41,8 +41,45 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
     return found ? found.category_name : slug
   }
 
+  const getHeaderInfo = () => {
+    if (selectedYear === '2026') {
+      return {
+        title: isEn ? 'The Nominees 2026' : 'Les Nominés 2026',
+        subtitle: isEn ? '11th Edition of Sotigui Awards' : '11ème Édition des Sotigui Awards'
+      }
+    } else if (selectedYear === '2025') {
+      return {
+        title: isEn ? 'The Nominees 2025' : 'Les Nominés 2025',
+        subtitle: isEn ? '10th Edition of Sotigui Awards' : '10ème Édition des Sotigui Awards'
+      }
+    } else if (selectedYear === '2022') {
+      return {
+        title: isEn ? 'The Nominees 2022' : 'Les Nominés 2022',
+        subtitle: isEn ? '7th Edition of Sotigui Awards' : '7ème Édition des Sotigui Awards'
+      }
+    } else {
+      return {
+        title: isEn ? 'All Nominees' : 'Tous les Nominés',
+        subtitle: isEn ? 'All Editions of Sotigui Awards' : 'Toutes les éditions des Sotigui Awards'
+      }
+    }
+  }
+
+  const headerInfo = getHeaderInfo()
+
   return (
     <div className="flex flex-col gap-8 w-full">
+      {/* Dynamic Header */}
+      <div className="text-center flex flex-col gap-2 mb-4 animate-fade-in">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold text-ivory tracking-tight">
+          {headerInfo.title}
+        </h1>
+        <p className="text-xs text-gold-light uppercase tracking-widest font-semibold font-serif">
+          {headerInfo.subtitle}
+        </p>
+        <div className="w-16 h-0.5 bg-gold-primary mx-auto mt-2" />
+      </div>
+
       {/* Filters Bar */}
       <div className="bg-dark-surface border border-border-color rounded-2xl p-6 flex flex-col lg:flex-row gap-4 items-center justify-between shadow-xl">
         {/* Search */}
