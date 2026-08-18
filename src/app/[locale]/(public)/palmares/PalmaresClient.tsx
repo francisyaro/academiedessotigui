@@ -584,6 +584,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleure_interpretation_masculine_serie_tv_10e",
+          name_fr: "Meilleure Interprétation Masculine Africaine – Série TV",
+          name_en: "Best Male Performance – TV Series",
+          nominees: [
+            {
+              name: "Moussa SOW",
+              country: "Sénégal",
+              work: "CŒURS BRISES",
+              image: "/images/nominee_10_moussa_sow.jpg",
+              isWinner: true
+            },
+            {
+              name: "Fortune AKAKPO",
+              country: "Côte d'Ivoire",
+              work: "LES NOUNOUS",
+              image: "/images/nominee_10_fortune_akakpo.jpg",
+              isWinner: false
+            },
+            {
+              name: "Femi ADEBAYO",
+              country: "Nigéria",
+              work: "SEVENS DOORS",
+              image: "/images/nominee_10_femi_adebayo.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
