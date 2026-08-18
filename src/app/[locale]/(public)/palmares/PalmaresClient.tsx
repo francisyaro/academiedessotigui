@@ -229,6 +229,20 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "MALDITO AMOR",
               image: "/images/nominee_11_silvio_nascimento.jpg",
               isWinner: false
+            },
+            {
+              name: "Siyabonga SHIBE",
+              country: "Afrique du Sud",
+              work: "Laundry (Uhlanjululo)",
+              image: "/images/nominee_11_siyabonga_shibe.jpg",
+              isWinner: false
+            },
+            {
+              name: "Admiro de Laura MUNGUAMBE",
+              country: "Mozambique",
+              work: "O Profeta",
+              image: "/images/nominee_11_admiro_munguambe.jpg",
+              isWinner: false
             }
           ]
         },
@@ -340,6 +354,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Egypte",
               work: "El Sett",
               image: "/images/nominee_11_mohamed_farrag.jpg",
+              isWinner: false
+            },
+            {
+              name: "Saja KILANI",
+              country: "Tunisie",
+              work: "The Voice of Hind Rajab",
+              image: "/images/nominee_11_saja_kilani.jpg",
               isWinner: false
             }
           ]
