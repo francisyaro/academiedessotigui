@@ -37,921 +37,218 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
   // Complete Palmares Mock Data
   const EDITIONS: Edition[] = [
     {
-      id: '11e',
-      name_fr: '11ème Édition',
-      name_en: '11th Edition',
+      id: "11e",
+      name_fr: "11ème Édition",
+      name_en: "11th Edition",
       year: 2026,
-      location: 'Ouagadougou, Burkina Faso',
+      location: "Ouagadougou, Burkina Faso",
       categories: [
         {
-          id: 'sotigui_du_public',
-          name_fr: 'Sotigui du Public',
-          name_en: 'Sotigui of the Public',
+          id: "sotigui_du_public",
+          name_fr: "Sotigui du Public",
+          name_en: "Sotigui of the Public",
           nominees: [
             {
-              name: 'Eve GUEHI',
-              country: 'Côte d\'Ivoire',
-              work: '"La femme du foyer"',
-              image: '/images/eve_guehi.jpg',
+              name: "Eve GUEHI",
+              country: "Côte d'Ivoire",
+              work: "La femme du foyer",
+              image: "/images/eve_guehi.jpg",
               isWinner: false
             },
             {
-              name: 'Kadhy TOURE',
-              country: 'Côte d\'Ivoire',
-              work: '"La femme du foyer"',
-              image: '/images/serie_tv_feminin_2022_kadhy_toure.jpg',
+              name: "Kadhy TOURE",
+              country: "Côte d'Ivoire",
+              work: "La femme du foyer",
+              image: "/images/serie_tv_feminin_2022_kadhy_toure.jpg",
               isWinner: false
             },
             {
-              name: 'Alassane SY',
-              country: 'Sénégal',
-              work: '"Le Rêve"',
-              image: '/images/laureat_cheikh_babou_gaye.jpg',
+              name: "Alassane SY",
+              country: "Sénégal",
+              work: "Le Rêve",
+              image: "/images/laureat_cheikh_babou_gaye.jpg",
               isWinner: false
             },
             {
-              name: 'Hafissatou COULIBALY',
-              country: 'Burkina Faso',
-              work: '"La Traversée"',
-              image: '/images/burkina_faso_feminin_coulibaly_hafissatou.jpg',
+              name: "Hafissatou COULIBALY",
+              country: "Burkina Faso",
+              work: "La Traversée",
+              image: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleure_actrice_ao',
-          name_fr: 'Meilleure Actrice de l\'Afrique de l\'Ouest',
-          name_en: 'Best Actress of West Africa',
+          id: "meilleure_actrice_ao",
+          name_fr: "Meilleure Actrice de l'Afrique de l'Ouest",
+          name_en: "Best Actress of West Africa",
           nominees: [
             {
-              name: 'Prisca MARCELENEY',
-              country: 'Côte d\'Ivoire',
-              work: '"Anthôman"',
-              image: '/images/serie_tv_feminin_eve_guehi.jpg',
+              name: "Prisca MARCELENEY",
+              country: "Côte d'Ivoire",
+              work: "Anthôman",
+              image: "/images/serie_tv_feminin_eve_guehi.jpg",
               isWinner: false
             },
             {
-              name: 'Fatoumata DIAWARA',
-              country: 'Mali',
-              work: '"Sira"',
-              image: '/images/burkina_faso_feminin_irene_minoungou.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_feminine_serie',
-          name_fr: 'Meilleure Interprétation Féminine Africaine – Série TV',
-          name_en: 'Best Female Performance – TV Series',
-          nominees: [
-            {
-              name: 'Bienvenue KOFFI (Lady Nature)',
-              country: 'Côte d\'Ivoire',
-              work: '"Les Nounous"',
-              image: '/images/laureat_rosine_nguemgaing.jpg',
+              name: "Fatoumata DIAWARA",
+              country: "Mali",
+              work: "Sira",
+              image: "/images/burkina_faso_feminin_irene_minoungou.jpg",
               isWinner: false
             },
             {
-              name: 'Amina DIALLO',
-              country: 'Sénégal',
-              work: '"Bété"',
-              image: '/images/serie_tv_feminin_keisha_khadija_deme.jpg',
+              name: "Aïda Niatta MAATIKARA",
+              country: "Burkina Faso",
+              work: "Les 3 Lascars 2",
+              image: "/images/nominee_11_aida_maatikara.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleure_interpretation_masculine_serie',
-          name_fr: 'Meilleure Interprétation Masculine Africaine – Série TV',
-          name_en: 'Best Male Performance – TV Series',
+          id: "meilleure_interpretation_feminine_serie",
+          name_fr: "Meilleure Interprétation Féminine Africaine – Série TV",
+          name_en: "Best Female Performance – TV Series",
           nominees: [
             {
-              name: 'Biggy King (Jean-François Ettien)',
-              country: 'Côte d\'Ivoire',
-              work: '"Les Nounous"',
-              image: '/images/espoir_serie_tv_jean_francois_ettien.jpg',
+              name: "Bienvenue KOFFI",
+              country: "Côte d'Ivoire",
+              work: "Les Nounous Saison 3",
+              image: "/images/nominee_11_bienvenue_koffi.jpg",
               isWinner: false
             },
             {
-              name: 'Souleymane Seye NDIAYE',
-              country: 'Sénégal',
-              work: '"Wara"',
-              image: '/images/serie_tv_masculin_moussa_sow.jpg',
+              name: "Astou DIAW",
+              country: "Sénégal",
+              work: "XALISSO",
+              image: "/images/nominee_11_astou_diaw.jpg",
               isWinner: false
             },
             {
-              name: 'Mahamady NANA',
-              country: 'Burkina Faso',
-              work: '"Inspecteur Sori"',
-              image: '/images/afrique_de_l_ouest_mahamady_nana.jpg',
+              name: "Amina DIALLO",
+              country: "Sénégal",
+              work: "Bété",
+              image: "/images/serie_tv_feminin_keisha_khadija_deme.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleur_espoir_serie',
-          name_fr: 'Meilleur Espoir Africain – Série TV',
-          name_en: 'Best African Hope – TV Series',
+          id: "meilleure_interpretation_masculine_serie",
+          name_fr: "Meilleure Interprétation Masculine Africaine – Série TV",
+          name_en: "Best Male Performance – TV Series",
           nominees: [
             {
-              name: 'Marie-Odile GONDO',
-              country: 'Côte d\'Ivoire',
-              work: '"Les Nounous"',
-              image: '/images/laureat_diariatou_sow.jpg',
+              name: "Biggy King (Jean-François Ettien)",
+              country: "Côte d'Ivoire",
+              work: "Les Nounous",
+              image: "/images/espoir_serie_tv_jean_francois_ettien.jpg",
               isWinner: false
             },
             {
-              name: 'Thierry YAKE (DJ TikTok)',
-              country: 'Côte d\'Ivoire',
-              work: '"Y\'a Braquage au village"',
-              image: '/images/espoir_africain_pape_aly_diop.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_jeune_acteur',
-          name_fr: 'Meilleur Jeune Acteur Africain',
-          name_en: 'Best Young African Actor',
-          nominees: [
-            {
-              name: 'Ephraïm OKA',
-              country: 'Côte d\'Ivoire',
-              work: '"Ebinto"',
-              image: '/images/plus_jeune_acteur_marcelino_antonio_ingira.jpg',
+              name: "Souleymane Seye NDIAYE",
+              country: "Sénégal",
+              work: "Wara",
+              image: "/images/serie_tv_masculin_moussa_sow.jpg",
               isWinner: false
             },
             {
-              name: 'Lionel BAMBARA',
-              country: 'Burkina Faso',
-              work: '"L\'ami de mon père"',
-              image: '/images/plus_jeune_acteur_lionel_bambara.jpg',
+              name: "Mahamady NANA",
+              country: "Burkina Faso",
+              work: "Inspecteur Sori",
+              image: "/images/afrique_de_l_ouest_mahamady_nana.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleur_acteur_aa_11e',
-          name_fr: 'Sotigui du Meilleur Acteur de l\'Afrique Australe',
-          name_en: 'Sotigui of the Best Actor of Southern Africa',
+          id: "meilleur_espoir_serie",
+          name_fr: "Meilleur Espoir Africain – Série TV",
+          name_en: "Best African Hope – TV Series",
           nominees: [
             {
-              name: 'Silvio Emerson De Sousa Ferreira DO NASCIMENTO',
-              country: 'Angola',
-              work: '"MALDITO AMOR" de Ladislau RAMALHO',
-              image: '/images/nominee_11_silvio_nascimento.jpg',
+              name: "Marie-Odile GONDO",
+              country: "Côte d'Ivoire",
+              work: "Les Nounous",
+              image: "/images/laureat_diariatou_sow.jpg",
+              isWinner: false
+            },
+            {
+              name: "Thierry YAKE (DJ TikTok)",
+              country: "Côte d'Ivoire",
+              work: "Y'a Braquage au village",
+              image: "/images/espoir_africain_pape_aly_diop.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleur_acteur_ac_11e',
-          name_fr: 'Sotigui du Meilleur Acteur de l\'Afrique Centrale',
-          name_en: 'Sotigui of the Best Actor of Central Africa',
+          id: "meilleur_jeune_acteur",
+          name_fr: "Meilleur Jeune Acteur Africain",
+          name_en: "Best Young African Actor",
           nominees: [
             {
-              name: 'Achouackh ABAKAR SOULEYMANE',
-              country: 'Tchad',
-              work: '"Soumsoum, the Night of the Stars" de Mahamat-Saleh Haroun',
-              image: '/images/nominee_11_achouackh_souleymane.jpg',
+              name: "Ephraïm OKA",
+              country: "Côte d'Ivoire",
+              work: "Ebinto",
+              image: "/images/plus_jeune_acteur_marcelino_antonio_ingira.jpg",
+              isWinner: false
+            },
+            {
+              name: "Lionel BAMBARA",
+              country: "Burkina Faso",
+              work: "L'ami de mon père",
+              image: "/images/plus_jeune_acteur_lionel_bambara.jpg",
               isWinner: false
             }
           ]
         },
         {
-          id: 'meilleur_acteur_ng_11e',
-          name_fr: 'Sotigui du Meilleur Acteur Nigeria / Ghana',
-          name_en: 'Sotigui of the Best Actor Nigeria / Ghana',
+          id: "meilleur_acteur_aa_11e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique Australe",
+          name_en: "Sotigui of the Best Actor of Southern Africa",
           nominees: [
             {
-              name: 'Adjetey ANANG',
-              country: 'Ghana',
-              work: '"VIRGIN OF THE THRONE" de FRANK RAJAH FILMS TV et Haja Marie Films',
-              image: '/images/nominee_11_adjetey_anang.jpg',
+              name: "Silvio Emerson De Sousa Ferreira DO NASCIMENTO",
+              country: "Angola",
+              work: "MALDITO AMOR",
+              image: "/images/nominee_11_silvio_nascimento.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_ac_11e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique Centrale",
+          name_en: "Sotigui of the Best Actor of Central Africa",
+          nominees: [
+            {
+              name: "Achouackh ABAKAR SOULEYMANE",
+              country: "Tchad",
+              work: "Soumsoum, the Night of the Stars",
+              image: "/images/nominee_11_achouackh_souleymane.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_ng_11e",
+          name_fr: "Sotigui du Meilleur Acteur Nigeria / Ghana",
+          name_en: "Sotigui of the Best Actor Nigeria / Ghana",
+          nominees: [
+            {
+              name: "Adjetey ANANG",
+              country: "Ghana",
+              work: "VIRGIN OF THE THRONE",
+              image: "/images/nominee_11_adjetey_anang.jpg",
               isWinner: false
             }
           ]
         }
       ]
-    },
-    {
-      id: '10e',
-      name_fr: '10ème Édition',
-      name_en: '10th Edition',
-      year: 2025,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: [
-        {
-          id: 'meilleur_acteur_ao',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Ouest',
-          name_en: 'Sotigui of the Best Actor of West Africa',
-          nominees: [
-            {
-              name: 'Cheikh Babou GAYE',
-              country: 'Sénégal',
-              work: '"NANAS" de Khalifa BA',
-              image: '/images/afrique_de_l_ouest_cheikh_babou_gaye.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Arthur LONGVILLE',
-              country: 'Côte d\'Ivoire',
-              work: '"LE SACRIFICE" de Landry AGBADOU',
-              image: '/images/afrique_de_l_ouest_arthur_longville.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Mahamady NANA',
-              country: 'Burkina Faso',
-              work: '"KATANGA, LA DANSE DES SCORPIONS" de Dani KOUYATE',
-              image: '/images/afrique_de_l_ouest_mahamady_nana.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_an',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique du Nord',
-          name_en: 'Sotigui of the Best Actor of North Africa',
-          nominees: [
-            {
-              name: 'Nisrin ERRADI',
-              country: 'Maroc',
-              work: '"EVERYBODY LOVES TOUDA" de Nabil AYOUCH',
-              image: '/images/afrique_du_nord_nisrin_erradi.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Sammy LECHEA',
-              country: 'Algérie',
-              work: '"L\'EFFACEMENT" de Karim MOUSSAOUI',
-              image: '/images/afrique_du_nord_sammy_lechea.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Fatma SFAR',
-              country: 'Tunisie',
-              work: '"AICHA" de Mehdi BARSOUI',
-              image: '/images/afrique_du_nord_fatma_sfar.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ae',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Est',
-          name_en: 'Sotigui of the Best Actor of East Africa',
-          nominees: [
-            {
-              name: 'Ednara CONCEIÇÃO',
-              country: 'Angola',
-              work: '"ACAIXA" de Carlos G. RODRIGUES',
-              image: '/images/afrique_de_l_est_ednara_conceicao.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Aline AMike',
-              country: 'Rwanda',
-              work: '"MINIMALS IN A TITANIC WORLD / UN MONDE TITANIC" de Philbert Aimé MBABAZI SHARANGABO',
-              image: '/images/afrique_de_l_est_aline_amike.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Debbie BAKUSEKA',
-              country: 'Ouganda',
-              work: '"PHILBERT AIMÉ MBABAZI SHARANGABO" de Rehema NANFUKA',
-              image: '/images/afrique_de_l_est_debbie_bakuseka.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ac',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique Centrale',
-          name_en: 'Sotigui of the Best Actor of Central Africa',
-          nominees: [
-            {
-              name: 'Thérèse NGONO',
-              country: 'Cameroun',
-              work: '"INDOMPTABLES" de Thomas NGIJOL',
-              image: '/images/afrique_centrale_therese_ngono.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Ferdinand MBAISSANE',
-              country: 'Tchad',
-              work: '"DIYA" de Achille RONAIMOU',
-              image: '/images/afrique_centrale_ferdinand_mbaissane.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Olivier KISSITA',
-              country: 'République du Congo',
-              work: '"SEX LOVE AND MONEY" de Owen BROWN',
-              image: '/images/afrique_centrale_olivier_kissita.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ng_gh',
-          name_fr: 'Sotigui du Meilleur Acteur Nigeria / Ghana',
-          name_en: 'Sotigui of the Best Actor Nigeria / Ghana',
-          nominees: [
-            {
-              name: 'Kwadwo NKANSAH alias Lil Win',
-              country: 'Ghana',
-              work: '"CAPITAIN IBRAHIM TRAORE" de Jackson K. BENTUM',
-              image: '/images/nigeria_ghana_kwadwo_nkansah.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Nnamdi AGBO',
-              country: 'Nigéria',
-              work: '"LE DETOURNEMENT (HIJACK 93)" de Robert O. PETERS',
-              image: '/images/nigeria_ghana_nnamdi_agbo.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Wole OJO',
-              country: 'Nigéria',
-              work: '"L\'HOMME EST MORT" de Awam AMKPA',
-              image: '/images/nigeria_ghana_wole_ojo.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_diaspora',
-          name_fr: 'Sotigui du Meilleur Acteur de la Diaspora',
-          name_en: 'Sotigui of the Best Actor of Diaspora',
-          nominees: [
-            {
-              name: 'Ibrahim MBAYE',
-              country: 'Sénégal',
-              work: '"NI CHAINES NI MAITRES" de Simon MOUTAIROU',
-              image: '/images/diaspora_ibrahim_mbaye.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Taraji P. HENSON',
-              country: 'USA',
-              work: '"A BOUT" de Tyler PERRY',
-              image: '/images/diaspora_taraji_p_henson.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Thomas NGIJOL',
-              country: 'France / Cameroun',
-              work: '"INDOMPTABLES" de Thomas NGIJOL',
-              image: '/images/diaspora_thomas_ngijol.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_feminine_serie_tv',
-          name_fr: 'Sotigui de la Meilleure Interprétation Féminine Africaine Série TV',
-          name_en: 'Sotigui of the Best Female Interpretation African TV Show',
-          nominees: [
-            {
-              name: 'Eve GUEHI',
-              country: 'Côte d\'Ivoire',
-              work: '"LES NOUNOUS" de Franck VLEHI & Marina NIAVA',
-              image: '/images/serie_tv_feminin_eve_guehi.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Hortavie MPONDO',
-              country: 'Cameroun',
-              work: '"REVELATIONS SCANDALEUSES" de Ebenezer KEPOMBIA',
-              image: '/images/serie_tv_feminin_hortavie_mpondo.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Keisha Khadija DEME',
-              country: 'Sénégal',
-              work: '"KEY & ZA" de Peter AYIVOR',
-              image: '/images/serie_tv_feminin_keisha_khadija_deme.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_masculine_serie_tv',
-          name_fr: 'Sotigui de la Meilleure Interprétation Masculine Africaine Série TV',
-          name_en: 'Sotigui of the Best Male Interpretation African TV Show',
-          nominees: [
-            {
-              name: 'Fortune AKAKPO',
-              country: 'Côte d\'Ivoire',
-              work: '"LES NOUNOUS" de Franck VLEHI & Marina NIAVA',
-              image: '/images/serie_tv_masculin_fortune_akakpo.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Moussa SOW',
-              country: 'Sénégal',
-              work: '"CŒURS BRISES" de EVENPROD',
-              image: '/images/serie_tv_masculin_moussa_sow.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Femi ADEBAYO',
-              country: 'Nigéria',
-              work: '"SEVENS DOORS" de Femi ADEBAYO',
-              image: '/images/serie_tv_masculin_femi_adebayo.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_plus_jeune_acteur_africain',
-          name_fr: 'Sotigui du Meilleur plus Jeune Acteur Africain',
-          name_en: 'Sotigui of the Best Younger African Actor',
-          nominees: [
-            {
-              name: 'Rosine NGUEMGAING',
-              country: 'Cameroun',
-              work: '"CLASSE A PART" de Ghislain TOWA',
-              image: '/images/plus_jeune_acteur_rosine_nguemgaing.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Marcelino Antonio INGIRA',
-              country: 'Guinée Bissau',
-              work: '"NOME" de Sana NA N\'HADA',
-              image: '/images/plus_jeune_acteur_marcelino_antonio_ingira.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Lionel BAMBARA',
-              country: 'Burkina Faso',
-              work: '"KATANGA, LA DANSE DES SCORPIONS" de Dani KOUYATE',
-              image: '/images/plus_jeune_acteur_lionel_bambara.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_espoir_africain',
-          name_fr: 'Sotigui du Meilleur Espoir Africain',
-          name_en: 'Sotigui of the Best African Hope',
-          nominees: [
-            {
-              name: 'Pape Aly DIOP',
-              country: 'Sénégal',
-              work: '"TIMPI TAMPA" de Adama Bineta SOW',
-              image: '/images/espoir_africain_pape_aly_diop.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Yassine SAMOUNI',
-              country: 'Tunisie',
-              work: '"LES ENFANTS ROUGES" de Lotfi ACHOUR',
-              image: '/images/espoir_africain_yassine_samouni.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Youssef KADIR',
-              country: 'Maroc',
-              work: '"LE LAC BLEU" de Daoud AOULAD SYAD',
-              image: '/images/espoir_africain_youssef_kadir.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_espoir_africain_serie_tv',
-          name_fr: 'Sotigui du Meilleur Espoir Africain Série TV',
-          name_en: 'Sotigui of the Best Hope African TV Show',
-          nominees: [
-            {
-              name: 'Diariatou SOW',
-              country: 'Sénégal',
-              work: '"CREDULE" de Almoukhtari JANTLER',
-              image: '/images/espoir_serie_tv_diariatou_sow.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Aliu GAFAR',
-              country: 'Nigéria',
-              work: '"SEVENS DOORS" de Femi ADEBAYO',
-              image: '/images/espoir_serie_tv_aliu_gafar.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Jean François ETTIEN',
-              country: 'Côte d\'Ivoire',
-              work: '"LES NOUNOUS" de Franck VLEHI & Marina NIAVA',
-              image: '/images/espoir_serie_tv_jean_francois_ettien.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_feminine_burkinabe',
-          name_fr: 'Sotigui de la Meilleure Interprétation Féminine Burkinabè',
-          name_en: 'Sotigui of the Best Burkinabè Female Interpretation',
-          nominees: [
-            {
-              name: 'Adissa ILBOUDO',
-              country: 'Burkina Faso',
-              work: '"KATANGA, LA DANSE DES SCORPIONS" de Dani KOUYATE',
-              image: '/images/burkina_faso_feminin_adissa_ilboudo.jpg',
-              isWinner: true
-            },
-            {
-              name: 'COULIBALY Hafissatou',
-              country: 'Burkina Faso',
-              work: '"LES INVERTIEUSES" de Aïcha BORO',
-              image: '/images/burkina_faso_feminin_coulibaly_hafissatou.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Irène MINOUNGOU',
-              country: 'Burkina Faso',
-              work: '"CHOC MORTEL" de Euloge HOUNSOU',
-              image: '/images/burkina_faso_feminin_irene_minoungou.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_masculine_burkinabe',
-          name_fr: 'Sotigui de la Meilleure Interprétation Masculine Burkinabè',
-          name_en: 'Sotigui of the Best Burkinabè Male Interpretation',
-          nominees: [
-            {
-              name: 'Dramane OUEDRAOGO',
-              country: 'Burkina Faso',
-              work: '"KATANGA, LA DANSE DES SCORPIONS" de Dani KOUYATE',
-              image: '/images/burkina_faso_masculin_dramane_ouedraogo.jpg',
-              isWinner: true
-            },
-            {
-              name: 'MANDJEM Heu Maurice Johnny Jonathan',
-              country: 'Burkina Faso',
-              work: '"UNE SI LONGUE NUIT" de Dephine YERBANGA',
-              image: '/images/burkina_faso_masculin_mandjem_heu_maurice_johnny_jonathan.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Tony OUEDRAOGO',
-              country: 'Burkina Faso',
-              work: '"BRAQUAGE A OUAGA" de Abdoul Aziz NIKIEMA',
-              image: '/images/burkina_faso_masculin_tony_ouedraogo.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'sotigui_d_or',
-          name_fr: 'Sotigui d\'Or',
-          name_en: 'Sotigui d\'Or',
-          nominees: [
-            {
-              name: 'Ibrahim MBAYE',
-              country: 'Sénégal',
-              work: '"NI CHAINES NI MAITRES" de Simon MOUTAIROU',
-              image: '/images/laureat_sotigui_d_or_ibrahim_mbaye.jpg',
-              isWinner: true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: '9e',
-      name_fr: '9ème Édition',
-      name_en: '9th Edition',
-      year: 2024,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: [
-        {
-          id: 'sotigui_d_or_9',
-          name_fr: 'Sotigui d\'Or 2024',
-          name_en: 'Sotigui d\'Or 2024',
-          nominees: [
-            {
-              name: 'Lazare Minoungou',
-              country: 'Burkina Faso',
-              work: '"SIRA" d\'Apolline Traoré',
-              image: '/images/trophy_dark.jpg',
-              isWinner: true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: '8e',
-      name_fr: '8ème Édition',
-      name_en: '8th Edition',
-      year: 2023,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: []
-    },
-    {
-      id: '7e',
-      name_fr: '7ème Édition',
-      name_en: '7th Edition',
-      year: 2022,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: [
-        {
-          id: 'meilleur_acteur_ac_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique Centrale',
-          name_en: 'Sotigui of the Best Actor of Central Africa',
-          nominees: [
-            {
-              name: 'Landry Nguetsa',
-              country: 'Cameroun',
-              work: '"KANKAN" de Joseph Akama',
-              image: '/images/afrique_centrale_2022_landry_nguetsa.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Doria LEMBE',
-              country: 'Congo Brazzaville',
-              work: '"PARCOURS" de BONGO Said',
-              image: '/images/afrique_centrale_2022_doria_lembe.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Adjani Nancy NGELEKWA',
-              country: 'RD Congo',
-              work: '"ADJANI" de Julio Lolo BIBAS',
-              image: '/images/afrique_centrale_2022_adjani_nancy_ngelekwa.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ng_gh_7e',
-          name_fr: 'Sotigui du Meilleur Acteur Nigeria / Ghana',
-          name_en: 'Sotigui of the Best Actor Nigeria / Ghana',
-          nominees: [
-            {
-              name: 'Lydia Forson',
-              country: 'Ghana',
-              work: '"BORGA" de York-Fabian Raabe',
-              image: '/images/nigeria_ghana_2022_lydia_forson.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Blossom Chukwujekwu',
-              country: 'Nigéria',
-              work: '"THE RISE OF IGBINOGUN" de Onesoul',
-              image: '/images/nigeria_ghana_2022_blossom_chukwujekwu.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Funke Akindele',
-              country: 'Nigéria',
-              work: '"OMO GHETTO THE SAGA" de Funke Akindele',
-              image: '/images/nigeria_ghana_2022_funke_akindele.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_feminine_serie_tv_7e',
-          name_fr: 'Sotigui de la Meilleure Interprétation Féminine Africaine Série TV',
-          name_en: 'Sotigui of the Best Female Interpretation African TV Show',
-          nominees: [
-            {
-              name: 'Khady Touré',
-              country: 'Côte d\'Ivoire',
-              work: '"LES LARMES DE L\'AMOUR" de Brigitte BLEU et Andy Melo',
-              image: '/images/serie_tv_feminin_2022_kadhy_toure.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Awa Djiga KANE',
-              country: 'Sénégal',
-              work: '"VAUTOURS" de Ibou GAYE',
-              image: '/images/serie_tv_feminin_2022_awa_djiga_kane.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Nancy ISIME',
-              country: 'Nigéria',
-              work: '"BLOOD SISTERS" de Kenneth Gyang, Biyi Bandele',
-              image: '/images/serie_tv_feminin_2022_nancy_isime.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_an_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique du Nord',
-          name_en: 'Sotigui of the Best Actor of North Africa',
-          nominees: [
-            {
-              name: 'Fatma Ben Saidane',
-              country: 'Tunisie',
-              work: '"J\'IRAI AU DIABLE" de Ismahane Lahmar',
-              image: '/images/afrique_du_nord_2022_fatma_ben_saidane.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Demyana NASSAR',
-              country: 'Égypte',
-              work: '"FEATHERS" de Omar EL ZOHANY',
-              image: '/images/afrique_du_nord_2022_demyana_nassar.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Naima LEMCHERKI',
-              country: 'Maroc',
-              work: '"L\'AUTOMNE DES POMMIERS" de Mohamed MOUFTAKIR',
-              image: '/images/afrique_du_nord_2022_naima_lemcherki.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ao_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Ouest',
-          name_en: 'Sotigui of the Best Actor of West Africa',
-          nominees: [
-            {
-              name: 'Roger Felmont Sallah',
-              country: 'Sénégal',
-              work: '"SALOUM" de Jean-Luc Herbulot',
-              image: '/images/afrique_de_l_ouest_2022_roger_felmont_sallah.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Dosso TIEKOMBA',
-              country: 'Côte d\'Ivoire',
-              work: '"DJAGASSA" de Hyacinthe HOUNSOU',
-              image: '/images/afrique_de_l_ouest_2022_dosso_tiekomba.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Wabinle NABIE',
-              country: 'Burkina Faso',
-              work: '"UN TRIOMPHE" de Emmanuel COURCOL',
-              image: '/images/afrique_de_l_ouest_2022_wabinle_nabie.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_as_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique Australe',
-          name_en: 'Sotigui of the Best Actor of Southern Africa',
-          nominees: [
-            {
-              name: 'Thabo Rametsi',
-              country: 'Afrique du Sud',
-              work: '"SILVERTON SIEGE" de Mandla Dube',
-              image: '/images/afrique_australe_2022_thabo_rametsi.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Jose KITECULO',
-              country: 'Angola',
-              work: '"AIR CONDITIONER" de Mario Bastos Fradique',
-              image: '/images/afrique_australe_2022_jose_kiteculo.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Haingosoa VOLA',
-              country: 'Madagascar',
-              work: '"HAINGOSOA" de Edouard JOUBEAUD',
-              image: '/images/afrique_australe_2022_haingosoa_vola.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_ae_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de l’Afrique de l’Est',
-          name_en: 'Sotigui of the Best Actor of East Africa',
-          nominees: [
-            {
-              name: 'Rosemary Odire',
-              country: 'Kenya',
-              work: '"BANGARANG" de Robin ODONGO',
-              image: '/images/afrique_de_l_est_2022_rosemary_odire.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Ms. Tunu MWINYIMBEGU',
-              country: 'Tanzanie',
-              work: '"UNCLE" de Halibu MADUDU',
-              image: '/images/afrique_de_l_est_2022_tunu_mwinyimbegu.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Seare FITSUM',
-              country: 'Érythrée',
-              work: '"Seare - The Winner" de Seare FITSUM',
-              image: '/images/afrique_de_l_est_2022_seare_fitsum.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleure_interpretation_masculine_serie_tv_7e',
-          name_fr: 'Sotigui de la Meilleure Interprétation Masculine Africaine Série TV',
-          name_en: 'Sotigui of the Best Male Interpretation African TV Show',
-          nominees: [
-            {
-              name: 'Philippe Coly',
-              country: 'Sénégal',
-              work: '"IMPACT" de Elhadji Cissokho et Ousmane Gningue',
-              image: '/images/serie_tv_masculin_2022_philippe_coly.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Narcisse MAME',
-              country: 'Cameroun',
-              work: '"JE TE PROMETS" de Arnaud SELIGNAC et Renaud BERTRAND',
-              image: '/images/serie_tv_masculin_2022_narcisse_mame.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Terrence AMADI',
-              country: 'Mali',
-              work: '"EKI" de Nadine Otsobogo, Boris Oué et Alex Ogou',
-              image: '/images/serie_tv_masculin_2022_terrence_amadi.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'meilleur_acteur_diaspora_7e',
-          name_fr: 'Sotigui du Meilleur Acteur de la Diaspora',
-          name_en: 'Sotigui of the Best Actor of Diaspora',
-          nominees: [
-            {
-              name: 'Letitia Michelle Wright',
-              country: 'Guyane',
-              work: '"MORT SUR LE NIL" de Kenneth Branagh',
-              image: '/images/diaspora_2022_letitia_michelle_wright.jpg',
-              isWinner: true
-            },
-            {
-              name: 'Lea Lucas GARCIA',
-              country: 'Brésil',
-              work: '"UN DIA COM JERUSA" de Viviane FERREIRA',
-              image: '/images/diaspora_2022_lea_lucas_garcia.jpg',
-              isWinner: false
-            },
-            {
-              name: 'Passi BALENDE',
-              country: 'Congo Brazzaville',
-              work: '"LE PRINCE" de Lisa Bierwirth',
-              image: '/images/diaspora_2022_passi_balende.jpg',
-              isWinner: false
-            }
-          ]
-        },
-        {
-          id: 'sotigui_d_or_7e',
-          name_fr: 'Sotigui d\'Or 2022',
-          name_en: 'Sotigui d\'Or 2022',
-          nominees: [
-            {
-              name: 'Roger Felmont Sallah',
-              country: 'Sénégal',
-              work: '"SALOUM" de Jean-Luc Herbulot',
-              image: '/images/afrique_de_l_ouest_2022_roger_felmont_sallah.jpg',
-              isWinner: true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: '6e',
-      name_fr: '6ème Édition',
-      name_en: '6th Edition',
-      year: 2021,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: []
-    },
-    {
-      id: '5e',
-      name_fr: '5ème Édition',
-      name_en: '5th Edition',
-      year: 2020,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: []
-    },
-    {
-      id: '4e',
-      name_fr: '4ème Édition',
-      name_en: '4th Edition',
-      year: 2019,
-      location: 'Ouagadougou, Burkina Faso',
-      categories: []
     }
-  ]
+  ];
 
   // State
   const [selectedEdition, setSelectedEdition] = useState(EDITIONS[0])
