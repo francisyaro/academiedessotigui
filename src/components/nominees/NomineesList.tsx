@@ -13,12 +13,14 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
   const [search, setSearch] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedCountry, setSelectedCountry] = useState('all')
+  const [selectedYear, setSelectedYear] = useState('2026') // Default to 2026 (11th Edition)
 
   const isEn = locale === 'en'
 
-  // Extract unique categories and countries for filters
-  const categories = ['all', ...Array.from(new Set(initialNominees.map(n => n.category_slug)))]
-  const countries = ['all', ...Array.from(new Set(initialNominees.map(n => n.country_id)))]
+  // Extract unique categories and countries dynamically based on the selected year to avoid empty options
+  const nomineesForYear = initialNominees.filter(n => selectedYear === 'all' || String(n.year) === selectedYear)
+  const categories = ['all', ...Array.from(new Set(nomineesForYear.map(n => n.category_slug)))]
+  const countries = ['all', ...Array.from(new Set(nomineesForYear.map(n => n.country_id)))]
 
   // Filter logic
   const filteredNominees = initialNominees.filter((nominee) => {
@@ -26,10 +28,11 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
     const matchesSearch = displayName.toLowerCase().includes(search.toLowerCase()) || 
                           (nominee.film_title && nominee.film_title.toLowerCase().includes(search.toLowerCase()))
     
+    const matchesYear = selectedYear === 'all' || String(nominee.year) === selectedYear
     const matchesCategory = selectedCategory === 'all' || nominee.category_slug === selectedCategory
     const matchesCountry = selectedCountry === 'all' || nominee.country_id === selectedCountry
 
-    return matchesSearch && matchesCategory && matchesCountry
+    return matchesSearch && matchesYear && matchesCategory && matchesCountry
   })
 
   const getCategoryLabel = (slug: string) => {
@@ -41,9 +44,9 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
   return (
     <div className="flex flex-col gap-8 w-full">
       {/* Filters Bar */}
-      <div className="bg-dark-surface border border-border-color rounded-2xl p-6 flex flex-col md:flex-row gap-4 items-center justify-between shadow-xl">
+      <div className="bg-dark-surface border border-border-color rounded-2xl p-6 flex flex-col lg:flex-row gap-4 items-center justify-between shadow-xl">
         {/* Search */}
-        <div className="relative w-full md:w-1/3">
+        <div className="relative w-full lg:w-1/3">
           <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-text" />
           <input
             type="text"
@@ -55,17 +58,33 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
         </div>
 
         {/* Filters selectors */}
-        <div className="flex flex-wrap md:flex-nowrap gap-4 w-full md:w-auto items-center justify-end">
-          <div className="flex items-center gap-2 text-xs text-gray-text uppercase font-bold tracking-wider shrink-0">
+        <div className="flex flex-wrap lg:flex-nowrap gap-3 w-full lg:w-auto items-center justify-end">
+          <div className="flex items-center gap-2 text-xs text-gray-text uppercase font-bold tracking-wider shrink-0 mr-1">
             <SlidersHorizontal size={14} />
             <span>{isEn ? 'Filters' : 'Filtres'} :</span>
           </div>
+
+          {/* Edition Filter */}
+          <select
+            value={selectedYear}
+            onChange={(e) => {
+              setSelectedYear(e.target.value)
+              setSelectedCategory('all')
+              setSelectedCountry('all')
+            }}
+            className="bg-dark-bg border border-border-color focus:border-gold-primary text-xs font-semibold py-2.5 px-4 rounded-full text-ivory focus:outline-none cursor-pointer"
+          >
+            <option value="2026">{isEn ? '11th Edition (2026)' : '11ème Édition (2026)'}</option>
+            <option value="2025">{isEn ? '10th Edition (2025)' : '10ème Édition (2025)'}</option>
+            <option value="2022">{isEn ? '7th Edition (2022)' : '7ème Édition (2022)'}</option>
+            <option value="all">{isEn ? 'All Editions' : 'Toutes les éditions'}</option>
+          </select>
 
           {/* Category Filter */}
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="bg-dark-bg border border-border-color focus:border-gold-primary text-xs font-semibold py-2.5 px-4 rounded-full text-ivory focus:outline-none cursor-pointer"
+            className="bg-dark-bg border border-border-color focus:border-gold-primary text-xs font-semibold py-2.5 px-4 rounded-full text-ivory focus:outline-none cursor-pointer max-w-[200px] truncate"
           >
             {categories.map((cat) => (
               <option key={cat} value={cat}>

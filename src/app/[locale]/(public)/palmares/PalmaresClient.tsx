@@ -159,6 +159,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "Inspecteur Sori",
               image: "/images/afrique_de_l_ouest_mahamady_nana.jpg",
               isWinner: false
+            },
+            {
+              name: "Gaël HOUNKPATIN",
+              country: "Bénin",
+              work: "Apparences",
+              image: "/images/nominee_11_gael_hounkpatin.jpg",
+              isWinner: false
             }
           ]
         },
@@ -264,6 +271,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "Ben'imana",
               image: "/images/nominee_11_clementine_nyirinkindi.jpg",
               isWinner: false
+            },
+            {
+              name: "Jacky VIKE",
+              country: "Kenya",
+              work: "INSIDE JOB",
+              image: "/images/nominee_11_jacky_vike.jpg",
+              isWinner: false
             }
           ]
         },
@@ -277,6 +291,20 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "France/Cameroun",
               work: "L2: Empuraan",
               image: "/images/nominee_11_eriq_ebouaney.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_an_11e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique du Nord",
+          name_en: "Sotigui of the Best Actor of North Africa",
+          nominees: [
+            {
+              name: "Fatima ATTIF",
+              country: "Maroc",
+              work: "Goundafa the cursed song",
+              image: "/images/nominee_11_fatima_attif.jpg",
               isWinner: false
             }
           ]
