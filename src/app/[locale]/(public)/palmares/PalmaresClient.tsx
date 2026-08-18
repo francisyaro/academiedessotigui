@@ -500,6 +500,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleur_acteur_ao_10e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique de l'Ouest",
+          name_en: "Sotigui of the Best Actor of West Africa",
+          nominees: [
+            {
+              name: "Cheikh Babou GAYE",
+              country: "Sénégal",
+              work: "NANAS",
+              image: "/images/nominee_10_cheikh_babou_gaye.jpg",
+              isWinner: true
+            },
+            {
+              name: "Mahamady NANA",
+              country: "Burkina Faso",
+              work: "KATANGA, LA DANSE DES SCORPIONS",
+              image: "/images/nominee_10_mahamady_nana.jpg",
+              isWinner: false
+            },
+            {
+              name: "Arthur LONGVILLE",
+              country: "Côte d'Ivoire",
+              work: "LE SACRIFICE",
+              image: "/images/nominee_10_arthur_longville.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
