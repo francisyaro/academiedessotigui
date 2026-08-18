@@ -32,12 +32,12 @@ export function VotingModal({ isOpen, onClose, locale }: VotingModalProps) {
   const directLink = "https://forms.gle/e8ANJa7vKQ6944nT8"
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 bg-black/90 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in">
       {/* Backdrop close */}
       <div className="absolute inset-0 cursor-default" onClick={onClose} />
 
       {/* Modal Card */}
-      <div className="relative w-full h-full sm:h-[90vh] max-w-4xl bg-dark-surface border-0 sm:border sm:border-gold-primary/30 rounded-none sm:rounded-3xl shadow-2xl z-10 flex flex-col overflow-hidden animate-scale-in">
+      <div className="relative w-[94%] max-w-4xl h-[85vh] md:h-[90vh] bg-dark-surface border border-gold-primary/30 rounded-2xl sm:rounded-3xl shadow-2xl z-10 flex flex-col overflow-hidden animate-scale-in">
         
         {/* Top Control Bar */}
         <div className="flex items-center justify-between px-6 py-4 bg-dark-bg border-b border-border-color/60 shrink-0">

@@ -189,6 +189,48 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: 'meilleur_acteur_aa_11e',
+          name_fr: 'Sotigui du Meilleur Acteur de l\'Afrique Australe',
+          name_en: 'Sotigui of the Best Actor of Southern Africa',
+          nominees: [
+            {
+              name: 'Silvio Emerson De Sousa Ferreira DO NASCIMENTO',
+              country: 'Angola',
+              work: '"MALDITO AMOR" de Ladislau RAMALHO',
+              image: '/images/nominee_11_silvio_nascimento.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_ac_11e',
+          name_fr: 'Sotigui du Meilleur Acteur de l\'Afrique Centrale',
+          name_en: 'Sotigui of the Best Actor of Central Africa',
+          nominees: [
+            {
+              name: 'Achouackh ABAKAR SOULEYMANE',
+              country: 'Tchad',
+              work: '"Soumsoum, the Night of the Stars" de Mahamat-Saleh Haroun',
+              image: '/images/nominee_11_achouackh_souleymane.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_acteur_ng_11e',
+          name_fr: 'Sotigui du Meilleur Acteur Nigeria / Ghana',
+          name_en: 'Sotigui of the Best Actor Nigeria / Ghana',
+          nominees: [
+            {
+              name: 'Adjetey ANANG',
+              country: 'Ghana',
+              work: '"VIRGIN OF THE THRONE" de FRANK RAJAH FILMS TV et Haja Marie Films',
+              image: '/images/nominee_11_adjetey_anang.jpg',
+              isWinner: false
+            }
+          ]
         }
       ]
     },
