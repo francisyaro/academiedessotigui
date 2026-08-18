@@ -3,8 +3,9 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { Menu, X, Globe, LogIn } from 'lucide-react'
+import { Menu, X, Globe, Award } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { VotingModal } from '../ui/VotingModal'
 
 interface NavbarProps {
   locale: string
@@ -12,6 +13,7 @@ interface NavbarProps {
 
 export function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVotingModalOpen, setIsVotingModalOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
 
@@ -67,8 +69,17 @@ export function Navbar({ locale }: NavbarProps) {
             ))}
           </nav>
 
-          {/* Right actions (Language switch only) */}
+          {/* Right actions (Language switch & Vote button) */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Vote CTA Button */}
+            <button
+              onClick={() => setIsVotingModalOpen(true)}
+              className="flex items-center gap-1.5 px-4 py-2 text-xs font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 shadow-md shadow-gold-primary/10 hover:scale-105 transform cursor-pointer border border-gold-light/20"
+            >
+              <Award size={14} className="fill-black" />
+              <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
+            </button>
+
             {/* Language Switch */}
             <button
               onClick={handleLanguageChange}
@@ -81,6 +92,15 @@ export function Navbar({ locale }: NavbarProps) {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center gap-3">
+            {/* Mobile Vote button */}
+            <button
+              onClick={() => setIsVotingModalOpen(true)}
+              className="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 cursor-pointer"
+            >
+              <Award size={12} className="fill-black" />
+              <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
+            </button>
+
             {/* Mobile language switch */}
             <button
               onClick={handleLanguageChange}
@@ -121,6 +141,13 @@ export function Navbar({ locale }: NavbarProps) {
           </nav>
         </div>
       )}
+
+      {/* Voting Instructions Modal */}
+      <VotingModal
+        isOpen={isVotingModalOpen}
+        onClose={() => setIsVotingModalOpen(false)}
+        locale={locale}
+      />
     </header>
   )
 }

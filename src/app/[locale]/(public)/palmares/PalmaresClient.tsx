@@ -37,6 +37,162 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
   // Complete Palmares Mock Data
   const EDITIONS: Edition[] = [
     {
+      id: '11e',
+      name_fr: '11ème Édition',
+      name_en: '11th Edition',
+      year: 2026,
+      location: 'Ouagadougou, Burkina Faso',
+      categories: [
+        {
+          id: 'sotigui_du_public',
+          name_fr: 'Sotigui du Public',
+          name_en: 'Sotigui of the Public',
+          nominees: [
+            {
+              name: 'Eve GUEHI',
+              country: 'Côte d\'Ivoire',
+              work: '"La femme du foyer"',
+              image: '/images/eve_guehi.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Kadhy TOURE',
+              country: 'Côte d\'Ivoire',
+              work: '"La femme du foyer"',
+              image: '/images/serie_tv_feminin_2022_kadhy_toure.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Alassane SY',
+              country: 'Sénégal',
+              work: '"Le Rêve"',
+              image: '/images/laureat_cheikh_babou_gaye.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Hafissatou COULIBALY',
+              country: 'Burkina Faso',
+              work: '"La Traversée"',
+              image: '/images/burkina_faso_feminin_coulibaly_hafissatou.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleure_actrice_ao',
+          name_fr: 'Meilleure Actrice de l\'Afrique de l\'Ouest',
+          name_en: 'Best Actress of West Africa',
+          nominees: [
+            {
+              name: 'Prisca MARCELENEY',
+              country: 'Côte d\'Ivoire',
+              work: '"Anthôman"',
+              image: '/images/serie_tv_feminin_eve_guehi.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Fatoumata DIAWARA',
+              country: 'Mali',
+              work: '"Sira"',
+              image: '/images/burkina_faso_feminin_irene_minoungou.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleure_interpretation_feminine_serie',
+          name_fr: 'Meilleure Interprétation Féminine Africaine – Série TV',
+          name_en: 'Best Female Performance – TV Series',
+          nominees: [
+            {
+              name: 'Bienvenue KOFFI (Lady Nature)',
+              country: 'Côte d\'Ivoire',
+              work: '"Les Nounous"',
+              image: '/images/laureat_rosine_nguemgaing.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Amina DIALLO',
+              country: 'Sénégal',
+              work: '"Bété"',
+              image: '/images/serie_tv_feminin_keisha_khadija_deme.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleure_interpretation_masculine_serie',
+          name_fr: 'Meilleure Interprétation Masculine Africaine – Série TV',
+          name_en: 'Best Male Performance – TV Series',
+          nominees: [
+            {
+              name: 'Biggy King (Jean-François Ettien)',
+              country: 'Côte d\'Ivoire',
+              work: '"Les Nounous"',
+              image: '/images/espoir_serie_tv_jean_francois_ettien.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Souleymane Seye NDIAYE',
+              country: 'Sénégal',
+              work: '"Wara"',
+              image: '/images/serie_tv_masculin_moussa_sow.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Mahamady NANA',
+              country: 'Burkina Faso',
+              work: '"Inspecteur Sori"',
+              image: '/images/afrique_de_l_ouest_mahamady_nana.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_espoir_serie',
+          name_fr: 'Meilleur Espoir Africain – Série TV',
+          name_en: 'Best African Hope – TV Series',
+          nominees: [
+            {
+              name: 'Marie-Odile GONDO',
+              country: 'Côte d\'Ivoire',
+              work: '"Les Nounous"',
+              image: '/images/laureat_diariatou_sow.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Thierry YAKE (DJ TikTok)',
+              country: 'Côte d\'Ivoire',
+              work: '"Y\'a Braquage au village"',
+              image: '/images/espoir_africain_pape_aly_diop.jpg',
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: 'meilleur_jeune_acteur',
+          name_fr: 'Meilleur Jeune Acteur Africain',
+          name_en: 'Best Young African Actor',
+          nominees: [
+            {
+              name: 'Ephraïm OKA',
+              country: 'Côte d\'Ivoire',
+              work: '"Ebinto"',
+              image: '/images/plus_jeune_acteur_marcelino_antonio_ingira.jpg',
+              isWinner: false
+            },
+            {
+              name: 'Lionel BAMBARA',
+              country: 'Burkina Faso',
+              work: '"L\'ami de mon père"',
+              image: '/images/plus_jeune_acteur_lionel_bambara.jpg',
+              isWinner: false
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: '10e',
       name_fr: '10ème Édition',
       name_en: '10th Edition',

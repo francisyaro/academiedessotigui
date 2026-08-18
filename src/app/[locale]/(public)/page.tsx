@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/Button'
 import { LaureatesGrid } from '@/components/ui/LaureatesGrid'
 import { HighlightsCarousel } from '@/components/ui/HighlightsCarousel'
 import { SotiguiTV } from '@/components/ui/SotiguiTV'
-import { Calendar } from 'lucide-react'
+import { VoteCTAButton } from '@/components/ui/VoteCTAButton'
+import { Calendar, Sparkles } from 'lucide-react'
 
 interface HomeProps {
   params: Promise<{ locale: string }>
@@ -206,12 +207,13 @@ export default async function HomePage({ params }: HomeProps) {
               : 'Célébrer les acteurs, actrices et professionnels du cinéma africain et de sa diaspora.'}
           </p>
 
-          <div className="flex justify-center w-full">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
             <Link href={`/${locale}/academie/presentation`}>
-              <Button variant="gold" size="lg" className="uppercase tracking-widest text-xs px-8">
+              <Button variant="outline" size="lg" className="uppercase tracking-widest text-xs px-8 border-gold-primary/30 hover:border-gold-primary text-gold-light hover:text-gold-primary">
                 {isEn ? 'The Academy' : "L'Académie"}
               </Button>
             </Link>
+            <VoteCTAButton locale={locale} variant="gold" />
           </div>
         </div>
       </section>
@@ -227,6 +229,52 @@ export default async function HomePage({ params }: HomeProps) {
           <Countdown targetDate="2026-11-12T19:00:00Z" locale={locale} />
         </div>
       </section>
+
+      {/* 3. Official 11th Edition Trailer Spotlight Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 w-full">
+        <div className="bg-gradient-to-r from-dark-surface/60 to-dark-surface/30 border border-border-color/60 rounded-3xl p-6 md:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-2xl relative overflow-hidden">
+          {/* Decorative background glow */}
+          <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-gold-primary/5 rounded-full blur-3xl pointer-events-none" />
+          
+          {/* Video Player */}
+          <div className="w-full lg:w-3/5 aspect-video rounded-2xl overflow-hidden bg-black shadow-lg border border-border-color/30">
+            <iframe
+              src="https://www.youtube.com/embed/ecE_edZBwpc?rel=0"
+              title={isEn ? "11th Edition Official Nominees Video" : "Vidéo Officielle des Nominés de la 11ème Édition"}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+
+          {/* Description & Call to Action */}
+          <div className="w-full lg:w-2/5 flex flex-col gap-5 justify-center">
+            <div className="flex flex-col gap-2">
+              <span className="text-[10px] text-gold-light uppercase tracking-widest font-black flex items-center gap-1.5">
+                <Sparkles size={12} className="animate-pulse" />
+                {isEn ? "OFFICIAL REVEAL" : "RÉVÉLATION OFFICIELLE"}
+              </span>
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-ivory tracking-tight leading-tight">
+                {isEn ? "Nominees of the 11th Edition" : "Les Nominés de la 11ème Édition"}
+              </h2>
+            </div>
+            
+            <p className="text-xs text-gray-text leading-relaxed">
+              {isEn
+                ? "Watch the official announcement presentation video for the Sotigui Awards 2026. Discover the 48 nominees from 36 countries, and support your favorite actors by casting your vote now."
+                : "Visionnez la présentation vidéo de l'annonce officielle des nominés pour les Sotigui Awards 2026. Découvrez les 48 talents en compétition représentant 36 nations, et soutenez vos favoris en votant dès aujourd'hui."}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <VoteCTAButton locale={locale} variant="gold" className="!px-6 !py-3 text-[10px]" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating Vote Button */}
+      <VoteCTAButton locale={locale} variant="floating" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 flex flex-col gap-28 w-full">
         {/* Carousel Highlights of the 10th Edition */}
