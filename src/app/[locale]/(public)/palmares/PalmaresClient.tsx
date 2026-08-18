@@ -444,6 +444,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleur_acteur_ae_10e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique de l'Est",
+          name_en: "Sotigui of the Best Actor of East Africa",
+          nominees: [
+            {
+              name: "Ednara CONCEIÇÃO",
+              country: "Angola",
+              work: "ACAIXA",
+              image: "/images/nominee_10_ednara_conceicao.jpg",
+              isWinner: true
+            },
+            {
+              name: "Debbie BAKUSEKA",
+              country: "Ouganda",
+              work: "Philbert Aimé MBABAZI SHARANGABO",
+              image: "/images/nominee_10_debbie_bakuseka.jpg",
+              isWinner: false
+            },
+            {
+              name: "Aline AMIKE",
+              country: "Rwanda",
+              work: "MINIMALS IN A TITANIC WORLD / UN MONDE TITANIC",
+              image: "/images/nominee_10_aline_amike.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
