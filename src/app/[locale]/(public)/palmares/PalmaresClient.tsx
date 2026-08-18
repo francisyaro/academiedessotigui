@@ -472,6 +472,34 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               isWinner: false
             }
           ]
+        },
+        {
+          id: "meilleur_acteur_an_10e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique du Nord",
+          name_en: "Sotigui of the Best Actor of North Africa",
+          nominees: [
+            {
+              name: "Nisrin ERRADI",
+              country: "Maroc",
+              work: "EVERYBODY LOVES TOUDA",
+              image: "/images/nominee_10_nisrin_erradi.jpg",
+              isWinner: true
+            },
+            {
+              name: "Fatma SFAR",
+              country: "Tunisie",
+              work: "AICHA",
+              image: "/images/nominee_10_fatma_sfar.jpg",
+              isWinner: false
+            },
+            {
+              name: "Sammy LECHEA",
+              country: "Algérie",
+              work: "L'EFFACEMENT",
+              image: "/images/nominee_10_sammy_lechea.jpg",
+              isWinner: false
+            }
+          ]
         }
       ]
     },
