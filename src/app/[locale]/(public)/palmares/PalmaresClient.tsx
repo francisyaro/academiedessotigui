@@ -110,6 +110,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "Les 3 Lascars 2",
               image: "/images/nominee_11_aida_maatikara.jpg",
               isWinner: false
+            },
+            {
+              name: "Souleymane Seye NDIAYE",
+              country: "Sénégal",
+              work: "VALDIODIO",
+              image: "/images/nominee_11_souleymane_seye_ndiaye.jpg",
+              isWinner: false
             }
           ],
         },
@@ -137,6 +144,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Sénégal",
               work: "Bété",
               image: "/images/serie_tv_feminin_keisha_khadija_deme.jpg",
+              isWinner: false
+            },
+            {
+              name: "Tatiana MATIP",
+              country: "Cameroun",
+              work: "MONKAM",
+              image: "/images/nominee_11_tatiana_matip.jpg",
               isWinner: false
             }
           ]
@@ -277,6 +291,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Ghana",
               work: "VIRGIN OF THE THRONE",
               image: "/images/nominee_11_adjetey_anang.jpg",
+              isWinner: false
+            },
+            {
+              name: "Şope DÌRÍSÙ",
+              country: "Nigéria",
+              work: "My Father's Shadow",
+              image: "/images/nominee_11_sope_dirisu.jpg",
               isWinner: false
             }
           ]
