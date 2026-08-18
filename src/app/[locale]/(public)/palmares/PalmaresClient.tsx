@@ -292,6 +292,20 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "L2: Empuraan",
               image: "/images/nominee_11_eriq_ebouaney.jpg",
               isWinner: false
+            },
+            {
+              name: "Michael B. JORDAN",
+              country: "USA",
+              work: "SINNERS",
+              image: "/images/nominee_11_michael_b_jordan.jpg",
+              isWinner: false
+            },
+            {
+              name: "Lupita NYONG'O",
+              country: "Mexique/Kenya",
+              work: "A Quiet Place: Day One",
+              image: "/images/nominee_11_lupita_nyongo.jpg",
+              isWinner: false
             }
           ]
         },
