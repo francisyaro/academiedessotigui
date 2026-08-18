@@ -409,6 +409,67 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
         }
       ]
     }
+  ,
+    {
+      id: "10e",
+      name_fr: "10ème Édition",
+      name_en: "10th Edition",
+      year: 2025,
+      location: "Ouagadougou, Burkina Faso",
+      categories: [
+        {
+          id: "meilleur_acteur_ac_10e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique Centrale",
+          name_en: "Sotigui of the Best Actor of Central Africa",
+          nominees: [
+            {
+              name: "Thérèse NGONO",
+              country: "Cameroun",
+              work: "INDOMPTABLES",
+              image: "/images/nominee_10_therese_ngono.jpg",
+              isWinner: true
+            },
+            {
+              name: "Ferdinand MBAISSANE",
+              country: "Tchad",
+              work: "DIYA",
+              image: "/images/nominee_10_ferdinand_mbaissane.jpg",
+              isWinner: false
+            },
+            {
+              name: "Olivier KISSITA",
+              country: "République du Congo",
+              work: "SEX LOVE AND MONEY",
+              image: "/images/nominee_10_olivier_kissita.jpg",
+              isWinner: false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "7e",
+      name_fr: "7ème Édition",
+      name_en: "7th Edition",
+      year: 2022,
+      location: "Ouagadougou, Burkina Faso",
+      categories: [
+        {
+          id: "meilleure_interpretation_feminine_serie_7e",
+          name_fr: "Meilleure Interprétation Féminine Africaine – Série TV",
+          name_en: "Best Female Performance – TV Series",
+          nominees: [
+            {
+              name: "Kadhy Touré",
+              country: "Côte d'Ivoire",
+              work: "LES LARMES DE L'AMOUR",
+              image: "/images/serie_tv_feminin_2022_kadhy_toure.jpg",
+              isWinner: false
+            }
+          ]
+        }
+      ]
+    }
   ];
 
   // State
