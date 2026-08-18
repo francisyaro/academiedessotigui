@@ -187,6 +187,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "Apparences",
               image: "/images/nominee_11_gael_hounkpatin.jpg",
               isWinner: false
+            },
+            {
+              name: "Vincent BAZIÉ",
+              country: "Burkina Faso",
+              work: "UNE FEMME A KOSYAM",
+              image: "/images/nominee_11_vincent_bazie.jpg",
+              isWinner: false
             }
           ]
         },
@@ -278,6 +285,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "LE PRIX DU POUVOIR",
               image: "/images/nominee_11_emy_dany_bassong.jpg",
               isWinner: false
+            },
+            {
+              name: "Tiss Warren MOMBO",
+              country: "Gabon",
+              work: "AFROTOPIA",
+              image: "/images/nominee_11_tiss_warren_mombo.jpg",
+              isWinner: false
             }
           ]
         },
@@ -298,6 +312,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Nigéria",
               work: "My Father's Shadow",
               image: "/images/nominee_11_sope_dirisu.jpg",
+              isWinner: false
+            },
+            {
+              name: "Uche MONTANA",
+              country: "Nigéria",
+              work: "MONICA 2",
+              image: "/images/nominee_11_uche_montana.jpg",
               isWinner: false
             }
           ]
