@@ -84,17 +84,24 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
           name_en: "Best Actress of West Africa",
           nominees: [
             {
-              name: "Prisca MARCELENEY",
-              country: "Côte d'Ivoire",
-              work: "Anthôman",
-              image: "/images/serie_tv_feminin_eve_guehi.jpg",
-              isWinner: false
-            },
-            {
               name: "Fatoumata DIAWARA",
               country: "Mali",
               work: "Sira",
               image: "/images/burkina_faso_feminin_irene_minoungou.jpg",
+              isWinner: false
+            }
+          ]
+        },
+        {
+          id: "meilleur_acteur_ao_11e",
+          name_fr: "Sotigui du Meilleur Acteur de l'Afrique de l'Ouest",
+          name_en: "Sotigui of the Best Actor of West Africa",
+          nominees: [
+            {
+              name: "Prisca MARCELENEY",
+              country: "Côte d'Ivoire",
+              work: "Anthôman ou Pour l'honneur",
+              image: "/images/nominee_11_prisca_marceleney.jpg",
               isWinner: false
             },
             {
@@ -104,7 +111,7 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               image: "/images/nominee_11_aida_maatikara.jpg",
               isWinner: false
             }
-          ]
+          ],
         },
         {
           id: "meilleure_interpretation_feminine_serie",
@@ -278,6 +285,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               work: "INSIDE JOB",
               image: "/images/nominee_11_jacky_vike.jpg",
               isWinner: false
+            },
+            {
+              name: "Mihad MURTTADA",
+              country: "Soudan",
+              work: "COTTON QUEEN",
+              image: "/images/nominee_11_mihad_murttada.jpg",
+              isWinner: false
             }
           ]
         },
@@ -319,6 +333,13 @@ export function PalmaresClient({ locale }: PalmaresClientProps) {
               country: "Maroc",
               work: "Goundafa the cursed song",
               image: "/images/nominee_11_fatima_attif.jpg",
+              isWinner: false
+            },
+            {
+              name: "Mohamed FARRAG",
+              country: "Egypte",
+              work: "El Sett",
+              image: "/images/nominee_11_mohamed_farrag.jpg",
               isWinner: false
             }
           ]
