@@ -1,0 +1,584 @@
+export interface NomineeVideoExtract {
+  id: string
+  actorName: string
+  country: string
+  filmTitle: string
+  director?: string
+  portraitPath: string
+  videoUrl?: string
+  videoPassword?: string
+}
+
+export interface AcademyCategory {
+  id: string
+  slug: string
+  titleFr: string
+  titleEn: string
+  googleFormUrl: string
+  bannerPath?: string
+  nominees: NomineeVideoExtract[]
+}
+
+export const ACADEMY_CATEGORIES: AcademyCategory[] = [
+  {
+    id: "cat_australe",
+    slug: "le-sotigui-du-meilleur-acteur-de-lafrique-australe",
+    titleFr: "Sotigui du Meilleur Acteur de l'Afrique Australe",
+    titleEn: "Sotigui of the Best Actor of Southern Africa",
+    googleFormUrl: "https://forms.gle/BMgEZSoQPdgu5KeZ9",
+    bannerPath: "/images/nominee_11_silvio_nascimento.jpg",
+    nominees: [
+      {
+        id: "australe_1",
+        actorName: "Silvio Emerson DO NASCIMENTO",
+        country: "Angola",
+        filmTitle: "MALDITO AMOR",
+        director: "Ladislau Ramalho",
+        portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc",
+        videoPassword: "SOTIGUI_AUSTRALE_2026"
+      },
+      {
+        id: "australe_2",
+        actorName: "Siyabonga SHIBE",
+        country: "Afrique du Sud",
+        filmTitle: "Laundry (Uhlanjululo)",
+        director: "Zamo Mkhwanazi",
+        portraitPath: "/images/nominee_11_siyabonga_shibe.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "australe_3",
+        actorName: "Admiro de Laura MUNGUAMBE",
+        country: "Mozambique",
+        filmTitle: "O Profeta",
+        director: "Ique Langa",
+        portraitPath: "/images/nominee_11_admiro_munguambe.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_centrale",
+    slug: "le-sotigui-du-meilleur-acteur-de-lafrique-centrale",
+    titleFr: "Sotigui du Meilleur Acteur de l'Afrique Centrale",
+    titleEn: "Sotigui of the Best Actor of Central Africa",
+    googleFormUrl: "https://forms.gle/fJ6a8R71Rus7WjYL6",
+    bannerPath: "/images/nominee_11_tiss_warren_mombo.jpg",
+    nominees: [
+      {
+        id: "centrale_1",
+        actorName: "Tiss Warren MOMBO",
+        country: "Gabon",
+        filmTitle: "AFROTOPIA",
+        director: "David Mboussou",
+        portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "centrale_2",
+        actorName: "Emy Dany BASSONG",
+        country: "Cameroun",
+        filmTitle: "La Reine de la Cité",
+        director: "Ebenezer Kepombia",
+        portraitPath: "/images/nominee_11_emy_dany_bassong.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc",
+        videoPassword: "CENTRAL_SOTIGUI_PASS"
+      },
+      {
+        id: "centrale_3",
+        actorName: "Tatiana MATIP",
+        country: "Cameroun",
+        filmTitle: "MONKAM",
+        director: "Narcisse Wandji",
+        portraitPath: "/images/nominee_11_tatiana_matip.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_diaspora",
+    slug: "le-sotigui-du-meilleur-acteur-de-la-diaspora",
+    titleFr: "Sotigui du Meilleur Acteur de la Diaspora",
+    titleEn: "Sotigui of the Best Actor of the Diaspora",
+    googleFormUrl: "https://forms.gle/MmKUhnR9hWXReY6W6",
+    bannerPath: "/images/nominee_11_michael_b_jordan.jpg",
+    nominees: [
+      {
+        id: "diaspora_1",
+        actorName: "Michael B. JORDAN",
+        country: "USA",
+        filmTitle: "SINNERS",
+        director: "Ryan Coogler",
+        portraitPath: "/images/nominee_11_michael_b_jordan.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "diaspora_2",
+        actorName: "Lupita NYONG'O",
+        country: "Mexique/Kenya",
+        filmTitle: "A Quiet Place: Day One",
+        director: "Michael Sarnoski",
+        portraitPath: "/images/nominee_11_lupita_nyongo.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "diaspora_3",
+        actorName: "Eriq EBOUANEY",
+        country: "France/Cameroun",
+        filmTitle: "L2: Empuraan",
+        director: "Prithviraj Sukumaran",
+        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_est",
+    slug: "le-sotigui-du-meilleur-acteur-de-lafrique-de-lest",
+    titleFr: "Sotigui du Meilleur Acteur de l'Afrique de l'Est",
+    titleEn: "Sotigui of the Best Actor of East Africa",
+    googleFormUrl: "https://forms.gle/gdQgpeTE3JqzaiEH8",
+    bannerPath: "/images/nominee_11_jacky_vike.jpg",
+    nominees: [
+      {
+        id: "est_1",
+        actorName: "Jacky VIKE",
+        country: "Kenya",
+        filmTitle: "INSIDE JOB",
+        director: "Nick Mutuma",
+        portraitPath: "/images/nominee_11_jacky_vike.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "est_2",
+        actorName: "Mihad MURTTADA",
+        country: "Soudan",
+        filmTitle: "COTTON QUEEN",
+        director: "Suzannah Mirghani",
+        portraitPath: "/images/nominee_11_mihad_murttada.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "est_3",
+        actorName: "Clémentine U. NYIRINKINDI",
+        country: "Rwanda",
+        filmTitle: "Ben'imana",
+        director: "Kantarama Gahigiri",
+        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_nord",
+    slug: "le-sotigui-du-meilleur-acteur-de-lafrique-du-nord",
+    titleFr: "Sotigui du Meilleur Acteur de l'Afrique du Nord",
+    titleEn: "Sotigui of the Best Actor of North Africa",
+    googleFormUrl: "https://forms.gle/29xBZaLJ2vqE9Hf57",
+    bannerPath: "/images/nominee_11_fatima_attif.jpg",
+    nominees: [
+      {
+        id: "nord_1",
+        actorName: "Fatima ATTIF",
+        country: "Maroc",
+        filmTitle: "Goundafa the cursed song",
+        director: "Nabil Ayouch",
+        portraitPath: "/images/nominee_11_fatima_attif.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "nord_2",
+        actorName: "Mohamed FARRAG",
+        country: "Egypte",
+        filmTitle: "El Sett",
+        director: "Marwan Hamed",
+        portraitPath: "/images/nominee_11_mohamed_farrag.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "nord_3",
+        actorName: "Saja KILANI",
+        country: "Tunisie",
+        filmTitle: "The Voice of Hind Rajab",
+        director: "Kaouther Ben Hania",
+        portraitPath: "/images/nominee_11_saja_kilani.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_ouest",
+    slug: "le-sotigui-du-meilleur-acteur-de-lafrique-de-louest",
+    titleFr: "Sotigui du Meilleur Acteur de l'Afrique de l'Ouest",
+    titleEn: "Sotigui of the Best Actor of West Africa",
+    googleFormUrl: "https://forms.gle/zJvBnR6w3aF2eRVx5",
+    bannerPath: "/images/nominee_11_prisca_marceleney.jpg",
+    nominees: [
+      {
+        id: "ouest_1",
+        actorName: "Prisca MARCELENEY",
+        country: "Côte d'Ivoire",
+        filmTitle: "Anthôman ou Pour l'honneur",
+        director: "Jacques Trabi",
+        portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "ouest_2",
+        actorName: "Souleymane Seye NDIAYE",
+        country: "Sénégal",
+        filmTitle: "VALDIODIO",
+        director: "Amina Ndiaye Leclerc",
+        portraitPath: "/images/nominee_11_souleymane_seye_ndiaye.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "ouest_3",
+        actorName: "Aïda Niatta MAATIKARA",
+        country: "Burkina Faso",
+        filmTitle: "Katanga",
+        director: "Dani Kouyaté",
+        portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_ng_gh",
+    slug: "le-sotigui-du-meilleur-acteur-nigeria-ghana",
+    titleFr: "Sotigui du Meilleur Acteur Nigeria / Ghana",
+    titleEn: "Sotigui of the Best Actor Nigeria / Ghana",
+    googleFormUrl: "https://forms.gle/tf4pvwp2UTQ2zcSz9",
+    bannerPath: "/images/nominee_11_adjetey_anang.jpg",
+    nominees: [
+      {
+        id: "ng_gh_1",
+        actorName: "Adjetey ANANG",
+        country: "Ghana",
+        filmTitle: "VIRGIN OF THE THRONE",
+        director: "Shirley Frimpong-Manso",
+        portraitPath: "/images/nominee_11_adjetey_anang.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "ng_gh_2",
+        actorName: "Şope DÌRÍSÙ",
+        country: "Nigéria",
+        filmTitle: "My Father's Shadow",
+        director: "Akinola Davies Jr.",
+        portraitPath: "/images/nominee_11_sope_dirisu.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "ng_gh_3",
+        actorName: "Uche MONTANA",
+        country: "Nigéria",
+        filmTitle: "MONICA 2",
+        director: "Uche Montana",
+        portraitPath: "/images/nominee_11_uche_montana.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_plus_jeune",
+    slug: "le-sotigui-du-meilleur-plus-jeune-acteur-africain",
+    titleFr: "Sotigui du Meilleur Plus Jeune Acteur Africain",
+    titleEn: "Sotigui of the Best Youngest African Actor",
+    googleFormUrl: "https://forms.gle/iavTDianGX5Y5rzi6",
+    bannerPath: "/images/plus_jeune_acteur_lionel_bambara.jpg",
+    nominees: [
+      {
+        id: "plus_jeune_1",
+        actorName: "Bienvenue KOFFI",
+        country: "Côte d'Ivoire",
+        filmTitle: "Le destin des ombres",
+        director: "Franck Vlehi",
+        portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "plus_jeune_2",
+        actorName: "Astou DIAW",
+        country: "Sénégal",
+        filmTitle: "L'ombre du passe",
+        director: "Moussa Sène Absa",
+        portraitPath: "/images/nominee_11_astou_diaw.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "plus_jeune_3",
+        actorName: "Clémentine U. NYIRINKINDI",
+        country: "Rwanda",
+        filmTitle: "Ben'imana",
+        director: "Kantarama Gahigiri",
+        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_espoir",
+    slug: "le-sotigui-du-meilleur-espoir-africain",
+    titleFr: "Sotigui du Meilleur Espoir Africain",
+    titleEn: "Sotigui of the Best African Hope",
+    googleFormUrl: "https://forms.gle/LGa7XwERF9X8rZ3R8",
+    bannerPath: "/images/espoir_africain_pape_aly_diop.jpg",
+    nominees: [
+      {
+        id: "espoir_1",
+        actorName: "Gaël HOUNKPATIN",
+        country: "Bénin",
+        filmTitle: "L'Arbre de la mémoire",
+        director: "Sylvestre Amoussou",
+        portraitPath: "/images/nominee_11_gael_hounkpatin.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "espoir_2",
+        actorName: "Achouackh ABAKAR SOULEYMANE",
+        country: "Tchad",
+        filmTitle: "Les Voiles du Sahel",
+        director: "Mahamat-Saleh Haroun",
+        portraitPath: "/images/nominee_11_achouackh_souleymane.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "espoir_3",
+        actorName: "Bienvenue KOFFI",
+        country: "Côte d'Ivoire",
+        filmTitle: "Le souffle des ancêtres",
+        director: "Jacques Trabi",
+        portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_burkinabe_m",
+    slug: "le-sotigui-de-la-meilleure-interpretation-masculine-burkinabe",
+    titleFr: "Sotigui de la Meilleure Interprétation Masculine Burkinabè",
+    titleEn: "Sotigui for Best Male Performance - Burkina Faso",
+    googleFormUrl: "https://forms.gle/yKaR2ySkHeZ2PphJ9",
+    bannerPath: "/images/nominee_11_vincent_bazie.jpg",
+    nominees: [
+      {
+        id: "burkinabe_m_1",
+        actorName: "Vincent BAZIÉ",
+        country: "Burkina Faso",
+        filmTitle: "UNE FEMME A KOSYAM",
+        director: "Serge Armel",
+        portraitPath: "/images/nominee_11_vincent_bazie.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "burkinabe_m_2",
+        actorName: "Mahamady NANA",
+        country: "Burkina Faso",
+        filmTitle: "KATANGA, LA DANSE DES SCORPIONS",
+        director: "Dani Kouyaté",
+        portraitPath: "/images/nominee_10_mahamady_nana.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "burkinabe_m_3",
+        actorName: "Aïda Niatta MAATIKARA",
+        country: "Burkina Faso",
+        filmTitle: "Katanga",
+        director: "Dani Kouyaté",
+        portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_burkinabe_f",
+    slug: "le-sotigui-de-la-meilleure-interpretation-feminine-burkinabe",
+    titleFr: "Sotigui de la Meilleure Interprétation Féminine Burkinabè",
+    titleEn: "Sotigui for Best Female Performance - Burkina Faso",
+    googleFormUrl: "https://forms.gle/u6ZTr19ZLChcGdyYA",
+    bannerPath: "/images/burkina_faso_feminin_irene_minoungou.jpg",
+    nominees: [
+      {
+        id: "burkinabe_f_1",
+        actorName: "Aïda Niatta MAATIKARA",
+        country: "Burkina Faso",
+        filmTitle: "Katanga",
+        director: "Dani Kouyaté",
+        portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "burkinabe_f_2",
+        actorName: "Fatoumata DIAWARA",
+        country: "Burkina Faso",
+        filmTitle: "Sira",
+        director: "Apolline Traoré",
+        portraitPath: "/images/burkina_faso_feminin_irene_minoungou.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "burkinabe_f_3",
+        actorName: "Hafissatou COULIBALY",
+        country: "Burkina Faso",
+        filmTitle: "La Traversée",
+        director: "Missa Hébié",
+        portraitPath: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_espoir_tv",
+    slug: "le-sotigui-du-meilleur-espoir-africain-serie-tv",
+    titleFr: "Sotigui du Meilleur Espoir Africain Série TV",
+    titleEn: "Sotigui for Best Hope African TV Series",
+    googleFormUrl: "https://forms.gle/HsAVQ1AcQcvZUytn8",
+    bannerPath: "/images/laureat_diariatou_sow.jpg",
+    nominees: [
+      {
+        id: "espoir_tv_1",
+        actorName: "Jean François ETTIEN",
+        country: "Côte d'Ivoire",
+        filmTitle: "LES NOUNOUS SAISON 3",
+        director: "Franck Vlehi",
+        portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "espoir_tv_2",
+        actorName: "Marie-Odile GONDO",
+        country: "Côte d'Ivoire",
+        filmTitle: "Les Nounous",
+        director: "Franck Vlehi",
+        portraitPath: "/images/laureat_diariatou_sow.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "espoir_tv_3",
+        actorName: "Thierry YAKE (DJ TikTok)",
+        country: "Côte d'Ivoire",
+        filmTitle: "Y'a Braquage au village",
+        director: "Serge Armel",
+        portraitPath: "/images/espoir_africain_pape_aly_diop.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_feminin_tv",
+    slug: "le-sotigui-de-la-meilleure-interpretation-feminine-africaine-serie-tv",
+    titleFr: "Sotigui de la Meilleure Interprétation Féminine Africaine Série TV",
+    titleEn: "Sotigui for Best Female Performance - African TV Series",
+    googleFormUrl: "https://forms.gle/tNan5XMLzjMUq67z9",
+    bannerPath: "/images/nominee_11_tatiana_matip.jpg",
+    nominees: [
+      {
+        id: "feminin_tv_1",
+        actorName: "Tatiana MATIP",
+        country: "Cameroun",
+        filmTitle: "MONKAM",
+        director: "Narcisse Wandji",
+        portraitPath: "/images/nominee_11_tatiana_matip.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "feminin_tv_2",
+        actorName: "Eve GUEHI",
+        country: "Côte d'Ivoire",
+        filmTitle: "LES NOUNOUS",
+        director: "Franck Vlehi & Marina Niava",
+        portraitPath: "/images/nominee_10_eve_guehi.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "feminin_tv_3",
+        actorName: "Hortavie MPONDO",
+        country: "Cameroun",
+        filmTitle: "REVELATIONS SCANDALEUSES",
+        director: "Ebenezer Kepombia",
+        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_masculin_tv",
+    slug: "le-sotigui-de-la-meilleure-interpretation-masculine-africaine-serie-tv",
+    titleFr: "Sotigui de la Meilleure Interprétation Masculine Africaine Série TV",
+    titleEn: "Sotigui for Best Male Performance - African TV Series",
+    googleFormUrl: "https://forms.gle/JPauwQbjyFzXXazTA",
+    bannerPath: "/images/nominee_11_jean_francois_ettien.jpg",
+    nominees: [
+      {
+        id: "masculin_tv_1",
+        actorName: "Jean François ETTIEN",
+        country: "Côte d'Ivoire",
+        filmTitle: "LES NOUNOUS SAISON 3",
+        director: "Franck Vlehi",
+        portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "masculin_tv_2",
+        actorName: "Vincent BAZIÉ",
+        country: "Burkina Faso",
+        filmTitle: "UNE FEMME A KOSYAM",
+        director: "Serge Armel",
+        portraitPath: "/images/nominee_11_vincent_bazie.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "masculin_tv_3",
+        actorName: "Moussa SOW",
+        country: "Sénégal",
+        filmTitle: "CŒURS BRISES",
+        director: "Evenprod",
+        portraitPath: "/images/nominee_10_moussa_sow.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  },
+  {
+    id: "cat_dor",
+    slug: "sotigui-award-2026-sotigui-dor",
+    titleFr: "SOTIGUI AWARDS 2026 – SOTIGUI D’OR",
+    titleEn: "SOTIGUI AWARDS 2026 – SOTIGUI D'OR",
+    googleFormUrl: "https://forms.gle/ua62SQccMtb1HviJ8",
+    bannerPath: "/images/trophy_dark.jpg",
+    nominees: [
+      {
+        id: "dor_1",
+        actorName: "Silvio Emerson DO NASCIMENTO",
+        country: "Angola",
+        filmTitle: "MALDITO AMOR",
+        director: "Ladislau Ramalho",
+        portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "dor_2",
+        actorName: "Prisca MARCELENEY",
+        country: "Côte d'Ivoire",
+        filmTitle: "Anthôman ou Pour l'honneur",
+        director: "Jacques Trabi",
+        portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      },
+      {
+        id: "dor_3",
+        actorName: "Eriq EBOUANEY",
+        country: "France/Cameroun",
+        filmTitle: "L2: Empuraan",
+        director: "Prithviraj Sukumaran",
+        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
+        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+      }
+    ]
+  }
+]
+
+export function getAcademyCategoryBySlug(slug: string): AcademyCategory | undefined {
+  return ACADEMY_CATEGORIES.find(c => c.slug === slug)
+}

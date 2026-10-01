@@ -22,7 +22,8 @@ export function Navbar({ locale }: NavbarProps) {
     { href: `/${locale}/academie/presentation`, label: locale === 'en' ? 'The Academy' : "L'Académie" },
     { href: `/${locale}/nomines`, label: locale === 'en' ? 'Nominees' : 'Nominés' },
     { href: `/${locale}/films`, label: locale === 'en' ? 'Films' : 'Films' },
-    { href: `/${locale}/vote`, label: locale === 'en' ? 'Vote' : 'Vote' },
+    { href: `/${locale}/vote`, label: locale === 'en' ? 'Public Vote' : 'Vote du Public' },
+    { href: `/${locale}/vote-academie`, label: locale === 'en' ? 'Academy Vote' : 'Vote Académie' },
     { href: `/${locale}/palmares`, label: locale === 'en' ? 'Winners' : 'Palmarès' },
     { href: `/${locale}/actualites`, label: locale === 'en' ? 'News' : 'Actualités' }
   ]
