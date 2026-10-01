@@ -6,6 +6,7 @@ export interface NomineeVideoExtract {
   director?: string
   portraitPath: string
   videoUrl?: string
+  videoUrls?: string[]
   videoPassword?: string
 }
 
@@ -35,8 +36,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MALDITO AMOR",
         director: "Ladislau Ramalho",
         portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc",
-        videoPassword: "SOTIGUI_AUSTRALE_2026"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc",
       },
       {
         id: "australe_2",
@@ -45,7 +45,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Laundry (Uhlanjululo)",
         director: "Zamo Mkhwanazi",
         portraitPath: "/images/nominee_11_siyabonga_shibe.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "australe_3",
@@ -54,7 +54,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "O Profeta",
         director: "Ique Langa",
         portraitPath: "/images/nominee_11_admiro_munguambe.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -73,7 +73,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "AFROTOPIA",
         director: "David Mboussou",
         portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "centrale_2",
@@ -82,8 +82,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "La Reine de la Cité",
         director: "Ebenezer Kepombia",
         portraitPath: "/images/nominee_11_emy_dany_bassong.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc",
-        videoPassword: "CENTRAL_SOTIGUI_PASS"
+        videoUrl: "https://youtu.be/vOSgPa5Xzko"
       },
       {
         id: "centrale_3",
@@ -92,7 +91,12 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MONKAM",
         director: "Narcisse Wandji",
         portraitPath: "/images/nominee_11_tatiana_matip.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://filmfreeway.com/projects/3277677",
+          "https://filmfreeway.com/projects/3277713",
+          "https://filmfreeway.com/projects/3277775"
+        ],
+        videoPassword: "2024"
       }
     ]
   },
@@ -111,7 +115,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "SINNERS",
         director: "Ryan Coogler",
         portraitPath: "/images/nominee_11_michael_b_jordan.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "diaspora_2",
@@ -120,7 +124,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "A Quiet Place: Day One",
         director: "Michael Sarnoski",
         portraitPath: "/images/nominee_11_lupita_nyongo.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "diaspora_3",
@@ -129,7 +133,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "L2: Empuraan",
         director: "Prithviraj Sukumaran",
         portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -148,7 +152,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "INSIDE JOB",
         director: "Nick Mutuma",
         portraitPath: "/images/nominee_11_jacky_vike.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "est_2",
@@ -157,7 +161,8 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "COTTON QUEEN",
         director: "Suzannah Mirghani",
         portraitPath: "/images/nominee_11_mihad_murttada.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://vimeo.com/1226136798?share=copy&fl=sv&fe=ci",
+        videoPassword: "sudan2"
       },
       {
         id: "est_3",
@@ -166,7 +171,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Ben'imana",
         director: "Kantarama Gahigiri",
         portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -185,7 +190,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Goundafa the cursed song",
         director: "Nabil Ayouch",
         portraitPath: "/images/nominee_11_fatima_attif.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "nord_2",
@@ -194,7 +199,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "El Sett",
         director: "Marwan Hamed",
         portraitPath: "/images/nominee_11_mohamed_farrag.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "nord_3",
@@ -203,7 +208,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "The Voice of Hind Rajab",
         director: "Kaouther Ben Hania",
         portraitPath: "/images/nominee_11_saja_kilani.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -222,7 +227,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Anthôman ou Pour l'honneur",
         director: "Jacques Trabi",
         portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "ouest_2",
@@ -231,7 +236,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "VALDIODIO",
         director: "Amina Ndiaye Leclerc",
         portraitPath: "/images/nominee_11_souleymane_seye_ndiaye.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "ouest_3",
@@ -240,7 +245,8 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Katanga",
         director: "Dani Kouyaté",
         portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
+        videoPassword: "droma2"
       }
     ]
   },
@@ -259,7 +265,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "VIRGIN OF THE THRONE",
         director: "Shirley Frimpong-Manso",
         portraitPath: "/images/nominee_11_adjetey_anang.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "ng_gh_2",
@@ -268,7 +274,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "My Father's Shadow",
         director: "Akinola Davies Jr.",
         portraitPath: "/images/nominee_11_sope_dirisu.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "ng_gh_3",
@@ -277,7 +283,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MONICA 2",
         director: "Uche Montana",
         portraitPath: "/images/nominee_11_uche_montana.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=7jteLIoNDaQ&t=178s"
       }
     ]
   },
@@ -296,7 +302,11 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Le destin des ombres",
         director: "Franck Vlehi",
         portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       },
       {
         id: "plus_jeune_2",
@@ -305,7 +315,11 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "L'ombre du passe",
         director: "Moussa Sène Absa",
         portraitPath: "/images/nominee_11_astou_diaw.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://www.youtube.com/watch?v=mYTFA0VIPLc&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906",
+          "https://www.youtube.com/watch?v=Crv5fkOYiMA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=2",
+          "https://www.youtube.com/watch?v=k566UWDtvKA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=3"
+        ]
       },
       {
         id: "plus_jeune_3",
@@ -314,7 +328,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Ben'imana",
         director: "Kantarama Gahigiri",
         portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -333,7 +347,10 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "L'Arbre de la mémoire",
         director: "Sylvestre Amoussou",
         portraitPath: "/images/nominee_11_gael_hounkpatin.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://www.youtube.com/watch?v=N84zsJRtKrs&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=39",
+          "https://www.youtube.com/watch?v=2lQiXV0s9Ww&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=38"
+        ]
       },
       {
         id: "espoir_2",
@@ -342,7 +359,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Les Voiles du Sahel",
         director: "Mahamat-Saleh Haroun",
         portraitPath: "/images/nominee_11_achouackh_souleymane.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "espoir_3",
@@ -351,7 +368,11 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Le souffle des ancêtres",
         director: "Jacques Trabi",
         portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       }
     ]
   },
@@ -370,7 +391,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "UNE FEMME A KOSYAM",
         director: "Serge Armel",
         portraitPath: "/images/nominee_11_vincent_bazie.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "burkinabe_m_2",
@@ -379,7 +400,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "KATANGA, LA DANSE DES SCORPIONS",
         director: "Dani Kouyaté",
         portraitPath: "/images/nominee_10_mahamady_nana.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "burkinabe_m_3",
@@ -388,7 +409,8 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Katanga",
         director: "Dani Kouyaté",
         portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
+        videoPassword: "droma2"
       }
     ]
   },
@@ -407,7 +429,8 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Katanga",
         director: "Dani Kouyaté",
         portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
+        videoPassword: "droma2"
       },
       {
         id: "burkinabe_f_2",
@@ -416,7 +439,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Sira",
         director: "Apolline Traoré",
         portraitPath: "/images/burkina_faso_feminin_irene_minoungou.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "burkinabe_f_3",
@@ -425,7 +448,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "La Traversée",
         director: "Missa Hébié",
         portraitPath: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -444,16 +467,24 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "LES NOUNOUS SAISON 3",
         director: "Franck Vlehi",
         portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       },
       {
         id: "espoir_tv_2",
-        actorName: "Marie-Odile GONDO",
+        actorName: "Marie-Odile GONDO (odo marie)",
         country: "Côte d'Ivoire",
         filmTitle: "Les Nounous",
         director: "Franck Vlehi",
         portraitPath: "/images/laureat_diariatou_sow.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       },
       {
         id: "espoir_tv_3",
@@ -462,7 +493,17 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Y'a Braquage au village",
         director: "Serge Armel",
         portraitPath: "/images/espoir_africain_pape_aly_diop.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://vimeo.com/1206281951/0f03b1c6be"
+      },
+      {
+        id: "espoir_tv_4",
+        actorName: "Ephraim OKA",
+        country: "Côte d'Ivoire",
+        filmTitle: "Innocente",
+        director: "Kady Traoré",
+        portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
+        videoUrl: "https://vimeo.com/1204785807?fl=ip&fe=ec",
+        videoPassword: "I2V"
       }
     ]
   },
@@ -481,7 +522,12 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MONKAM",
         director: "Narcisse Wandji",
         portraitPath: "/images/nominee_11_tatiana_matip.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://filmfreeway.com/projects/3277677",
+          "https://filmfreeway.com/projects/3277713",
+          "https://filmfreeway.com/projects/3277775"
+        ],
+        videoPassword: "2024"
       },
       {
         id: "feminin_tv_2",
@@ -490,7 +536,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "LES NOUNOUS",
         director: "Franck Vlehi & Marina Niava",
         portraitPath: "/images/nominee_10_eve_guehi.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "feminin_tv_3",
@@ -499,7 +545,17 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "REVELATIONS SCANDALEUSES",
         director: "Ebenezer Kepombia",
         portraitPath: "/images/nominee_10_hortavie_mpondo.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+      },
+      {
+        id: "feminin_tv_4",
+        actorName: "Diana BOULI",
+        country: "Cameroun",
+        filmTitle: "Le destin des ombres",
+        director: "Franck Vlehi",
+        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg",
+        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
+        videoPassword: "droma2"
       }
     ]
   },
@@ -518,7 +574,11 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "LES NOUNOUS SAISON 3",
         director: "Franck Vlehi",
         portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       },
       {
         id: "masculin_tv_2",
@@ -527,7 +587,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "UNE FEMME A KOSYAM",
         director: "Serge Armel",
         portraitPath: "/images/nominee_11_vincent_bazie.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "masculin_tv_3",
@@ -536,7 +596,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "CŒURS BRISES",
         director: "Evenprod",
         portraitPath: "/images/nominee_10_moussa_sow.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   },
@@ -555,7 +615,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MALDITO AMOR",
         director: "Ladislau Ramalho",
         portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "dor_2",
@@ -564,7 +624,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "Anthôman ou Pour l'honneur",
         director: "Jacques Trabi",
         portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       },
       {
         id: "dor_3",
@@ -573,7 +633,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "L2: Empuraan",
         director: "Prithviraj Sukumaran",
         portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
-        videoUrl: "https://www.youtube.com/embed/ecE_edZBwpc"
+        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
       }
     ]
   }
