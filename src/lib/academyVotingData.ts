@@ -433,24 +433,27 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "espoir_tv_1",
-        actorName: "Jean François ETTIEN",
-        country: "Côte d'Ivoire",
-        filmTitle: "LES NOUNOUS SAISON 3",
-        director: "Franck Vlehi",
-        portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
-        videoUrls: [
-          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
-        ]
+        actorName: "EL Hadj Hamadou DIOP",
+        country: "Sénégal",
+        filmTitle: "LAKANTANE, la méduse",
+        director: "Angèle Diabang & Kismath Baguiri",
+        portraitPath: "/images/nominee_11_el_hadj_hamadou_diop.jpg"
       },
       {
         id: "espoir_tv_2",
-        actorName: "Marie-Odile GONDO (odo marie)",
+        actorName: "Jenny MEZILE",
+        country: "Haïti",
+        filmTitle: "le secret des Bagayoko",
+        director: "Boubacar Diallo",
+        portraitPath: "/images/nominee_11_jenny_mezile.jpg"
+      },
+      {
+        id: "espoir_tv_3",
+        actorName: "Marie-Odile GONDO dite ODO MARIE",
         country: "Côte d'Ivoire",
-        filmTitle: "Les Nounous",
+        filmTitle: "LES NOUNOUS SAISON 3",
         director: "Franck Vlehi",
-        portraitPath: "/images/laureat_diariatou_sow.jpg",
+        portraitPath: "/images/nominee_11_marie_odile_gondo.jpg",
         videoUrls: [
           "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
           "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
