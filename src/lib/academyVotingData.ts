@@ -76,34 +76,28 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "centrale_1",
-        actorName: "Tiss Warren MOMBO",
-        country: "Gabon",
-        filmTitle: "AFROTOPIA",
-        director: "David Mboussou",
-        portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg"
+        actorName: "Achouackh ABAKAR SOULEYMANE",
+        country: "Tchad",
+        filmTitle: "Soumsoum, the Night of the Stars",
+        director: "Mahamat-Saleh Haroun",
+        portraitPath: "/images/nominee_11_achouackh_souleymane.jpg"
       },
       {
         id: "centrale_2",
         actorName: "Emy Dany BASSONG",
         country: "Cameroun",
-        filmTitle: "La Reine de la Cité",
+        filmTitle: "LE PRIX DU POUVOIR",
         director: "Ebenezer Kepombia",
         portraitPath: "/images/nominee_11_emy_dany_bassong.jpg",
         videoUrl: "https://youtu.be/vOSgPa5Xzko"
       },
       {
         id: "centrale_3",
-        actorName: "Tatiana MATIP",
-        country: "Cameroun",
-        filmTitle: "MONKAM",
-        director: "Narcisse Wandji",
-        portraitPath: "/images/nominee_11_tatiana_matip.jpg",
-        videoUrls: [
-          "https://filmfreeway.com/projects/3277677",
-          "https://filmfreeway.com/projects/3277713",
-          "https://filmfreeway.com/projects/3277775"
-        ],
-        videoPassword: "2024"
+        actorName: "Tiss Warren MOMBO",
+        country: "Gabon",
+        filmTitle: "AFROTOPIA",
+        director: "David Mboussou",
+        portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg"
       }
     ]
   },
