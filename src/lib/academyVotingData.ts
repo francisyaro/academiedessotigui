@@ -555,7 +555,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "SOTIGUI AWARDS 2026 – SOTIGUI D’OR",
     titleEn: "SOTIGUI AWARDS 2026 – SOTIGUI D'OR",
     googleFormUrl: "https://forms.gle/ua62SQccMtb1HviJ8",
-    bannerPath: "/images/trophy_dark.jpg",
+    bannerPath: "/images/category_banner_sotigui_dor.jpg",
     nominees: [
       {
         id: "dor_1",
