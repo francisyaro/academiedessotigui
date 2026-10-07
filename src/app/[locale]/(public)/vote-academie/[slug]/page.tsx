@@ -82,27 +82,29 @@ export default async function CategoryVotePage({ params }: CategoryVotePageProps
             </div>
           </div>
 
-          {/* Nominee Video Extracts Section */}
-          <div className="flex flex-col gap-6 mt-6 border-t border-border-color/60 pt-10">
-            <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-ivory font-serif text-xl font-bold">
-                <Film size={22} className="text-gold-primary" />
-                <h2>{isEn ? 'Nominees Film Video Extracts' : 'Extraits Vidéo des Acteurs Nominés'}</h2>
+          {/* Nominee Video Extracts Section (Excluded for Sotigui d'Or as extracts are available in individual categories) */}
+          {category.id !== 'cat_dor' && category.nominees.length > 0 && (
+            <div className="flex flex-col gap-6 mt-6 border-t border-border-color/60 pt-10">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2 text-ivory font-serif text-xl font-bold">
+                  <Film size={22} className="text-gold-primary" />
+                  <h2>{isEn ? 'Nominees Film Video Extracts' : 'Extraits Vidéo des Acteurs Nominés'}</h2>
+                </div>
+                <p className="text-xs text-gray-text">
+                  {isEn
+                    ? 'Watch the performance excerpts for each nominated actor below to inform your decision.'
+                    : 'Consultez les extraits d\'interprétation de chaque acteur nominé ci-dessous pour guider votre choix.'}
+                </p>
               </div>
-              <p className="text-xs text-gray-text">
-                {isEn
-                  ? 'Watch the performance excerpts for each nominated actor below to inform your decision.'
-                  : 'Consultez les extraits d\'interprétation de chaque acteur nominé ci-dessous pour guider votre choix.'}
-              </p>
-            </div>
 
-            {/* Grid of 3 VideoExtractCards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {category.nominees.map((nominee) => (
-                <VideoExtractCard key={nominee.id} nominee={nominee} locale={locale} />
-              ))}
+              {/* Grid of 3 VideoExtractCards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {category.nominees.map((nominee) => (
+                  <VideoExtractCard key={nominee.id} nominee={nominee} locale={locale} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </AcademyAuthGate>
     </div>

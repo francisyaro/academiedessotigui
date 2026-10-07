@@ -85,7 +85,7 @@ export default async function AcademyVotePortalPage({ params }: AcademyVotePorta
                     </h3>
                     <p className="text-xs text-gray-text flex items-center gap-1.5">
                       <CheckCircle size={14} className="text-gold-primary shrink-0" />
-                      <span>{category.nominees.length} {isEn ? 'Nominated Actors' : 'Acteurs Nominés'}</span>
+                      <span>{category.id === 'cat_dor' ? 27 : category.nominees.length} {isEn ? 'Nominated Actors' : 'Acteurs Nominés'}</span>
                     </p>
                   </div>
 
