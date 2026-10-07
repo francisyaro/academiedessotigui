@@ -535,19 +535,23 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
       },
       {
         id: "masculin_tv_2",
+        actorName: "Gaël HOUNKPATIN",
+        country: "Bénin",
+        filmTitle: "Apparences",
+        director: "Kismath BAGUIRI & Pape Abdoulaye SECK",
+        portraitPath: "/images/nominee_11_gael_hounkpatin.jpg",
+        videoUrls: [
+          "https://www.youtube.com/watch?v=N84zsJRtKrs&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=39",
+          "https://www.youtube.com/watch?v=2lQiXV0s9Ww&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=38"
+        ]
+      },
+      {
+        id: "masculin_tv_3",
         actorName: "Vincent BAZIÉ",
         country: "Burkina Faso",
         filmTitle: "UNE FEMME A KOSYAM",
         director: "Serge Armel",
         portraitPath: "/images/nominee_11_vincent_bazie.jpg"
-      },
-      {
-        id: "masculin_tv_3",
-        actorName: "Moussa SOW",
-        country: "Sénégal",
-        filmTitle: "CŒURS BRISES",
-        director: "Evenprod",
-        portraitPath: "/images/nominee_10_moussa_sow.jpg"
       }
     ]
   },
