@@ -456,25 +456,6 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
           "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
           "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
         ]
-      },
-      {
-        id: "espoir_tv_3",
-        actorName: "Thierry YAKE (DJ TikTok)",
-        country: "Côte d'Ivoire",
-        filmTitle: "Y'a Braquage au village",
-        director: "Serge Armel",
-        portraitPath: "/images/espoir_africain_pape_aly_diop.jpg",
-        videoUrl: "https://vimeo.com/1206281951/0f03b1c6be"
-      },
-      {
-        id: "espoir_tv_4",
-        actorName: "Ephraim OKA",
-        country: "Côte d'Ivoire",
-        filmTitle: "Innocente",
-        director: "Kady Traoré",
-        portraitPath: "/images/nominee_11_jean_francois_ettien.jpg",
-        videoUrl: "https://vimeo.com/1204785807?fl=ip&fe=ec",
-        videoPassword: "I2V"
       }
     ]
   },
@@ -515,16 +496,6 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "REVELATIONS SCANDALEUSES",
         director: "Ebenezer Kepombia",
         portraitPath: "/images/nominee_10_hortavie_mpondo.jpg"
-      },
-      {
-        id: "feminin_tv_4",
-        actorName: "Diana BOULI",
-        country: "Cameroun",
-        filmTitle: "Le destin des ombres",
-        director: "Franck Vlehi",
-        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg",
-        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
-        videoPassword: "droma2"
       }
     ]
   },
