@@ -113,7 +113,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de la Diaspora",
     titleEn: "Sotigui of the Best Actor of the Diaspora",
     googleFormUrl: "https://forms.gle/MmKUhnR9hWXReY6W6",
-    bannerPath: "/images/nominee_11_michael_b_jordan.jpg",
+    bannerPath: "/images/category_banner_diaspora.jpg",
     nominees: [
       {
         id: "diaspora_1",
@@ -253,7 +253,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur Nigeria / Ghana",
     titleEn: "Sotigui of the Best Actor Nigeria / Ghana",
     googleFormUrl: "https://forms.gle/tf4pvwp2UTQ2zcSz9",
-    bannerPath: "/images/nominee_11_adjetey_anang.jpg",
+    bannerPath: "/images/category_banner_ng_gh.jpg",
     nominees: [
       {
         id: "ng_gh_1",
@@ -375,7 +375,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui de la Meilleure Interprétation Masculine Burkinabè",
     titleEn: "Sotigui for Best Male Performance - Burkina Faso",
     googleFormUrl: "https://forms.gle/yKaR2ySkHeZ2PphJ9",
-    bannerPath: "/images/nominee_11_vincent_bazie.jpg",
+    bannerPath: "/images/category_banner_burkinabe_masculin.jpg",
     nominees: [
       {
         id: "burkinabe_m_1",
@@ -502,7 +502,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui de la Meilleure Interprétation Féminine Africaine Série TV",
     titleEn: "Sotigui for Best Female Performance - African TV Series",
     googleFormUrl: "https://forms.gle/tNan5XMLzjMUq67z9",
-    bannerPath: "/images/nominee_11_tatiana_matip.jpg",
+    bannerPath: "/images/category_banner_feminin_tv.jpg",
     nominees: [
       {
         id: "feminin_tv_1",
@@ -552,7 +552,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui de la Meilleure Interprétation Masculine Africaine Série TV",
     titleEn: "Sotigui for Best Male Performance - African TV Series",
     googleFormUrl: "https://forms.gle/JPauwQbjyFzXXazTA",
-    bannerPath: "/images/nominee_11_jean_francois_ettien.jpg",
+    bannerPath: "/images/category_banner_masculin_tv.jpg",
     nominees: [
       {
         id: "masculin_tv_1",
