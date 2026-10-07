@@ -330,36 +330,28 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "espoir_1",
-        actorName: "Gaël HOUNKPATIN",
-        country: "Bénin",
-        filmTitle: "L'Arbre de la mémoire",
-        director: "Sylvestre Amoussou",
-        portraitPath: "/images/nominee_11_gael_hounkpatin.jpg",
-        videoUrls: [
-          "https://www.youtube.com/watch?v=N84zsJRtKrs&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=39",
-          "https://www.youtube.com/watch?v=2lQiXV0s9Ww&list=PLDPS0WtrIOX8b28cFJo0jJfc0E45sFZXN&index=38"
-        ]
+        actorName: "Adham SHUKR",
+        country: "Egypte",
+        filmTitle: "THE SETTLEMENT",
+        director: "Mohamad RASHAD",
+        portraitPath: "/images/nominee_11_adham_shukr.jpg"
       },
       {
         id: "espoir_2",
-        actorName: "Achouackh ABAKAR SOULEYMANE",
-        country: "Tchad",
-        filmTitle: "Les Voiles du Sahel",
-        director: "Mahamat-Saleh Haroun",
-        portraitPath: "/images/nominee_11_achouackh_souleymane.jpg"
+        actorName: "Thierry YAKÉ",
+        country: "Côte d'Ivoire",
+        filmTitle: "YA BRAQUAGE AU VILLAGE",
+        director: "Odo Marie et Consty Peursy",
+        portraitPath: "/images/nominee_11_thierry_yake.jpg",
+        videoUrl: "https://vimeo.com/1206281951/0f03b1c6be"
       },
       {
         id: "espoir_3",
-        actorName: "Bienvenue KOFFI",
-        country: "Côte d'Ivoire",
-        filmTitle: "Le souffle des ancêtres",
-        director: "Jacques Trabi",
-        portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
-        videoUrls: [
-          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
-        ]
+        actorName: "Fally IPUPA",
+        country: "République Démocratique du Congo",
+        filmTitle: "Rumba Royale",
+        director: "Yohane Dean Lengol et Hamed Mobasser",
+        portraitPath: "/images/nominee_11_fally_ipupa.jpg"
       }
     ]
   },
