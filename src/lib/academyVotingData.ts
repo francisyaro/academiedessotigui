@@ -1,3 +1,9 @@
+export interface VideoItem {
+  url: string
+  password?: string
+  title?: string
+}
+
 export interface NomineeVideoExtract {
   id: string
   actorName: string
@@ -7,6 +13,7 @@ export interface NomineeVideoExtract {
   portraitPath: string
   videoUrl?: string
   videoUrls?: string[]
+  videoItems?: VideoItem[]
   videoPassword?: string
 }
 
@@ -36,7 +43,10 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MALDITO AMOR",
         director: "Ladislau Ramalho",
         portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc",
+        videoItems: [
+          { url: "https://vimeo.com/1170950826", password: "Diamond25", title: "Extrait 1" },
+          { url: "https://vimeo.com/1127099277", password: "Val1923", title: "Extrait 2" }
+        ]
       },
       {
         id: "australe_2",
@@ -44,8 +54,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Afrique du Sud",
         filmTitle: "Laundry (Uhlanjululo)",
         director: "Zamo Mkhwanazi",
-        portraitPath: "/images/nominee_11_siyabonga_shibe.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_siyabonga_shibe.jpg"
       },
       {
         id: "australe_3",
@@ -53,8 +62,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Mozambique",
         filmTitle: "O Profeta",
         director: "Ique Langa",
-        portraitPath: "/images/nominee_11_admiro_munguambe.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_admiro_munguambe.jpg"
       }
     ]
   },
@@ -72,8 +80,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Gabon",
         filmTitle: "AFROTOPIA",
         director: "David Mboussou",
-        portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_tiss_warren_mombo.jpg"
       },
       {
         id: "centrale_2",
@@ -114,8 +121,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "USA",
         filmTitle: "SINNERS",
         director: "Ryan Coogler",
-        portraitPath: "/images/nominee_11_michael_b_jordan.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_michael_b_jordan.jpg"
       },
       {
         id: "diaspora_2",
@@ -123,8 +129,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Mexique/Kenya",
         filmTitle: "A Quiet Place: Day One",
         director: "Michael Sarnoski",
-        portraitPath: "/images/nominee_11_lupita_nyongo.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_lupita_nyongo.jpg"
       },
       {
         id: "diaspora_3",
@@ -132,8 +137,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "France/Cameroun",
         filmTitle: "L2: Empuraan",
         director: "Prithviraj Sukumaran",
-        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg"
       }
     ]
   },
@@ -151,8 +155,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Kenya",
         filmTitle: "INSIDE JOB",
         director: "Nick Mutuma",
-        portraitPath: "/images/nominee_11_jacky_vike.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_jacky_vike.jpg"
       },
       {
         id: "est_2",
@@ -170,8 +173,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Rwanda",
         filmTitle: "Ben'imana",
         director: "Kantarama Gahigiri",
-        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg"
       }
     ]
   },
@@ -189,8 +191,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Maroc",
         filmTitle: "Goundafa the cursed song",
         director: "Nabil Ayouch",
-        portraitPath: "/images/nominee_11_fatima_attif.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_fatima_attif.jpg"
       },
       {
         id: "nord_2",
@@ -198,8 +199,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Egypte",
         filmTitle: "El Sett",
         director: "Marwan Hamed",
-        portraitPath: "/images/nominee_11_mohamed_farrag.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_mohamed_farrag.jpg"
       },
       {
         id: "nord_3",
@@ -207,8 +207,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Tunisie",
         filmTitle: "The Voice of Hind Rajab",
         director: "Kaouther Ben Hania",
-        portraitPath: "/images/nominee_11_saja_kilani.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_saja_kilani.jpg"
       }
     ]
   },
@@ -226,8 +225,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Côte d'Ivoire",
         filmTitle: "Anthôman ou Pour l'honneur",
         director: "Jacques Trabi",
-        portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_prisca_marceleney.jpg"
       },
       {
         id: "ouest_2",
@@ -235,8 +233,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Sénégal",
         filmTitle: "VALDIODIO",
         director: "Amina Ndiaye Leclerc",
-        portraitPath: "/images/nominee_11_souleymane_seye_ndiaye.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_souleymane_seye_ndiaye.jpg"
       },
       {
         id: "ouest_3",
@@ -264,8 +261,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Ghana",
         filmTitle: "VIRGIN OF THE THRONE",
         director: "Shirley Frimpong-Manso",
-        portraitPath: "/images/nominee_11_adjetey_anang.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_adjetey_anang.jpg"
       },
       {
         id: "ng_gh_2",
@@ -273,8 +269,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Nigéria",
         filmTitle: "My Father's Shadow",
         director: "Akinola Davies Jr.",
-        portraitPath: "/images/nominee_11_sope_dirisu.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_sope_dirisu.jpg"
       },
       {
         id: "ng_gh_3",
@@ -293,7 +288,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Plus Jeune Acteur Africain",
     titleEn: "Sotigui of the Best Youngest African Actor",
     googleFormUrl: "https://forms.gle/iavTDianGX5Y5rzi6",
-    bannerPath: "/images/plus_jeune_acteur_lionel_bambara.jpg",
+    bannerPath: "/images/category_banner_plus_jeune_acteur.jpg",
     nominees: [
       {
         id: "plus_jeune_1",
@@ -327,8 +322,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Rwanda",
         filmTitle: "Ben'imana",
         director: "Kantarama Gahigiri",
-        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg"
       }
     ]
   },
@@ -338,7 +332,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Espoir Africain",
     titleEn: "Sotigui of the Best African Hope",
     googleFormUrl: "https://forms.gle/LGa7XwERF9X8rZ3R8",
-    bannerPath: "/images/espoir_africain_pape_aly_diop.jpg",
+    bannerPath: "/images/category_banner_espoir_africain.jpg",
     nominees: [
       {
         id: "espoir_1",
@@ -358,8 +352,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Tchad",
         filmTitle: "Les Voiles du Sahel",
         director: "Mahamat-Saleh Haroun",
-        portraitPath: "/images/nominee_11_achouackh_souleymane.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_achouackh_souleymane.jpg"
       },
       {
         id: "espoir_3",
@@ -390,8 +383,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Burkina Faso",
         filmTitle: "UNE FEMME A KOSYAM",
         director: "Serge Armel",
-        portraitPath: "/images/nominee_11_vincent_bazie.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_vincent_bazie.jpg"
       },
       {
         id: "burkinabe_m_2",
@@ -399,8 +391,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Burkina Faso",
         filmTitle: "KATANGA, LA DANSE DES SCORPIONS",
         director: "Dani Kouyaté",
-        portraitPath: "/images/nominee_10_mahamady_nana.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_10_mahamady_nana.jpg"
       },
       {
         id: "burkinabe_m_3",
@@ -420,7 +411,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui de la Meilleure Interprétation Féminine Burkinabè",
     titleEn: "Sotigui for Best Female Performance - Burkina Faso",
     googleFormUrl: "https://forms.gle/u6ZTr19ZLChcGdyYA",
-    bannerPath: "/images/burkina_faso_feminin_irene_minoungou.jpg",
+    bannerPath: "/images/category_banner_burkinabe_feminin.jpg",
     nominees: [
       {
         id: "burkinabe_f_1",
@@ -438,8 +429,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Burkina Faso",
         filmTitle: "Sira",
         director: "Apolline Traoré",
-        portraitPath: "/images/burkina_faso_feminin_irene_minoungou.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/burkina_faso_feminin_irene_minoungou.jpg"
       },
       {
         id: "burkinabe_f_3",
@@ -447,8 +437,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Burkina Faso",
         filmTitle: "La Traversée",
         director: "Missa Hébié",
-        portraitPath: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg"
       }
     ]
   },
@@ -458,7 +447,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Espoir Africain Série TV",
     titleEn: "Sotigui for Best Hope African TV Series",
     googleFormUrl: "https://forms.gle/HsAVQ1AcQcvZUytn8",
-    bannerPath: "/images/laureat_diariatou_sow.jpg",
+    bannerPath: "/images/category_banner_espoir_serie_tv.jpg",
     nominees: [
       {
         id: "espoir_tv_1",
@@ -535,8 +524,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Côte d'Ivoire",
         filmTitle: "LES NOUNOUS",
         director: "Franck Vlehi & Marina Niava",
-        portraitPath: "/images/nominee_10_eve_guehi.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_10_eve_guehi.jpg"
       },
       {
         id: "feminin_tv_3",
@@ -544,8 +532,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Cameroun",
         filmTitle: "REVELATIONS SCANDALEUSES",
         director: "Ebenezer Kepombia",
-        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg"
       },
       {
         id: "feminin_tv_4",
@@ -586,8 +573,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Burkina Faso",
         filmTitle: "UNE FEMME A KOSYAM",
         director: "Serge Armel",
-        portraitPath: "/images/nominee_11_vincent_bazie.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_vincent_bazie.jpg"
       },
       {
         id: "masculin_tv_3",
@@ -595,8 +581,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Sénégal",
         filmTitle: "CŒURS BRISES",
         director: "Evenprod",
-        portraitPath: "/images/nominee_10_moussa_sow.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_10_moussa_sow.jpg"
       }
     ]
   },
@@ -615,7 +600,10 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         filmTitle: "MALDITO AMOR",
         director: "Ladislau Ramalho",
         portraitPath: "/images/nominee_11_silvio_nascimento.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        videoItems: [
+          { url: "https://vimeo.com/1170950826", password: "Diamond25", title: "Extrait 1" },
+          { url: "https://vimeo.com/1127099277", password: "Val1923", title: "Extrait 2" }
+        ]
       },
       {
         id: "dor_2",
@@ -623,8 +611,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Côte d'Ivoire",
         filmTitle: "Anthôman ou Pour l'honneur",
         director: "Jacques Trabi",
-        portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_prisca_marceleney.jpg"
       },
       {
         id: "dor_3",
@@ -632,8 +619,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "France/Cameroun",
         filmTitle: "L2: Empuraan",
         director: "Prithviraj Sukumaran",
-        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg",
-        videoUrl: "https://www.youtube.com/watch?v=ecE_edZBwpc"
+        portraitPath: "/images/nominee_11_eriq_ebouaney.jpg"
       }
     ]
   }

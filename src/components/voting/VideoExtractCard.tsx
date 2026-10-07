@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { NomineeVideoExtract } from '@/lib/academyVotingData'
-import { Film, Lock, Copy, Check, Play, ExternalLink, Video } from 'lucide-react'
+import { NomineeVideoExtract, VideoItem } from '@/lib/academyVotingData'
+import { Film, Lock, Copy, Check, ExternalLink, Video, Clock, AlertCircle } from 'lucide-react'
 
 interface VideoExtractCardProps {
   nominee: NomineeVideoExtract
@@ -14,15 +14,26 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
   const [copied, setCopied] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  const videoList = nominee.videoUrls && nominee.videoUrls.length > 0
-    ? nominee.videoUrls
-    : (nominee.videoUrl ? [nominee.videoUrl] : [])
+  // Determine video items list
+  const items: VideoItem[] = nominee.videoItems && nominee.videoItems.length > 0
+    ? nominee.videoItems
+    : (nominee.videoUrls && nominee.videoUrls.length > 0
+      ? nominee.videoUrls.map((url, idx) => ({
+          url,
+          password: nominee.videoPassword,
+          title: `${isEn ? 'Clip' : 'Extrait'} ${idx + 1}`
+        }))
+      : (nominee.videoUrl && !nominee.videoUrl.includes('ecE_edZBwpc')
+        ? [{ url: nominee.videoUrl, password: nominee.videoPassword, title: isEn ? 'Clip 1' : 'Extrait 1' }]
+        : []))
 
-  const currentUrl = videoList[selectedIndex] || nominee.videoUrl
+  const currentItem = items[selectedIndex]
+  const currentUrl = currentItem?.url
+  const currentPassword = currentItem?.password || nominee.videoPassword
 
   const handleCopyPassword = () => {
-    if (nominee.videoPassword) {
-      navigator.clipboard.writeText(nominee.videoPassword)
+    if (currentPassword) {
+      navigator.clipboard.writeText(currentPassword)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }
@@ -67,6 +78,7 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
 
   const embedUrl = getEmbedUrl(currentUrl)
   const isFilmFreeway = currentUrl && currentUrl.includes('filmfreeway.com')
+  const hasValidVideo = Boolean(currentUrl)
 
   return (
     <div className="bg-dark-surface border border-border-color/80 hover:border-gold-primary/40 rounded-2xl overflow-hidden shadow-xl flex flex-col transition-all duration-300">
@@ -98,13 +110,13 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
       </div>
 
       {/* Multi-extract Selector Tabs */}
-      {videoList.length > 1 && (
+      {items.length > 1 && (
         <div className="bg-dark-bg/80 px-4 py-2 border-b border-border-color/40 flex items-center gap-2 overflow-x-auto">
           <span className="text-[10px] font-bold text-gray-text uppercase tracking-widest shrink-0 flex items-center gap-1">
             <Video size={12} className="text-gold-primary" />
             {isEn ? 'Extracts:' : 'Extraits:'}
           </span>
-          {videoList.map((_, idx) => (
+          {items.map((item, idx) => (
             <button
               key={idx}
               onClick={() => setSelectedIndex(idx)}
@@ -114,7 +126,7 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
                   : 'bg-dark-surface border border-border-color text-gray-text hover:text-ivory'
               }`}
             >
-              {isEn ? `Clip ${idx + 1}` : `Extrait ${idx + 1}`}
+              {item.title || (isEn ? `Clip ${idx + 1}` : `Extrait ${idx + 1}`)}
             </button>
           ))}
         </div>
@@ -122,44 +134,66 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
 
       {/* Video Player Section */}
       <div className="relative aspect-video w-full bg-black flex items-center justify-center overflow-hidden">
-        {isFilmFreeway ? (
-          <div className="flex flex-col items-center justify-center gap-3 p-6 text-center">
-            <Film size={40} className="text-gold-primary" />
-            <p className="text-xs text-ivory font-semibold max-w-xs">
-              {isEn
-                ? 'This video excerpt is hosted on FilmFreeway.'
-                : 'Cet extrait vidéo est hébergé sur FilmFreeway.'}
-            </p>
-            <a
-              href={currentUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-gold-primary hover:bg-gold-light text-black text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md cursor-pointer"
-            >
-              <span>{isEn ? 'Watch on FilmFreeway' : 'Visionner sur FilmFreeway'}</span>
-              <ExternalLink size={14} />
-            </a>
-          </div>
-        ) : embedUrl ? (
-          <iframe
-            src={embedUrl}
-            title={`Extrait - ${nominee.actorName}`}
-            className="w-full h-full border-0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+        {hasValidVideo ? (
+          isFilmFreeway ? (
+            <div className="flex flex-col items-center justify-center gap-3 p-6 text-center">
+              <Film size={40} className="text-gold-primary" />
+              <p className="text-xs text-ivory font-semibold max-w-xs">
+                {isEn
+                  ? 'This video excerpt is hosted on FilmFreeway.'
+                  : 'Cet extrait vidéo est hébergé sur FilmFreeway.'}
+              </p>
+              <a
+                href={currentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-gold-primary hover:bg-gold-light text-black text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md cursor-pointer"
+              >
+                <span>{isEn ? 'Watch on FilmFreeway' : 'Visionner sur FilmFreeway'}</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+          ) : embedUrl ? (
+            <iframe
+              src={embedUrl}
+              title={`Extrait - ${nominee.actorName}`}
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center gap-2 p-6 text-center text-gray-text">
+              <Clock size={32} className="text-gold-primary/60" />
+              <p className="text-xs font-bold uppercase tracking-wider text-gold-light">
+                {isEn ? 'LINK PENDING' : 'LIEN ATTENDU'}
+              </p>
+            </div>
+          )
         ) : (
-          <div className="flex flex-col items-center justify-center gap-2 p-6 text-center text-gray-text">
-            <Play size={32} className="text-gold-primary/60" />
-            <p className="text-xs">
-              {isEn ? 'Video extract currently loading...' : 'Extrait vidéo en cours de chargement...'}
-            </p>
+          /* Notice for films without video links yet */
+          <div className="flex flex-col items-center justify-center gap-3 p-6 text-center bg-gradient-to-b from-dark-surface/40 via-black to-dark-bg">
+            <div className="w-12 h-12 rounded-full bg-gold-primary/10 border border-gold-primary/30 flex items-center justify-center text-gold-light shadow-inner">
+              <Clock size={24} className="animate-pulse text-gold-primary" />
+            </div>
+            <div className="flex flex-col gap-1 items-center">
+              <span className="px-2.5 py-0.5 rounded-full bg-gold-primary/20 text-gold-light border border-gold-primary/30 text-[10px] font-extrabold uppercase tracking-widest">
+                {isEn ? 'LINK PENDING' : 'LIEN ATTENDU'}
+              </span>
+              <p className="text-xs font-bold text-ivory uppercase tracking-wider mt-1">
+                {isEn ? 'LINK AVAILABLE SOON' : 'LIEN MIS À DISPOSITION BIENTÔT'}
+              </p>
+              <p className="text-[11px] text-gray-text max-w-xs mt-1 leading-relaxed">
+                {isEn
+                  ? 'The video extract for this film will be provided shortly to Academy members.'
+                  : 'L\'extrait vidéo de ce film sera mis à la disposition des membres de l\'Académie très prochainement.'}
+              </p>
+            </div>
           </div>
         )}
       </div>
 
       {/* Optional Password Protected Notice */}
-      {nominee.videoPassword && (
+      {hasValidVideo && currentPassword && (
         <div className="p-4 bg-gold-primary/10 border-t border-gold-primary/30 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 min-w-0">
             <Lock size={15} className="text-gold-light shrink-0" />
@@ -168,7 +202,7 @@ export function VideoExtractCard({ nominee, locale }: VideoExtractCardProps) {
                 {isEn ? 'Protected Video Access' : 'Accès Vidéo Protégé'}
               </p>
               <p className="text-xs text-ivory font-mono font-bold truncate">
-                {nominee.videoPassword}
+                {currentPassword}
               </p>
             </div>
           </div>
