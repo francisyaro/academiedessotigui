@@ -365,29 +365,27 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "burkinabe_m_1",
-        actorName: "Vincent BAZIÉ",
+        actorName: "Charles WATTARA",
         country: "Burkina Faso",
-        filmTitle: "UNE FEMME A KOSYAM",
-        director: "Serge Armel",
-        portraitPath: "/images/nominee_11_vincent_bazie.jpg"
+        filmTitle: "LALA",
+        director: "Omar SAMBA SEKOU",
+        portraitPath: "/images/nominee_11_charles_wattara.jpg"
       },
       {
         id: "burkinabe_m_2",
-        actorName: "Mahamady NANA",
+        actorName: "Gérard OUÉDRAOGO",
         country: "Burkina Faso",
-        filmTitle: "KATANGA, LA DANSE DES SCORPIONS",
-        director: "Dani Kouyaté",
-        portraitPath: "/images/nominee_10_mahamady_nana.jpg"
+        filmTitle: "CA SUFFIT",
+        director: "Alima Ouédraogo",
+        portraitPath: "/images/nominee_11_gerard_ouedraogo.jpg"
       },
       {
         id: "burkinabe_m_3",
-        actorName: "Aïda Niatta MAATIKARA",
+        actorName: "Soumaïla KABORÉ dit Soum le sapeur",
         country: "Burkina Faso",
-        filmTitle: "Katanga",
-        director: "Dani Kouyaté",
-        portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
-        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
-        videoPassword: "droma2"
+        filmTitle: "PPS",
+        director: "Soum le Sapeur",
+        portraitPath: "/images/nominee_11_soumaila_kabore.jpg"
       }
     ]
   },
