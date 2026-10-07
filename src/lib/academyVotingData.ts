@@ -486,19 +486,29 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
       },
       {
         id: "feminin_tv_2",
-        actorName: "Eve GUEHI",
+        actorName: "Bienvenue KOFFI",
         country: "Côte d'Ivoire",
-        filmTitle: "LES NOUNOUS",
-        director: "Franck Vlehi & Marina Niava",
-        portraitPath: "/images/nominee_10_eve_guehi.jpg"
+        filmTitle: "LES NOUNOUS SAISON 3",
+        director: "Franck Vlehi",
+        portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
+        videoUrls: [
+          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
+          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
+        ]
       },
       {
         id: "feminin_tv_3",
-        actorName: "Hortavie MPONDO",
-        country: "Cameroun",
-        filmTitle: "REVELATIONS SCANDALEUSES",
-        director: "Ebenezer Kepombia",
-        portraitPath: "/images/nominee_10_hortavie_mpondo.jpg"
+        actorName: "Astou DIAW",
+        country: "Sénégal",
+        filmTitle: "XALISSO",
+        director: "Ibou Gueye",
+        portraitPath: "/images/nominee_11_astou_diaw.jpg",
+        videoUrls: [
+          "https://www.youtube.com/watch?v=mYTFA0VIPLc&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906",
+          "https://www.youtube.com/watch?v=Crv5fkOYiMA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=2",
+          "https://www.youtube.com/watch?v=k566UWDtvKA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=3"
+        ]
       }
     ]
   },
