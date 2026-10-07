@@ -34,7 +34,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de l'Afrique Australe",
     titleEn: "Sotigui of the Best Actor of Southern Africa",
     googleFormUrl: "https://forms.gle/BMgEZSoQPdgu5KeZ9",
-    bannerPath: "/images/nominee_11_silvio_nascimento.jpg",
+    bannerPath: "/images/category_banner_afrique_australe.jpg",
     nominees: [
       {
         id: "australe_1",
@@ -72,7 +72,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de l'Afrique Centrale",
     titleEn: "Sotigui of the Best Actor of Central Africa",
     googleFormUrl: "https://forms.gle/fJ6a8R71Rus7WjYL6",
-    bannerPath: "/images/nominee_11_tiss_warren_mombo.jpg",
+    bannerPath: "/images/category_banner_afrique_centrale.jpg",
     nominees: [
       {
         id: "centrale_1",
@@ -147,7 +147,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de l'Afrique de l'Est",
     titleEn: "Sotigui of the Best Actor of East Africa",
     googleFormUrl: "https://forms.gle/gdQgpeTE3JqzaiEH8",
-    bannerPath: "/images/nominee_11_jacky_vike.jpg",
+    bannerPath: "/images/category_banner_afrique_est.jpg",
     nominees: [
       {
         id: "est_1",
@@ -183,7 +183,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de l'Afrique du Nord",
     titleEn: "Sotigui of the Best Actor of North Africa",
     googleFormUrl: "https://forms.gle/29xBZaLJ2vqE9Hf57",
-    bannerPath: "/images/nominee_11_fatima_attif.jpg",
+    bannerPath: "/images/category_banner_afrique_nord.jpg",
     nominees: [
       {
         id: "nord_1",
@@ -217,7 +217,7 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     titleFr: "Sotigui du Meilleur Acteur de l'Afrique de l'Ouest",
     titleEn: "Sotigui of the Best Actor of West Africa",
     googleFormUrl: "https://forms.gle/zJvBnR6w3aF2eRVx5",
-    bannerPath: "/images/nominee_11_prisca_marceleney.jpg",
+    bannerPath: "/images/category_banner_afrique_ouest.jpg",
     nominees: [
       {
         id: "ouest_1",
