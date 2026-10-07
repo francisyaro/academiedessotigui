@@ -399,29 +399,27 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "burkinabe_f_1",
-        actorName: "Aïda Niatta MAATIKARA",
+        actorName: "Alima OUÉDRAOGO",
         country: "Burkina Faso",
-        filmTitle: "Katanga",
-        director: "Dani Kouyaté",
-        portraitPath: "/images/nominee_11_aida_niatta_maatikara.jpg",
-        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
-        videoPassword: "droma2"
+        filmTitle: "CA SUFFIT",
+        director: "Alima Ouédraogo",
+        portraitPath: "/images/nominee_11_alima_ouedraogo.jpg"
       },
       {
         id: "burkinabe_f_2",
-        actorName: "Fatoumata DIAWARA",
+        actorName: "Patricia NABA",
         country: "Burkina Faso",
-        filmTitle: "Sira",
-        director: "Apolline Traoré",
-        portraitPath: "/images/burkina_faso_feminin_irene_minoungou.jpg"
+        filmTitle: "YIKIAN, DEBOUT",
+        director: "Alidou BADINI",
+        portraitPath: "/images/nominee_11_patricia_naba.jpg"
       },
       {
         id: "burkinabe_f_3",
-        actorName: "Hafissatou COULIBALY",
+        actorName: "Flora SAWADOGO",
         country: "Burkina Faso",
-        filmTitle: "La Traversée",
-        director: "Missa Hébié",
-        portraitPath: "/images/burkina_faso_feminin_coulibaly_hafissatou.jpg"
+        filmTitle: "MAMAN DETESTE MA BELLE MERE",
+        director: "Omar Dagnon",
+        portraitPath: "/images/nominee_11_flora_sawadogo.jpg"
       }
     ]
   },
