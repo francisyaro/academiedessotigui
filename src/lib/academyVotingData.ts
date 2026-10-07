@@ -292,37 +292,31 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
     nominees: [
       {
         id: "plus_jeune_1",
-        actorName: "Bienvenue KOFFI",
-        country: "Côte d'Ivoire",
-        filmTitle: "Le destin des ombres",
-        director: "Franck Vlehi",
-        portraitPath: "/images/nominee_11_bienvenue_koffi.jpg",
-        videoUrls: [
-          "https://vimeo.com/1205932593/1479dcdb32?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205936214/98a2ac1d05?share=copy&fl=sv&fe=ci",
-          "https://vimeo.com/1205941655/0a0d2c4471?share=copy&fl=sv&fe=ci"
-        ]
+        actorName: "Diana BOULI",
+        country: "Cameroun",
+        filmTitle: "Les 3 Lascars 2",
+        director: "Boubacar Diallo",
+        portraitPath: "/images/nominee_11_diana_bouli.jpg",
+        videoUrl: "https://vimeo.com/1220230039?share=copy&fl=sv&fe=ci",
+        videoPassword: "droma2"
       },
       {
         id: "plus_jeune_2",
-        actorName: "Astou DIAW",
-        country: "Sénégal",
-        filmTitle: "L'ombre du passe",
-        director: "Moussa Sène Absa",
-        portraitPath: "/images/nominee_11_astou_diaw.jpg",
-        videoUrls: [
-          "https://www.youtube.com/watch?v=mYTFA0VIPLc&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906",
-          "https://www.youtube.com/watch?v=Crv5fkOYiMA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=2",
-          "https://www.youtube.com/watch?v=k566UWDtvKA&list=PLPgAk0OTvFp-EAXDbVBQ2Fb393fkDo906&index=3"
-        ]
+        actorName: "Ephraim OKA",
+        country: "Côte d'Ivoire",
+        filmTitle: "Ebinto",
+        director: "Luc Gnepa",
+        portraitPath: "/images/nominee_11_ephraim_oka.jpg",
+        videoUrl: "https://vimeo.com/1204785807?fl=ip&fe=ec",
+        videoPassword: "I2V"
       },
       {
         id: "plus_jeune_3",
-        actorName: "Clémentine U. NYIRINKINDI",
-        country: "Rwanda",
-        filmTitle: "Ben'imana",
-        director: "Kantarama Gahigiri",
-        portraitPath: "/images/nominee_11_clementine_nyirinkindi.jpg"
+        actorName: "Michel Lemuya IKENY",
+        country: "Kenya",
+        filmTitle: "Nawi, Dear Future me",
+        director: "Vallentine Chelluget",
+        portraitPath: "/images/nominee_11_michel_lemuya_ikeny.jpg"
       }
     ]
   },
