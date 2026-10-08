@@ -219,7 +219,9 @@ export const ACADEMY_CATEGORIES: AcademyCategory[] = [
         country: "Côte d'Ivoire",
         filmTitle: "Anthôman ou Pour l'honneur",
         director: "Jacques Trabi",
-        portraitPath: "/images/nominee_11_prisca_marceleney.jpg"
+        portraitPath: "/images/nominee_11_prisca_marceleney.jpg",
+        videoUrl: "https://vimeo.com/1146325139",
+        videoPassword: "BABI2026"
       },
       {
         id: "ouest_2",
