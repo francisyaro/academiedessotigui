@@ -7,6 +7,7 @@ import { LaureatesGrid } from '@/components/ui/LaureatesGrid'
 import { HighlightsCarousel } from '@/components/ui/HighlightsCarousel'
 import { SotiguiTV } from '@/components/ui/SotiguiTV'
 import { VoteCTAButton } from '@/components/ui/VoteCTAButton'
+import { HeroPosterSlider } from '@/components/ui/HeroPosterSlider'
 import { Calendar, Sparkles } from 'lucide-react'
 
 interface HomeProps {
@@ -184,39 +185,8 @@ export default async function HomePage({ params }: HomeProps) {
 
   return (
     <div className="flex flex-col w-full pb-20">
-      {/* 1. Hero Banner */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-black overflow-hidden py-20 px-4">
-        {/* Background Image: Eve GUEHI Poster */}
-        <div className="absolute inset-0 bg-[url('/images/dress_code.jpg')] bg-cover bg-center opacity-45 mix-blend-luminosity scale-105 transition-transform duration-[10000ms] hover:scale-100" />
-        {/* Soft Golden & Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg/90 via-transparent to-dark-bg/90" />
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-          <span className="bg-gold-primary/10 border border-gold-primary/30 text-gold-light text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 font-serif animate-pulse">
-            {isEn ? '11th Edition • November 2026' : '11ème Édition • Novembre 2026'}
-          </span>
-          
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-ivory tracking-tight mb-6 leading-none">
-            SOTIGUI AWARDS <span className="gold-text-gradient">2026</span>
-          </h1>
-          
-          <p className="text-sm md:text-lg text-gray-text font-sans max-w-2xl mb-10 leading-relaxed uppercase tracking-wider">
-            {isEn
-              ? 'Celebrating the actors, actresses and professionals of African and Diaspora cinema.'
-              : 'Célébrer les acteurs, actrices et professionnels du cinéma africain et de sa diaspora.'}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-            <Link href={`/${locale}/academie/presentation`}>
-              <Button variant="outline" size="lg" className="uppercase tracking-widest text-xs px-8 border-gold-primary/30 hover:border-gold-primary text-gold-light hover:text-gold-primary">
-                {isEn ? 'The Academy' : "L'Académie"}
-              </Button>
-            </Link>
-            <VoteCTAButton locale={locale} variant="gold" />
-          </div>
-        </div>
-      </section>
+      {/* 1. Hero Poster Slider (3 Official 2026 Visuals) */}
+      <HeroPosterSlider locale={locale} />
 
       {/* 2. Countdown Section */}
       <section className="relative z-20 -mt-16 max-w-4xl mx-auto w-full px-4">
@@ -226,7 +196,7 @@ export default async function HomePage({ params }: HomeProps) {
             {isEn ? 'Time remaining until the ceremony' : 'Temps restant avant la cérémonie'}
           </p>
           {/* Target date is November 12, 2026 at 19:00 UTC */}
-          <Countdown targetDate="2026-11-12T19:00:00Z" locale={locale} />
+          <Countdown targetDate="2026-11-14T19:00:00Z" locale={locale} />
         </div>
       </section>
 
