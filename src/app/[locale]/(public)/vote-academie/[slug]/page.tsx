@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { getAcademyCategoryBySlug } from '@/lib/academyVotingData'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { AcademyAuthGate } from '@/components/voting/AcademyAuthGate'
 import { VideoExtractCard } from '@/components/voting/VideoExtractCard'
 import { ArrowLeft, Award, Film, ExternalLink, Sparkles } from 'lucide-react'
@@ -13,6 +14,11 @@ interface CategoryVotePageProps {
 export default async function CategoryVotePage({ params }: CategoryVotePageProps) {
   const { locale, slug } = await params
   const isEn = locale === 'en'
+
+  // Security & Data Protection: Deactivate direct category ballot access & private screening passwords when voting is closed
+  if (!EVENT_CONFIG.isAcademyVotingOpen) {
+    redirect(`/${locale}/vote-academie`)
+  }
 
   const category = getAcademyCategoryBySlug(slug)
 
@@ -82,7 +88,7 @@ export default async function CategoryVotePage({ params }: CategoryVotePageProps
             </div>
           </div>
 
-          {/* Nominee Video Extracts Section (Excluded for Sotigui d'Or as extracts are available in individual categories) */}
+          {/* Nominee Video Extracts Section */}
           {category.id !== 'cat_dor' && category.nominees.length > 0 && (
             <div className="flex flex-col gap-6 mt-6 border-t border-border-color/60 pt-10">
               <div className="flex flex-col gap-1">
@@ -97,7 +103,6 @@ export default async function CategoryVotePage({ params }: CategoryVotePageProps
                 </p>
               </div>
 
-              {/* Grid of 3 VideoExtractCards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {category.nominees.map((nominee) => (
                   <VideoExtractCard key={nominee.id} nominee={nominee} locale={locale} />

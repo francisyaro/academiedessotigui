@@ -1,8 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import crypto from 'crypto'
 
 export async function POST(request: NextRequest) {
+  if (!EVENT_CONFIG.isPublicVotingOpen) {
+    return NextResponse.json(
+      { message: 'La session de vote de la 11ème édition des Sotigui Awards est officiellement clôturée.' },
+      { status: 403 }
+    )
+  }
+
   try {
     const { email, country } = await request.json()
 

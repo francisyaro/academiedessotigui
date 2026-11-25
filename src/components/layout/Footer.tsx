@@ -116,8 +116,8 @@ export function Footer({ locale }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/vote`} className="hover:text-ivory transition-colors">
-                  {locale === 'en' ? 'Public Vote' : 'Vote du Public'}
+                <Link href={`/${locale}/films`} className="hover:text-ivory transition-colors">
+                  {locale === 'en' ? 'Selected Films' : 'Films Sélectionnés'}
                 </Link>
               </li>
               <li>
@@ -126,8 +126,8 @@ export function Footer({ locale }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/vote#reglement`} className="hover:text-ivory transition-colors">
-                  {locale === 'en' ? 'Voting Rules' : 'Règlement du Vote'}
+                <Link href={`/${locale}/actualites`} className="hover:text-ivory transition-colors">
+                  {locale === 'en' ? 'News & Retrospective' : 'Actualités & Rétrospective'}
                 </Link>
               </li>
             </ul>

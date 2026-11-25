@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { NomineeCard } from '@/components/ui/NomineeCard'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { Search, SlidersHorizontal } from 'lucide-react'
 
 interface NomineesListProps {
@@ -154,7 +155,7 @@ export function NomineesList({ initialNominees, locale }: NomineesListProps) {
               key={nominee.id}
               nominee={nominee}
               locale={locale}
-              showVoteButton={nominee.is_public_vote_eligible}
+              showVoteButton={EVENT_CONFIG.isPublicVotingOpen && nominee.is_public_vote_eligible}
             />
           ))}
         </div>

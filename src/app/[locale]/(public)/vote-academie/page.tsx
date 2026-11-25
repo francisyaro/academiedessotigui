@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { ACADEMY_CATEGORIES } from '@/lib/academyVotingData'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { AcademyAuthGate } from '@/components/voting/AcademyAuthGate'
-import { Award, ArrowRight, Film, Sparkles, CheckCircle } from 'lucide-react'
+import { Award, ArrowRight, Film, Sparkles, CheckCircle, ShieldCheck, Lock } from 'lucide-react'
 
 interface AcademyVotePortalPageProps {
   params: Promise<{ locale: string }>
@@ -11,6 +12,54 @@ interface AcademyVotePortalPageProps {
 export default async function AcademyVotePortalPage({ params }: AcademyVotePortalPageProps) {
   const { locale } = await params
   const isEn = locale === 'en'
+
+  if (!EVENT_CONFIG.isAcademyVotingOpen) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col items-center text-center gap-8 w-full">
+        <div className="bg-dark-surface border border-gold-primary/30 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col items-center gap-6 relative overflow-hidden w-full">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-bronze via-gold-primary to-bordeaux" />
+
+          <div className="w-16 h-16 rounded-2xl bg-gold-primary/10 border border-gold-primary/30 text-gold-light flex items-center justify-center shadow-inner">
+            <ShieldCheck size={30} />
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="inline-flex items-center justify-center gap-1.5 text-xs text-gold-light uppercase tracking-widest font-bold font-serif">
+              <Lock size={12} />
+              <span>{isEn ? 'Official Academy Member Portal' : 'Portail Officiel des Membres de l’Académie'}</span>
+            </span>
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-ivory tracking-tight">
+              {isEn ? '11th Edition Academy Voting is Closed' : 'La Session de Vote de l’Académie est Clôturée'}
+            </h1>
+          </div>
+
+          <p className="text-sm text-gray-text max-w-xl leading-relaxed">
+            {isEn
+              ? 'The deliberation and voting period for the 15 categories of the 11th Edition of the Sotigui Awards (2026) has officially ended. For security and intellectual property protection, private film screening links and member ballots have been deactivated.'
+              : "La session de délibération et de vote des membres du Collège de l'Académie pour les 15 catégories de la 11ème Édition des Sotigui Awards (2026) est officiellement clôturée. Par mesure de sécurité et de protection des droits d'auteur, les accès aux extraits privés et aux formulaires de vote ont été désactivés."}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full pt-4">
+            <Link
+              href={`/${locale}/palmares`}
+              className="px-8 py-3.5 rounded-full bg-gold-primary hover:bg-gold-light text-black font-extrabold text-xs uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg cursor-pointer"
+            >
+              <Award size={16} />
+              <span>{isEn ? 'View Official Winners' : 'Consulter le Palmarès'}</span>
+            </Link>
+
+            <Link
+              href={`/${locale}`}
+              className="px-8 py-3.5 rounded-full bg-dark-bg hover:bg-dark-surface border border-border-color hover:border-gold-primary/40 text-ivory font-bold text-xs uppercase tracking-widest transition-all duration-300 flex items-center gap-2 cursor-pointer"
+            >
+              <span>{isEn ? 'Return to Homepage' : "Retour à l'Accueil"}</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col gap-10 w-full">

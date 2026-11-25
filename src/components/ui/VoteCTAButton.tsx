@@ -1,7 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Award, Sparkles } from 'lucide-react'
+import Link from 'next/link'
+import { Award } from 'lucide-react'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { VotingModal } from './VotingModal'
 
 interface VoteCTAButtonProps {
@@ -13,6 +15,27 @@ interface VoteCTAButtonProps {
 export function VoteCTAButton({ locale, className = '', variant = 'gold' }: VoteCTAButtonProps) {
   const [isOpen, setIsOpen] = useState(false)
   const isEn = locale === 'en'
+
+  // When public voting is closed (POST_EVENT), hide floating buttons and convert inline CTAs into Winners/Palmarès buttons
+  if (!EVENT_CONFIG.isPublicVotingOpen) {
+    if (variant === 'floating') {
+      return null
+    }
+
+    return (
+      <Link
+        href={`/${locale}/palmares`}
+        className={`px-8 py-4 rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center gap-2 shadow-lg ${
+          variant === 'gold'
+            ? 'bg-gold-primary hover:bg-gold-light text-black shadow-gold-primary/10 border border-gold-light/20'
+            : 'bg-transparent hover:bg-dark-surface/50 text-gold-light hover:text-gold-primary border border-gold-primary/30 hover:border-gold-primary'
+        } ${className}`}
+      >
+        <Award size={14} className={variant === 'gold' ? 'fill-black' : 'fill-gold-light'} />
+        <span>{isEn ? 'Discover the Winners' : 'Découvrir le Palmarès'}</span>
+      </Link>
+    )
+  }
 
   if (variant === 'floating') {
     return (

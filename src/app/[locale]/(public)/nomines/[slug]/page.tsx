@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getNomineeBySlug } from '@/lib/services'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { Button } from '@/components/ui/Button'
 import { ArrowLeft, Award, Film, Globe, Share2 } from 'lucide-react'
 
@@ -59,7 +60,7 @@ export default async function NomineeDetailPage({ params }: NomineeDetailProps) 
               <span>{isEn ? 'Share Profile' : 'Partager la fiche'}</span>
             </button>
             
-            {nominee.is_public_vote_eligible && (
+            {EVENT_CONFIG.isPublicVotingOpen && nominee.is_public_vote_eligible && (
               <Link href={`/${locale}/vote`} className="flex-grow">
                 <Button variant="gold" size="lg" className="w-full uppercase tracking-widest text-xs py-3.5">
                   {isEn ? 'Vote for this artist' : 'Voter pour cet artiste'}

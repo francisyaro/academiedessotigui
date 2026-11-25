@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { Menu, X, Globe, Award } from 'lucide-react'
-import { Button } from '../ui/Button'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
 import { VotingModal } from '../ui/VotingModal'
 
 interface NavbarProps {
@@ -17,15 +17,21 @@ export function Navbar({ locale }: NavbarProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  // Navigation Links definition
+  const isEn = locale === 'en'
+
+  // Navigation Links definition (Dynamically filtered based on event lifecycle)
   const links = [
-    { href: `/${locale}/academie/presentation`, label: locale === 'en' ? 'The Academy' : "L'Académie" },
-    { href: `/${locale}/nomines`, label: locale === 'en' ? 'Nominees' : 'Nominés' },
-    { href: `/${locale}/films`, label: locale === 'en' ? 'Films' : 'Films' },
-    { href: `/${locale}/vote`, label: locale === 'en' ? 'Public Vote' : 'Vote du Public' },
-    { href: `/${locale}/vote-academie`, label: locale === 'en' ? 'Academy Vote' : 'Vote Académie' },
-    { href: `/${locale}/palmares`, label: locale === 'en' ? 'Winners' : 'Palmarès' },
-    { href: `/${locale}/actualites`, label: locale === 'en' ? 'News' : 'Actualités' }
+    { href: `/${locale}/academie/presentation`, label: isEn ? 'The Academy' : "L'Académie" },
+    { href: `/${locale}/nomines`, label: isEn ? 'Nominees' : 'Nominés' },
+    { href: `/${locale}/films`, label: isEn ? 'Films' : 'Films' },
+    ...(EVENT_CONFIG.isPublicVotingOpen
+      ? [{ href: `/${locale}/vote`, label: isEn ? 'Public Vote' : 'Vote du Public' }]
+      : []),
+    ...(EVENT_CONFIG.isAcademyVotingOpen
+      ? [{ href: `/${locale}/vote-academie`, label: isEn ? 'Academy Vote' : 'Vote Académie' }]
+      : []),
+    { href: `/${locale}/palmares`, label: isEn ? 'Winners' : 'Palmarès' },
+    { href: `/${locale}/actualites`, label: isEn ? 'News' : 'Actualités' }
   ]
 
   // Switch locale FR <-> EN preserving paths
@@ -54,7 +60,7 @@ export function Navbar({ locale }: NavbarProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-1">
+          <nav className="hidden lg:flex space-x-1" aria-label={isEn ? 'Main Navigation' : 'Navigation principale'}>
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -70,20 +76,30 @@ export function Navbar({ locale }: NavbarProps) {
             ))}
           </nav>
 
-          {/* Right actions (Language switch & Vote button) */}
+          {/* Right actions (Language switch & Primary CTA) */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Vote CTA Button */}
-            <button
-              onClick={() => setIsVotingModalOpen(true)}
-              className="flex items-center gap-1.5 px-4 py-2 text-xs font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 shadow-md shadow-gold-primary/10 hover:scale-105 transform cursor-pointer border border-gold-light/20"
-            >
-              <Award size={14} className="fill-black" />
-              <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
-            </button>
+            {EVENT_CONFIG.isPublicVotingOpen ? (
+              <button
+                onClick={() => setIsVotingModalOpen(true)}
+                className="flex items-center gap-1.5 px-4 py-2 text-xs font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 shadow-md shadow-gold-primary/10 hover:scale-105 transform cursor-pointer border border-gold-light/20"
+              >
+                <Award size={14} className="fill-black" />
+                <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
+              </button>
+            ) : (
+              <Link
+                href={`/${locale}/palmares`}
+                className="flex items-center gap-1.5 px-4 py-2 text-xs font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 shadow-md shadow-gold-primary/10 hover:scale-105 transform cursor-pointer border border-gold-light/20"
+              >
+                <Award size={14} className="fill-black" />
+                <span>{locale === 'fr' ? 'Palmarès' : 'Winners'}</span>
+              </Link>
+            )}
 
             {/* Language Switch */}
             <button
               onClick={handleLanguageChange}
+              aria-label={isEn ? 'Switch language to French' : 'Passer le site en anglais'}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-gray-text hover:text-gold-light border border-border-color hover:border-gold-primary/30 rounded-full transition-all duration-300 cursor-pointer"
             >
               <Globe size={14} />
@@ -93,18 +109,28 @@ export function Navbar({ locale }: NavbarProps) {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center gap-3">
-            {/* Mobile Vote button */}
-            <button
-              onClick={() => setIsVotingModalOpen(true)}
-              className="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 cursor-pointer"
-            >
-              <Award size={12} className="fill-black" />
-              <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
-            </button>
+            {EVENT_CONFIG.isPublicVotingOpen ? (
+              <button
+                onClick={() => setIsVotingModalOpen(true)}
+                className="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 cursor-pointer"
+              >
+                <Award size={12} className="fill-black" />
+                <span>{locale === 'fr' ? 'Voter' : 'Vote'}</span>
+              </button>
+            ) : (
+              <Link
+                href={`/${locale}/palmares`}
+                className="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-black bg-gold-primary hover:bg-gold-light rounded-full transition-all duration-300 cursor-pointer"
+              >
+                <Award size={12} className="fill-black" />
+                <span>{locale === 'fr' ? 'Palmarès' : 'Winners'}</span>
+              </Link>
+            )}
 
             {/* Mobile language switch */}
             <button
               onClick={handleLanguageChange}
+              aria-label={isEn ? 'Switch language' : 'Changer de langue'}
               className="flex items-center gap-1 p-2 text-xs font-semibold text-gray-text hover:text-gold-light border border-border-color rounded-full"
             >
               <Globe size={14} />
@@ -113,6 +139,7 @@ export function Navbar({ locale }: NavbarProps) {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               className="p-2 rounded-md text-gray-text hover:text-ivory hover:bg-dark-surface focus:outline-none cursor-pointer"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -143,12 +170,14 @@ export function Navbar({ locale }: NavbarProps) {
         </div>
       )}
 
-      {/* Voting Instructions Modal */}
-      <VotingModal
-        isOpen={isVotingModalOpen}
-        onClose={() => setIsVotingModalOpen(false)}
-        locale={locale}
-      />
+      {/* Voting Instructions Modal (Only active when voting is open) */}
+      {EVENT_CONFIG.isPublicVotingOpen && (
+        <VotingModal
+          isOpen={isVotingModalOpen}
+          onClose={() => setIsVotingModalOpen(false)}
+          locale={locale}
+        />
+      )}
     </header>
   )
 }

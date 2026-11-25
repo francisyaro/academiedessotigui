@@ -8,7 +8,8 @@ import { HighlightsCarousel } from '@/components/ui/HighlightsCarousel'
 import { SotiguiTV } from '@/components/ui/SotiguiTV'
 import { VoteCTAButton } from '@/components/ui/VoteCTAButton'
 import { HeroPosterSlider } from '@/components/ui/HeroPosterSlider'
-import { Calendar, Sparkles } from 'lucide-react'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
+import { Calendar, Sparkles, Award, Film, Globe } from 'lucide-react'
 
 interface HomeProps {
   params: Promise<{ locale: string }>
@@ -188,16 +189,52 @@ export default async function HomePage({ params }: HomeProps) {
       {/* 1. Hero Poster Slider (3 Official 2026 Visuals) */}
       <HeroPosterSlider locale={locale} />
 
-      {/* 2. Countdown Section */}
-      <section className="relative z-20 -mt-16 max-w-4xl mx-auto w-full px-4">
-        <div className="bg-dark-surface/90 border border-border-color backdrop-blur-md rounded-3xl p-8 text-center shadow-2xl">
-          <p className="text-xs uppercase tracking-widest text-gold-light font-semibold mb-6 flex items-center justify-center gap-2">
-            <Calendar size={14} />
-            {isEn ? 'Time remaining until the ceremony' : 'Temps restant avant la cérémonie'}
-          </p>
-          {/* Target date is November 12, 2026 at 19:00 UTC */}
-          <Countdown targetDate="2026-11-14T19:00:00Z" locale={locale} />
-        </div>
+      {/* 2. Post-Edition Institutional Summary / Countdown */}
+      <section className="relative z-20 -mt-16 max-w-5xl mx-auto w-full px-4">
+        {EVENT_CONFIG.phase === 'POST_EVENT' ? (
+          <div className="bg-dark-surface/95 border border-gold-primary/40 backdrop-blur-md rounded-3xl p-8 md:p-10 text-center shadow-2xl">
+            <p className="text-xs uppercase tracking-widest text-gold-light font-bold mb-3 flex items-center justify-center gap-2">
+              <Award size={16} className="text-gold-primary" />
+              {isEn ? '11th Edition • Official Summary & Appreciation' : '11ème Édition • Bilan Officiel & Remerciements'}
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-ivory mb-4">
+              {isEn ? 'Thank You for Celebrating African & Diaspora Cinema' : 'Merci d’avoir célébré le Cinéma Africain et de la Diaspora'}
+            </h2>
+            <p className="text-xs md:text-sm text-gray-text max-w-2xl mx-auto leading-relaxed mb-8">
+              {isEn
+                ? 'The 11th Edition of the Sotigui Awards concluded on November 14, 2026 at the Centre Culturel du Faso in Ouagadougou. Voting is now officially closed. We look forward to welcoming you in November 2027 for the 12th Edition.'
+                : 'La 11ème Édition des Sotigui Awards s’est clôturée le 14 Novembre 2026 au Centre Culturel du Faso à Ouagadougou. Les sessions de vote sont désormais officiellement closes. Rendez-vous en Novembre 2027 pour la 12ème Édition.'}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-border-color/60 pt-6">
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-serif text-2xl md:text-3xl font-bold text-gold-light">48</span>
+                <span className="text-[11px] uppercase tracking-wider text-gray-text font-semibold">
+                  {isEn ? 'Nominated Talents' : 'Talents Nominés'}
+                </span>
+              </div>
+              <div className="flex flex-col items-center gap-1 border-y sm:border-y-0 sm:border-x border-border-color/50 py-3 sm:py-0">
+                <span className="font-serif text-2xl md:text-3xl font-bold text-gold-light">36</span>
+                <span className="text-[11px] uppercase tracking-wider text-gray-text font-semibold">
+                  {isEn ? 'Represented Nations' : 'Nations Représentées'}
+                </span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <span className="font-serif text-2xl md:text-3xl font-bold text-gold-light">15</span>
+                <span className="text-[11px] uppercase tracking-wider text-gray-text font-semibold">
+                  {isEn ? 'Official Categories' : 'Catégories Officielles'}
+                </span>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="bg-dark-surface/90 border border-border-color backdrop-blur-md rounded-3xl p-8 text-center shadow-2xl">
+            <p className="text-xs uppercase tracking-widest text-gold-light font-semibold mb-6 flex items-center justify-center gap-2">
+              <Calendar size={14} />
+              {isEn ? 'Time remaining until the ceremony' : 'Temps restant avant la cérémonie'}
+            </p>
+            <Countdown targetDate="2026-11-14T19:00:00Z" locale={locale} />
+          </div>
+        )}
       </section>
 
       {/* 3. Official 11th Edition Trailer Spotlight Section */}
@@ -232,8 +269,8 @@ export default async function HomePage({ params }: HomeProps) {
             
             <p className="text-xs text-gray-text leading-relaxed">
               {isEn
-                ? "Watch the official announcement presentation video for the Sotigui Awards 2026. Discover the 48 nominees from 36 countries, and support your favorite actors by casting your vote now."
-                : "Visionnez la présentation vidéo de l'annonce officielle des nominés pour les Sotigui Awards 2026. Découvrez les 48 talents en compétition représentant 36 nations, et soutenez vos favoris en votant dès aujourd'hui."}
+                ? "Watch the official presentation video of the 11th Edition of the Sotigui Awards 2026. Relive the selection of the 48 nominated actors and actresses representing 36 countries across Africa and the Diaspora."
+                : "Visionnez la présentation vidéo officielle de la 11ème Édition des Sotigui Awards 2026. Redécouvrez la sélection officielle des 48 talents en compétition représentant 36 nations d'Afrique et de sa diaspora."}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">

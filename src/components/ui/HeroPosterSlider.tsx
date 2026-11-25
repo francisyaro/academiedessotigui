@@ -4,7 +4,8 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { VoteCTAButton } from '@/components/ui/VoteCTAButton'
-import { ChevronLeft, ChevronRight, Calendar, MapPin, Clock, Sparkles } from 'lucide-react'
+import { EVENT_CONFIG } from '@/lib/eventConfig'
+import { ChevronLeft, ChevronRight, Calendar, MapPin, Clock, Sparkles, CheckCircle2 } from 'lucide-react'
 
 interface HeroPosterSliderProps {
   locale: string
@@ -33,6 +34,7 @@ const POSTER_SLIDES = [
 
 export function HeroPosterSlider({ locale }: HeroPosterSliderProps) {
   const isEn = locale === 'en'
+  const isPostEvent = EVENT_CONFIG.phase === 'POST_EVENT'
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
 
@@ -80,8 +82,17 @@ export function HeroPosterSlider({ locale }: HeroPosterSliderProps) {
         {/* Left Column: Editorial & Event Info (7 cols on desktop) */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
           <div className="inline-flex items-center gap-2 bg-gold-primary/15 border border-gold-primary/40 text-gold-light text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
-            <Sparkles size={14} className="text-gold-primary animate-pulse" />
-            <span>{isEn ? '11th Edition • Official Selection' : '11ème Édition • Sélection Officielle'}</span>
+            {isPostEvent ? (
+              <>
+                <CheckCircle2 size={14} className="text-gold-primary" />
+                <span>{isEn ? '11th Edition Successfully Concluded' : '11ème Édition Clôturée avec Succès'}</span>
+              </>
+            ) : (
+              <>
+                <Sparkles size={14} className="text-gold-primary animate-pulse" />
+                <span>{isEn ? '11th Edition • Official Selection' : '11ème Édition • Sélection Officielle'}</span>
+              </>
+            )}
           </div>
 
           <h1 className="font-serif text-4xl sm:text-6xl xl:text-7xl font-bold text-ivory tracking-tight mb-4 leading-[1.05]">
@@ -89,12 +100,16 @@ export function HeroPosterSlider({ locale }: HeroPosterSliderProps) {
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-gray-text font-sans max-w-2xl mb-8 leading-relaxed">
-            {isEn
+            {isPostEvent
+              ? isEn
+                ? 'The Academy of SOTIGUI warmly thanks all actors, filmmakers, partners, and audiences for making the 11th Edition in Ouagadougou an unforgettable celebration of African and Diaspora cinema.'
+                : 'L’Académie des SOTIGUI remercie chaleureusement les acteurs, cinéastes, partenaires et le public d’avoir fait de cette 11ème Édition à Ouagadougou une célébration inoubliable du cinéma africain et de sa diaspora.'
+              : isEn
               ? 'Celebrating the excellence of actors, actresses, and cinema professionals from Africa and its Diaspora.'
               : 'Célébrer l’excellence des acteurs, actrices et professionnels des arts cinématographiques africains et de la diaspora.'}
           </p>
 
-          {/* Key Event Details Pill Box (Matching the 3 Official Posters) */}
+          {/* Key Event Details Pill Box */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full max-w-2xl mb-10 bg-dark-surface/80 border border-gold-primary/30 backdrop-blur-md rounded-2xl p-4 shadow-2xl">
             <div className="flex items-center justify-center lg:justify-start gap-3 px-2 py-1 border-b sm:border-b-0 sm:border-r border-border-color/60 pb-3 sm:pb-1 sm:pr-4">
               <div className="w-10 h-10 rounded-xl bg-gold-primary/10 border border-gold-primary/30 flex items-center justify-center text-gold-primary shrink-0">
@@ -102,7 +117,7 @@ export function HeroPosterSlider({ locale }: HeroPosterSliderProps) {
               </div>
               <div className="text-left">
                 <span className="block text-[10px] uppercase tracking-widest text-gray-text font-semibold">
-                  {isEn ? 'Date' : 'Date'}
+                  {isEn ? 'Gala Date' : 'Date du Gala'}
                 </span>
                 <span className="font-serif text-sm font-bold text-ivory">
                   {isEn ? 'Sat. Nov 14, 2026' : 'Sam. 14 Nov. 2026'}
@@ -131,10 +146,10 @@ export function HeroPosterSlider({ locale }: HeroPosterSliderProps) {
               </div>
               <div className="text-left">
                 <span className="block text-[10px] uppercase tracking-widest text-gray-text font-semibold">
-                  {isEn ? 'Red Carpet & Gala' : 'Cérémonie'}
+                  {isPostEvent ? (isEn ? 'Status' : 'Statut') : isEn ? 'Red Carpet & Gala' : 'Cérémonie'}
                 </span>
-                <span className="font-serif text-base font-extrabold text-gold-light">
-                  19H00 GMT
+                <span className="font-serif text-sm font-extrabold text-gold-light">
+                  {isPostEvent ? (isEn ? '12th Ed. in 2027' : 'Cap sur la 12e Éd.') : '19H00 GMT'}
                 </span>
               </div>
             </div>
